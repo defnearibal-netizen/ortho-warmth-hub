@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -59,7 +60,7 @@ const Index = () => {
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroClinic})` }}
+          style={{ backgroundImage: `url(${heroBackground})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-transparent" />
         </div>
