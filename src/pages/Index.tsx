@@ -110,19 +110,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-center justify-between gap-6 mb-6">
+              <div className="flex items-center gap-6 mb-6">
                 <span className="text-primary font-semibold text-base md:text-lg tracking-wide">
                   Notre cabinet d'orthodontie
                 </span>
                 <img 
                   src={logoCabinet} 
                   alt="Logo Cabinet d'Orthodontie" 
-                  className="w-32 h-32 md:w-40 md:h-40 object-contain opacity-90"
-                  style={{ 
-                    filter: 'blur(0.3px)',
-                    maskImage: 'radial-gradient(ellipse 80% 80% at center, black 50%, transparent 100%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 50%, transparent 100%)'
-                  }}
+                  className="w-28 h-28 md:w-36 md:h-36 object-contain"
                 />
               </div>
               <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6 font-heading">
