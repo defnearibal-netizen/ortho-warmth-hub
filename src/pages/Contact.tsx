@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    content: "123 Avenue des Champs-Élysées\n75008 Paris",
-    link: "https://maps.google.com/?q=123+Avenue+des+Champs-Élysées+75008+Paris",
+    content: "123 Avenue du Panorama\n75008 Paris",
+    link: "https://maps.google.com/?q=123+Avenue+du+Panorama+75008+Paris",
   },
   {
     icon: Phone,
@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contact@cabinet-orthodontie.fr",
-    link: "mailto:contact@cabinet-orthodontie.fr",
+    content: "contact@panorama-dentaire.fr",
+    link: "mailto:contact@panorama-dentaire.fr",
   },
   {
     icon: Clock,
@@ -39,6 +39,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    subject: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,7 +65,7 @@ const Contact = () => {
       description: "Nous vous répondrons dans les plus brefs délais.",
     });
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -85,26 +86,26 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <span className="text-primary font-medium text-sm uppercase tracking-wider">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">
                 Nos Coordonnées
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-8">
+              <h2 className="text-3xl font-bold text-foreground mt-3 mb-8">
                 Comment nous joindre
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
                 {contactInfo.map((info, index) => (
                   <div
                     key={index}
-                    className="bg-card rounded-2xl p-6 shadow-soft"
+                    className="bg-white rounded-xl p-5 shadow-soft"
                   >
-                    <div className="w-12 h-12 rounded-xl gradient-hero flex items-center justify-center mb-4">
-                      <info.icon className="h-6 w-6 text-white" />
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <info.icon className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">
                       {info.title}
@@ -114,12 +115,12 @@ const Contact = () => {
                         href={info.link}
                         target={info.link.startsWith("http") ? "_blank" : undefined}
                         rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-muted-foreground hover:text-primary transition-colors whitespace-pre-line"
+                        className="text-muted-foreground hover:text-primary transition-colors whitespace-pre-line text-sm"
                       >
                         {info.content}
                       </a>
                     ) : (
-                      <p className="text-muted-foreground whitespace-pre-line">
+                      <p className="text-muted-foreground whitespace-pre-line text-sm">
                         {info.content}
                       </p>
                     )}
@@ -128,14 +129,14 @@ const Contact = () => {
               </div>
 
               {/* CTA */}
-              <div className="bg-secondary rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+              <div className="bg-primary rounded-xl p-8 text-white">
+                <h3 className="text-xl font-semibold mb-3">
                   Prenez rendez-vous en ligne
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-white/80 mb-6 text-sm">
                   Réservez votre consultation directement sur notre plateforme Doctolib.
                 </p>
-                <Button variant="cta" size="lg" asChild>
+                <Button variant="hero" size="lg" asChild>
                   <a
                     href="https://www.doctolib.fr"
                     target="_blank"
@@ -151,66 +152,88 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div>
-              <div className="bg-card rounded-2xl p-8 shadow-card">
+              <div className="bg-white rounded-2xl p-8 shadow-card">
                 <h3 className="text-2xl font-bold text-foreground mb-6">
                   Envoyez-nous un message
                 </h3>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      Nom complet *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Votre nom"
-                      className="h-12"
-                    />
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
+                        Nom complet *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Votre nom"
+                        className="h-12"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
+                        Email *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="votre@email.com"
+                        className="h-12"
+                      />
+                    </div>
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      Email *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="votre@email.com"
-                      className="h-12"
-                    />
-                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
+                        Téléphone
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="01 23 45 67 89"
+                        className="h-12"
+                      />
+                    </div>
 
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      Téléphone
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="01 23 45 67 89"
-                      className="h-12"
-                    />
+                    <div>
+                      <label
+                        htmlFor="subject"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
+                        Sujet
+                      </label>
+                      <Input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="Demande de RDV, Question..."
+                        className="h-12"
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -258,7 +281,7 @@ const Contact = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
               Nous trouver
             </h2>
             <p className="text-muted-foreground">
@@ -266,24 +289,17 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-card">
+          <div className="rounded-2xl overflow-hidden shadow-card max-w-4xl mx-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2157707855694!2d2.304955776975677!3d48.870502000274665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4e8f8ee69%3A0x109c73d6e0ce0e47!2sAv.%20des%20Champs-%C3%89lys%C3%A9es%2C%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1705600000000!5m2!1sen!2sfr"
               width="100%"
-              height="450"
+              height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Localisation du cabinet"
             />
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground mb-4">
-              <strong>Transports :</strong> Métro George V (ligne 1) • 
-              Bus 73, 42 • Parking à proximité
-            </p>
           </div>
         </div>
       </section>

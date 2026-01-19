@@ -2,51 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    /* Medical soft teal palette */
-    --background: 180 20% 99%;
-    --foreground: 200 25% 15%;
+    /* Clinique Dentaire Panorama - Palette bleu marine moderne et apaisante */
+    --background: 210 33% 99%;
+    --foreground: 220 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 25% 15%;
+    --card-foreground: 220 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 25% 15%;
+    --popover-foreground: 220 30% 15%;
 
-    /* Soft teal primary */
-    --primary: 175 45% 40%;
+    /* Bleu marine principal */
+    --primary: 215 50% 23%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light mint secondary */
-    --secondary: 170 30% 95%;
-    --secondary-foreground: 175 45% 30%;
+    /* Bleu clair secondaire */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 50% 23%;
 
-    --muted: 180 15% 96%;
-    --muted-foreground: 200 15% 45%;
+    --muted: 210 25% 96%;
+    --muted-foreground: 215 20% 45%;
 
-    /* Coral accent */
-    --accent: 15 75% 60%;
+    /* Accent doré/chaleureux */
+    --accent: 35 80% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 180 20% 90%;
-    --input: 180 20% 90%;
-    --ring: 175 45% 40%;
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 215 50% 23%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(175 45% 40%) 0%, hsl(190 50% 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(180 20% 99%) 0%, hsl(175 25% 97%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(15 75% 55%) 0%, hsl(25 80% 60%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(200 25% 15% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(200 25% 15% / 0.1);
-    --shadow-hover: 0 12px 40px -12px hsl(175 45% 40% / 0.2);
+    --gradient-hero: linear-gradient(135deg, hsl(215 50% 23%) 0%, hsl(215 45% 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(210 33% 99%) 0%, hsl(210 30% 97%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(215 50% 23%) 0%, hsl(215 45% 30%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(35 80% 55%) 0%, hsl(25 75% 50%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(220 30% 15% / 0.06);
+    --shadow-card: 0 8px 30px -8px hsl(220 30% 15% / 0.08);
+    --shadow-hover: 0 12px 40px -12px hsl(215 50% 23% / 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -59,33 +60,33 @@
   }
 
   .dark {
-    --background: 200 25% 8%;
-    --foreground: 180 15% 95%;
+    --background: 220 25% 8%;
+    --foreground: 210 20% 95%;
 
-    --card: 200 20% 12%;
-    --card-foreground: 180 15% 95%;
+    --card: 220 25% 12%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 200 20% 12%;
-    --popover-foreground: 180 15% 95%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 175 50% 50%;
-    --primary-foreground: 200 25% 8%;
+    --primary: 215 55% 50%;
+    --primary-foreground: 220 25% 8%;
 
-    --secondary: 200 20% 18%;
-    --secondary-foreground: 175 45% 70%;
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 215 45% 70%;
 
-    --muted: 200 20% 15%;
-    --muted-foreground: 180 15% 60%;
+    --muted: 220 25% 15%;
+    --muted-foreground: 210 20% 60%;
 
-    --accent: 15 70% 55%;
+    --accent: 35 75% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 20% 20%;
-    --input: 200 20% 20%;
-    --ring: 175 50% 50%;
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 215 55% 50%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -105,12 +106,12 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    @apply font-semibold tracking-tight;
+    font-family: 'Montserrat', sans-serif;
+    @apply font-bold tracking-tight;
   }
 }
 
@@ -125,6 +126,10 @@
 
   .gradient-cta {
     background: var(--gradient-cta);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
   }
 
   .shadow-soft {
@@ -143,6 +148,14 @@
     @apply bg-clip-text text-transparent;
     background: var(--gradient-hero);
   }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
 }
 
 @layer utilities {
@@ -156,6 +169,10 @@
 
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
   }
 
   @keyframes fadeUp {
@@ -186,6 +203,17 @@
     to {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }
