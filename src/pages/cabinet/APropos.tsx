@@ -35,33 +35,6 @@ const APropos = () => {
         </div>
       </section>
 
-      {/* Philosophie Section */}
-      <section className="py-12 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-foreground mb-6 font-heading">
-              Notre démarche
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons un logiciel patient ainsi qu'une application mobile pour faciliter la gestion des dossiers et le suivi orthodontique. Par ailleurs, le cabinet est équipé de technologies de pointe, notamment pour les empreintes numériques et les photographies, garantissant confort, précision et modernité.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Transparence Section */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-foreground mb-6 font-heading">
-              Transparence et pédagogie
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Chaque traitement vous est expliqué de manière claire et détaillée, afin que vous compreniez pleinement chaque étape de votre prise en charge. Nous prenons le temps d'échanger avec vous, de répondre à toutes vos questions et de vous accompagner avec attention tout au long de votre parcours orthodontique.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Citation Section */}
       <section className="py-16 bg-muted">
