@@ -139,11 +139,11 @@ const Techniques = () => {
           </p>
           <Button variant="cta" size="xl" asChild>
             <a
-              href="https://www.doctolib.fr"
+              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Consultation gratuite
+              Prendre rendez-vous
             </a>
           </Button>
         </div>

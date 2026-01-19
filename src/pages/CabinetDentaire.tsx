@@ -87,7 +87,7 @@ const CabinetDentaire = () => {
               </p>
               <Button variant="cta" size="lg" asChild>
                 <a
-                  href="https://www.doctolib.fr"
+                  href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -193,7 +193,7 @@ const CabinetDentaire = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://www.doctolib.fr"
+                href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
