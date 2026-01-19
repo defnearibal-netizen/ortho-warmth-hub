@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -25,13 +25,6 @@ const Footer = () => {
               Un sourire radieux pour toute la famille.
             </p>
             <div className="flex gap-3 mt-6">
-              <a
-                href="#"
-                className="p-2 rounded-full bg-secondary hover:bg-primary/10 transition-colors duration-200"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-4 w-4 text-foreground/70" />
-              </a>
               <a
                 href="#"
                 className="p-2 rounded-full bg-secondary hover:bg-primary/10 transition-colors duration-200"
