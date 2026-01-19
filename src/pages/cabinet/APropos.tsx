@@ -23,7 +23,14 @@ const APropos = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-foreground mb-6 font-heading">
-              Qu'est-ce qu'un spécialiste en orthodontie ?
+              <a 
+                href="https://www.lesodf.fr/vie-au-cabinet/usurpation-de-titre/code-36/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                Qu'est-ce qu'un spécialiste en orthodontie ?
+              </a>
             </h2>
             <p className="text-muted-foreground mb-4 leading-relaxed">
               Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
