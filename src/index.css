@@ -6,106 +6,106 @@
 
 @layer base {
   :root {
-    /* Clinique Dentaire Panorama - Palette teal/vert d'eau médicale */
-    --background: 180 20% 99%;
-    --foreground: 0 0% 23%;
+    /* Clinique Dentaire Panorama - Palette Beige/Marron Pastels */
+    --background: 40 25% 97%; /* Crème chaud */
+    --foreground: 25 20% 22%; /* Marron foncé */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 23%;
+    --card: 40 30% 99%;
+    --card-foreground: 25 20% 22%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 23%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 25 20% 22%;
 
-    /* Teal médical principal #5FA8A3 */
-    --primary: 174 28% 51%;
-    --primary-foreground: 0 0% 100%;
+    /* Caramel doux - couleur principale */
+    --primary: 30 35% 50%;
+    --primary-foreground: 40 30% 98%;
 
-    /* Bleu gris clair #E8F1F1 */
-    --secondary: 180 18% 93%;
-    --secondary-foreground: 174 28% 40%;
+    /* Beige clair */
+    --secondary: 35 30% 93%;
+    --secondary-foreground: 30 35% 38%;
 
     /* Muted */
-    --muted: 180 15% 96%;
-    --muted-foreground: 0 0% 54%;
+    --muted: 35 25% 95%;
+    --muted-foreground: 25 15% 48%;
 
-    /* Vert clair apaisant #A7D7C5 */
-    --accent: 153 40% 75%;
-    --accent-foreground: 0 0% 23%;
+    /* Beige doré - accent */
+    --accent: 38 45% 82%;
+    --accent-foreground: 25 20% 22%;
 
-    /* CTA Bleu soutenu #2F7F7A */
-    --cta: 177 45% 34%;
-    --cta-foreground: 0 0% 100%;
-    --cta-hover: 177 45% 28%;
+    /* CTA Marron chocolat */
+    --cta: 25 40% 38%;
+    --cta-foreground: 40 30% 98%;
+    --cta-hover: 25 45% 30%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 40 30% 98%;
 
-    --border: 180 15% 90%;
-    --input: 180 15% 90%;
-    --ring: 174 28% 51%;
+    --border: 35 25% 88%;
+    --input: 35 25% 90%;
+    --ring: 30 35% 50%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(174 28% 51%) 0%, hsl(177 45% 34%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(180 18% 97%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(177 45% 34%) 0%, hsl(177 45% 28%) 100%);
-    --gradient-soft: linear-gradient(135deg, hsl(153 40% 75% / 0.3) 0%, hsl(180 18% 93%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 23% / 0.05);
-    --shadow-card: 0 8px 30px -8px hsl(0 0% 23% / 0.08);
-    --shadow-hover: 0 12px 40px -12px hsl(174 28% 51% / 0.15);
+    --gradient-hero: linear-gradient(135deg, hsl(30 35% 50%) 0%, hsl(25 40% 38%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(40 30% 99%) 0%, hsl(35 30% 96%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(25 40% 38%) 0%, hsl(25 45% 30%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(38 45% 82% / 0.4) 0%, hsl(35 30% 93%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(25 20% 22% / 0.06);
+    --shadow-card: 0 8px 30px -8px hsl(25 20% 22% / 0.1);
+    --shadow-hover: 0 12px 40px -12px hsl(30 35% 50% / 0.18);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 174 28% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 180 18% 95%;
-    --sidebar-accent-foreground: 0 0% 23%;
-    --sidebar-border: 180 15% 91%;
-    --sidebar-ring: 174 28% 51%;
+    --sidebar-background: 40 25% 98%;
+    --sidebar-foreground: 25 20% 22%;
+    --sidebar-primary: 30 35% 50%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 35 30% 94%;
+    --sidebar-accent-foreground: 25 20% 22%;
+    --sidebar-border: 35 25% 90%;
+    --sidebar-ring: 30 35% 50%;
   }
 
   .dark {
-    --background: 180 15% 8%;
-    --foreground: 180 10% 95%;
+    --background: 25 20% 10%;
+    --foreground: 35 20% 95%;
 
-    --card: 180 15% 12%;
-    --card-foreground: 180 10% 95%;
+    --card: 25 18% 14%;
+    --card-foreground: 35 20% 95%;
 
-    --popover: 180 15% 12%;
-    --popover-foreground: 180 10% 95%;
+    --popover: 25 18% 14%;
+    --popover-foreground: 35 20% 95%;
 
-    --primary: 174 35% 55%;
-    --primary-foreground: 180 15% 8%;
+    --primary: 30 38% 55%;
+    --primary-foreground: 25 20% 10%;
 
-    --secondary: 180 15% 18%;
-    --secondary-foreground: 174 30% 70%;
+    --secondary: 25 15% 20%;
+    --secondary-foreground: 30 35% 70%;
 
-    --muted: 180 15% 15%;
-    --muted-foreground: 180 10% 60%;
+    --muted: 25 15% 18%;
+    --muted-foreground: 30 15% 58%;
 
-    --accent: 153 35% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 38 40% 55%;
+    --accent-foreground: 40 30% 98%;
 
-    --cta: 174 40% 45%;
-    --cta-foreground: 0 0% 100%;
-    --cta-hover: 174 40% 40%;
+    --cta: 30 40% 48%;
+    --cta-foreground: 40 30% 98%;
+    --cta-hover: 30 40% 42%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 180 10% 98%;
+    --destructive: 0 62% 35%;
+    --destructive-foreground: 35 20% 98%;
 
-    --border: 180 15% 20%;
-    --input: 180 15% 20%;
-    --ring: 174 35% 55%;
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 30 38% 55%;
 
-    --sidebar-background: 180 15% 10%;
-    --sidebar-foreground: 180 10% 95%;
-    --sidebar-primary: 174 35% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 180 15% 16%;
-    --sidebar-accent-foreground: 180 10% 95%;
-    --sidebar-border: 180 15% 16%;
-    --sidebar-ring: 174 35% 55%;
+    --sidebar-background: 25 18% 12%;
+    --sidebar-foreground: 35 20% 95%;
+    --sidebar-primary: 30 38% 55%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 35 20% 95%;
+    --sidebar-border: 25 15% 18%;
+    --sidebar-ring: 30 38% 55%;
   }
 }
 
