@@ -154,7 +154,7 @@ const Orthodontie = () => {
           </p>
           <Button variant="cta" size="xl" asChild>
             <a
-              href="https://www.doctolib.fr"
+              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
               target="_blank"
               rel="noopener noreferrer"
             >

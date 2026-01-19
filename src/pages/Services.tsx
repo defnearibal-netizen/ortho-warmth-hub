@@ -245,7 +245,7 @@ const Services = () => {
           </p>
           <Button variant="hero" size="lg" asChild>
             <a
-              href="https://www.doctolib.fr"
+              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

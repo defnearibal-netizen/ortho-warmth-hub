@@ -175,9 +175,13 @@ const Urgences = () => {
             N'hésitez pas à nous contacter pour toute question ou urgence.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <a href="tel:+33123456789" className="flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Appeler maintenant
+            <a 
+              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              Prendre rendez-vous
             </a>
           </Button>
         </div>
