@@ -2,100 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* Clinique Dentaire Panorama - Palette bleu marine moderne et apaisante */
-    --background: 210 33% 99%;
-    --foreground: 220 30% 15%;
+    /* Clinique Dentaire Panorama - Palette teal/vert d'eau médicale */
+    --background: 180 20% 99%;
+    --foreground: 0 0% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 0 0% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 0 0% 23%;
 
-    /* Bleu marine principal */
-    --primary: 215 50% 23%;
+    /* Teal médical principal #5FA8A3 */
+    --primary: 174 28% 51%;
     --primary-foreground: 0 0% 100%;
 
-    /* Bleu clair secondaire */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 50% 23%;
+    /* Bleu gris clair #E8F1F1 */
+    --secondary: 180 18% 93%;
+    --secondary-foreground: 174 28% 40%;
 
-    --muted: 210 25% 96%;
-    --muted-foreground: 215 20% 45%;
+    /* Muted */
+    --muted: 180 15% 96%;
+    --muted-foreground: 0 0% 54%;
 
-    /* Accent doré/chaleureux */
-    --accent: 35 80% 55%;
-    --accent-foreground: 0 0% 100%;
+    /* Vert clair apaisant #A7D7C5 */
+    --accent: 153 40% 75%;
+    --accent-foreground: 0 0% 23%;
+
+    /* CTA Bleu soutenu #2F7F7A */
+    --cta: 177 45% 34%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 177 45% 28%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 90%;
-    --input: 210 25% 90%;
-    --ring: 215 50% 23%;
+    --border: 180 15% 90%;
+    --input: 180 15% 90%;
+    --ring: 174 28% 51%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(215 50% 23%) 0%, hsl(215 45% 35%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(210 33% 99%) 0%, hsl(210 30% 97%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(215 50% 23%) 0%, hsl(215 45% 30%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(35 80% 55%) 0%, hsl(25 75% 50%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(220 30% 15% / 0.06);
-    --shadow-card: 0 8px 30px -8px hsl(220 30% 15% / 0.08);
-    --shadow-hover: 0 12px 40px -12px hsl(215 50% 23% / 0.15);
+    --gradient-hero: linear-gradient(135deg, hsl(174 28% 51%) 0%, hsl(177 45% 34%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(180 18% 97%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(177 45% 34%) 0%, hsl(177 45% 28%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(153 40% 75% / 0.3) 0%, hsl(180 18% 93%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 23% / 0.05);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 23% / 0.08);
+    --shadow-hover: 0 12px 40px -12px hsl(174 28% 51% / 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-primary: 174 28% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 18% 95%;
+    --sidebar-accent-foreground: 0 0% 23%;
+    --sidebar-border: 180 15% 91%;
+    --sidebar-ring: 174 28% 51%;
   }
 
   .dark {
-    --background: 220 25% 8%;
-    --foreground: 210 20% 95%;
+    --background: 180 15% 8%;
+    --foreground: 180 10% 95%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 180 15% 12%;
+    --card-foreground: 180 10% 95%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 180 15% 12%;
+    --popover-foreground: 180 10% 95%;
 
-    --primary: 215 55% 50%;
-    --primary-foreground: 220 25% 8%;
+    --primary: 174 35% 55%;
+    --primary-foreground: 180 15% 8%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 215 45% 70%;
+    --secondary: 180 15% 18%;
+    --secondary-foreground: 174 30% 70%;
 
-    --muted: 220 25% 15%;
-    --muted-foreground: 210 20% 60%;
+    --muted: 180 15% 15%;
+    --muted-foreground: 180 10% 60%;
 
-    --accent: 35 75% 50%;
+    --accent: 153 35% 50%;
     --accent-foreground: 0 0% 100%;
 
+    --cta: 174 40% 45%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 174 40% 40%;
+
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 180 10% 98%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 215 55% 50%;
+    --border: 180 15% 20%;
+    --input: 180 15% 20%;
+    --ring: 174 35% 55%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 180 15% 10%;
+    --sidebar-foreground: 180 10% 95%;
+    --sidebar-primary: 174 35% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 180 15% 16%;
+    --sidebar-accent-foreground: 180 10% 95%;
+    --sidebar-border: 180 15% 16%;
+    --sidebar-ring: 174 35% 55%;
   }
 }
 
@@ -105,13 +115,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Open Sans', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     @apply font-bold tracking-tight;
+  }
+
+  p, span, a, li {
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
@@ -128,8 +142,8 @@
     background: var(--gradient-cta);
   }
 
-  .gradient-warm {
-    background: var(--gradient-warm);
+  .gradient-soft {
+    background: var(--gradient-soft);
   }
 
   .shadow-soft {
@@ -150,11 +164,30 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:shadow-lg;
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:opacity-90 hover:shadow-lg;
+  }
+
+  .btn-cta {
+    background: hsl(var(--cta));
+    color: hsl(var(--cta-foreground));
+    @apply font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-lg;
+  }
+
+  .btn-cta:hover {
+    background: hsl(var(--cta-hover));
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Card styles with subtle shadow */
+  .card-medical {
+    @apply bg-card rounded-2xl shadow-soft transition-all duration-300;
+  }
+
+  .card-medical:hover {
+    @apply shadow-card -translate-y-1;
   }
 }
 
