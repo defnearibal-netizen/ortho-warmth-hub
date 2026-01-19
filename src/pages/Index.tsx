@@ -65,22 +65,22 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl animate-fade-up">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 font-heading">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 font-heading animate-fade-in">
               Clinique Dentaire Panorama
             </h1>
             
-            <p className="text-lg md:text-xl text-white/90 mb-6 italic">
+            <p className="text-xl md:text-2xl text-white/90 mb-6 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.1s' }}>
               « Un sourire confiant et harmonieux, ça fait toute la différence ! »
             </p>
 
-            <p className="text-base md:text-lg text-white/85 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-base md:text-lg text-white/85 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Notre clinique dentaire propose des soins pluridisciplinaires. Allant de l'orthodontie 
               aux soins dentaires, chirurgicaux d'implantologie et de parodontologie, notre cabinet 
               dentaire moderne allie technologie et soins personnalisés pour votre santé bucco-dentaire.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <Button variant="cta" size="xl" asChild>
                 <a
                   href={RDV_LINK}
@@ -165,7 +165,8 @@ const Index = () => {
             {engagements.map((item, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+                className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 hover-scale"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                   <item.icon className="h-7 w-7 text-primary" />
@@ -200,7 +201,8 @@ const Index = () => {
               <Link
                 key={index}
                 to={treatment.link}
-                className="group bg-card rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+                className="group bg-card rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-2 hover-scale"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-accent/30 flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors">
                   <treatment.icon className="h-6 w-6 text-primary" />
