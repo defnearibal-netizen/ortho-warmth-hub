@@ -3,14 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Calendar, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -35,6 +27,45 @@ const infosPratiquesSubPages = [
   { name: "Fiches d'information", href: "/infos-pratiques/fiches" },
 ];
 
+interface DropdownMenuProps {
+  label: string;
+  items: { name: string; href: string }[];
+  isActive: boolean;
+}
+
+const DropdownMenu = ({ label, items, isActive }: DropdownMenuProps) => {
+  return (
+    <div className="relative group">
+      <button
+        className={cn(
+          "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200",
+          isActive
+            ? "text-primary"
+            : "text-foreground/80 hover:text-primary"
+        )}
+      >
+        {label}
+        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+      </button>
+      
+      {/* Dropdown */}
+      <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div className="bg-white rounded-lg shadow-lg border border-border/50 py-2 min-w-[240px]">
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              to={item.href}
+              className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors duration-200"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobileMenu, setOpenMobileMenu] = useState<string | null>(null);
@@ -47,206 +78,115 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background shadow-soft">
-      {/* Top bar with clinic name */}
-      <div className="bg-background border-b border-border/30 py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="text-foreground">
-              <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-light font-heading tracking-wide text-foreground">
-                  Clinique Dentaire Panorama
-                </span>
-                <span className="text-xs text-muted-foreground font-light tracking-wider">
-                  Orthodontie et soins dentaires
-                </span>
-              </div>
-            </Link>
-            <div className="hidden md:flex items-center gap-6">
-              <a
-                href="tel:+33123456789"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                01 23 45 67 89
-              </a>
-              <Button variant="cta" size="sm" asChild>
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Calendar className="h-4 w-4" />
-                  Prendre RDV
-                </a>
-              </Button>
+    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      <div className="container mx-auto px-4">
+        <div className="flex h-20 items-center justify-between">
+          {/* Logo - Left aligned */}
+          <Link to="/" className="flex-shrink-0">
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-light font-heading tracking-wide text-foreground">
+                Clinique Dentaire Panorama
+              </span>
+              <span className="text-xs text-muted-foreground font-light tracking-wider">
+                Orthodontie et soins dentaires
+              </span>
             </div>
-            
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 rounded-lg hover:bg-muted"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Menu"
+          </Link>
+
+          {/* Desktop Navigation - Right of logo */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {/* Accueil */}
+            <Link
+              to="/"
+              className={cn(
+                "px-4 py-2 text-sm font-medium transition-colors duration-200",
+                location.pathname === "/"
+                  ? "text-primary"
+                  : "text-foreground/80 hover:text-primary"
+              )}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+              Accueil
+            </Link>
+
+            {/* Le Cabinet - Dropdown */}
+            <DropdownMenu
+              label="Le Cabinet"
+              items={cabinetSubPages}
+              isActive={isActive("/cabinet")}
+            />
+
+            {/* Soins & Techniques - Dropdown */}
+            <DropdownMenu
+              label="Soins & Techniques"
+              items={soinsSubPages}
+              isActive={isActive("/soins")}
+            />
+
+            {/* Infos Pratiques - Dropdown */}
+            <DropdownMenu
+              label="Infos Pratiques"
+              items={infosPratiquesSubPages}
+              isActive={isActive("/infos-pratiques")}
+            />
+
+            {/* Contact */}
+            <Link
+              to="/contact"
+              className={cn(
+                "px-4 py-2 text-sm font-medium transition-colors duration-200",
+                isActive("/contact")
+                  ? "text-primary"
+                  : "text-foreground/80 hover:text-primary"
+              )}
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* CTA Buttons - Desktop */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="tel:+33123456789"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              <Phone className="h-4 w-4" />
+              <span>01 23 45 67 89</span>
+            </a>
+            <Button variant="cta" size="sm" asChild>
+              <a
+                href={RDV_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Calendar className="h-4 w-4" />
+                Prendre RDV
+              </a>
+            </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
 
-      {/* Main navigation - Desktop */}
-      <nav className="hidden lg:block bg-secondary">
-        <div className="container mx-auto px-4">
-          <NavigationMenu className="h-12">
-            <NavigationMenuList className="gap-0 h-full">
-              {/* Accueil */}
-              <NavigationMenuItem>
-                <Link
-                  to="/"
-                  className={cn(
-                    "px-6 h-12 text-sm font-medium transition-colors inline-flex items-center",
-                    location.pathname === "/"
-                      ? "text-primary bg-background"
-                      : "text-foreground hover:text-primary hover:bg-background/50"
-                  )}
-                >
-                  Accueil
-                </Link>
-              </NavigationMenuItem>
-
-              {/* Le cabinet */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  className={cn(
-                    "px-6 h-12 text-sm font-medium transition-colors bg-transparent rounded-none",
-                    isActive("/cabinet")
-                      ? "text-primary bg-background"
-                      : "text-foreground hover:text-primary hover:bg-background/50"
-                  )}
-                >
-                  Le Cabinet
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[280px] gap-1 p-3 bg-background border border-border rounded-lg shadow-lg">
-                    {cabinetSubPages.map((item) => (
-                      <li key={item.href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={item.href}
-                            className={cn(
-                              "block select-none rounded-md p-3 text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary",
-                              isActive(item.href) ? "bg-secondary text-primary" : "text-foreground"
-                            )}
-                          >
-                            {item.name}
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {/* Soins & Techniques */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  className={cn(
-                    "px-6 h-12 text-sm font-medium transition-colors bg-transparent rounded-none",
-                    isActive("/soins")
-                      ? "text-primary bg-background"
-                      : "text-foreground hover:text-primary hover:bg-background/50"
-                  )}
-                >
-                  Soins & Techniques
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[320px] gap-1 p-3 bg-background border border-border rounded-lg shadow-lg">
-                    {soinsSubPages.map((item) => (
-                      <li key={item.href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={item.href}
-                            className={cn(
-                              "block select-none rounded-md p-3 text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary",
-                              isActive(item.href) ? "bg-secondary text-primary" : "text-foreground"
-                            )}
-                          >
-                            {item.name}
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {/* Infos Pratiques */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  className={cn(
-                    "px-6 h-12 text-sm font-medium transition-colors bg-transparent rounded-none",
-                    isActive("/infos-pratiques")
-                      ? "text-primary bg-background"
-                      : "text-foreground hover:text-primary hover:bg-background/50"
-                  )}
-                >
-                  Infos Pratiques
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[280px] gap-1 p-3 bg-background border border-border rounded-lg shadow-lg">
-                    {infosPratiquesSubPages.map((item) => (
-                      <li key={item.href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={item.href}
-                            className={cn(
-                              "block select-none rounded-md p-3 text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary",
-                              isActive(item.href) ? "bg-secondary text-primary" : "text-foreground"
-                            )}
-                          >
-                            {item.name}
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {/* Contact */}
-              <NavigationMenuItem>
-                <Link
-                  to="/contact"
-                  className={cn(
-                    "px-6 h-12 text-sm font-medium transition-colors inline-flex items-center",
-                    isActive("/contact")
-                      ? "text-primary bg-background"
-                      : "text-foreground hover:text-primary hover:bg-background/50"
-                  )}
-                >
-                  Contact
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
-      </nav>
-
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background">
-          <nav className="container mx-auto px-4 flex flex-col gap-1">
+        <div className="lg:hidden border-t border-border/50 bg-white animate-fade-in">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
             {/* Accueil */}
             <Link
               to="/"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg font-medium text-sm transition-colors",
-                location.pathname === "/" ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
+                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                location.pathname === "/" ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
               )}
             >
               Accueil
@@ -257,21 +197,21 @@ const Header = () => {
               <button
                 onClick={() => toggleMobileSubmenu("cabinet")}
                 className={cn(
-                  "w-full px-4 py-3 rounded-lg font-medium text-sm transition-colors flex items-center justify-between",
-                  isActive("/cabinet") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
+                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
+                  isActive("/cabinet") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
                 )}
               >
                 Le Cabinet
-                <ChevronDown className={cn("h-4 w-4 transition-transform", openMobileMenu === "cabinet" && "rotate-180")} />
+                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "cabinet" && "rotate-180")} />
               </button>
               {openMobileMenu === "cabinet" && (
-                <div className="pl-4 mt-1 space-y-1">
+                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
                   {cabinetSubPages.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded-lg"
+                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -285,21 +225,21 @@ const Header = () => {
               <button
                 onClick={() => toggleMobileSubmenu("soins")}
                 className={cn(
-                  "w-full px-4 py-3 rounded-lg font-medium text-sm transition-colors flex items-center justify-between",
-                  isActive("/soins") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
+                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
+                  isActive("/soins") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
                 )}
               >
                 Soins & Techniques
-                <ChevronDown className={cn("h-4 w-4 transition-transform", openMobileMenu === "soins" && "rotate-180")} />
+                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "soins" && "rotate-180")} />
               </button>
               {openMobileMenu === "soins" && (
-                <div className="pl-4 mt-1 space-y-1">
+                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
                   {soinsSubPages.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded-lg"
+                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -313,21 +253,21 @@ const Header = () => {
               <button
                 onClick={() => toggleMobileSubmenu("infos")}
                 className={cn(
-                  "w-full px-4 py-3 rounded-lg font-medium text-sm transition-colors flex items-center justify-between",
-                  isActive("/infos-pratiques") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
+                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
+                  isActive("/infos-pratiques") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
                 )}
               >
                 Infos Pratiques
-                <ChevronDown className={cn("h-4 w-4 transition-transform", openMobileMenu === "infos" && "rotate-180")} />
+                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "infos" && "rotate-180")} />
               </button>
               {openMobileMenu === "infos" && (
-                <div className="pl-4 mt-1 space-y-1">
+                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
                   {infosPratiquesSubPages.map((item) => (
                     <Link
                       key={item.href}
                       to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded-lg"
+                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -341,26 +281,28 @@ const Header = () => {
               to="/contact"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg font-medium text-sm transition-colors",
-                isActive("/contact") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
+                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                isActive("/contact") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
               )}
             >
               Contact
             </Link>
 
-            <div className="mt-4 flex flex-col gap-3">
-              <Button variant="outline" asChild>
-                <a href="tel:+33123456789" className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  01 23 45 67 89
-                </a>
-              </Button>
-              <Button variant="cta" asChild>
+            {/* Mobile CTA */}
+            <div className="mt-4 pt-4 border-t border-border/50 flex flex-col gap-3">
+              <a
+                href="tel:+33123456789"
+                className="flex items-center justify-center gap-2 px-4 py-3 text-sm text-muted-foreground hover:text-primary rounded-lg border border-border transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                01 23 45 67 89
+              </a>
+              <Button variant="cta" className="w-full" asChild>
                 <a
                   href={RDV_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2"
+                  className="flex items-center justify-center gap-2"
                 >
                   <Calendar className="h-4 w-4" />
                   Prendre RDV
