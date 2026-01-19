@@ -53,9 +53,14 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="text-foreground">
-              <span className="text-xl md:text-2xl font-light font-heading tracking-widest text-foreground">
-                CLINIQUE DENTAIRE PANORAMA
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl md:text-2xl font-light font-heading tracking-wide text-foreground">
+                  Clinique Dentaire Panorama
+                </span>
+                <span className="text-xs text-muted-foreground font-light tracking-wider">
+                  Orthodontie et soins dentaires
+                </span>
+              </div>
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <a
