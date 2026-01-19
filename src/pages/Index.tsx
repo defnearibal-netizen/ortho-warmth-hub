@@ -108,10 +108,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              <span className="text-primary font-semibold text-base md:text-lg uppercase tracking-wider">
                 Notre cabinet d'orthodontie
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-4 mb-6 font-heading">
                 Une expertise au service de votre sourire
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
