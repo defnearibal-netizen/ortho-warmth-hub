@@ -70,7 +70,7 @@ export default {
       },
       fontFamily: {
         sans: ['Open Sans', 'Arial', 'sans-serif'],
-        heading: ['Montserrat', 'Arial', 'sans-serif'],
+        heading: ['Aptos', 'Montserrat', 'Calibri', 'Arial', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
