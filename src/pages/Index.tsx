@@ -70,7 +70,7 @@ const Index = () => {
               Clinique Dentaire Panorama
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 mb-6 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <p className="text-xl md:text-2xl text-white/90 mb-6 font-light tracking-wide animate-[fade-in_1s_ease-out_0.2s_both,scale-in_0.8s_ease-out_0.2s_both] hover:scale-105 transition-transform duration-300 cursor-default">
               « Un sourire confiant et harmonieux, ça fait toute la différence ! »
             </p>
 
