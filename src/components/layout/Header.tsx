@@ -1,81 +1,33 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Calendar, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
-const cabinetSubPages = [
+const allPages = [
+  { name: "Accueil", href: "/" },
   { name: "À propos", href: "/cabinet/a-propos" },
-  { name: "Notre philosophie", href: "/cabinet/philosophie" },
-  { name: "L'équipe", href: "/cabinet/equipe" },
-];
-
-const soinsSubPages = [
-  { name: "Techniques pour les jeunes enfants", href: "/soins/enfants" },
-  { name: "Techniques multi-attaches autoligaturantes", href: "/soins/autoligaturantes" },
-  { name: "Techniques par aligneurs", href: "/soins/aligneurs" },
-  { name: "Technique linguale WIN", href: "/soins/linguale-win" },
-  { name: "Compléments techniques", href: "/soins/complements" },
-];
-
-const infosPratiquesSubPages = [
-  { name: "Votre parcours", href: "/infos-pratiques/parcours" },
+  { name: "Philosophie", href: "/cabinet/philosophie" },
+  { name: "Équipe", href: "/cabinet/equipe" },
+  { name: "Enfants", href: "/soins/enfants" },
+  { name: "Multi-attaches", href: "/soins/autoligaturantes" },
+  { name: "Aligneurs", href: "/soins/aligneurs" },
+  { name: "Lingual WIN", href: "/soins/linguale-win" },
+  { name: "Compléments", href: "/soins/complements" },
+  { name: "Parcours", href: "/infos-pratiques/parcours" },
   { name: "Urgences", href: "/infos-pratiques/urgences" },
   { name: "Conseils", href: "/infos-pratiques/conseils" },
-  { name: "Fiches d'information", href: "/infos-pratiques/fiches" },
+  { name: "Fiches", href: "/infos-pratiques/fiches" },
+  { name: "Contact", href: "/contact" },
 ];
-
-interface DropdownMenuProps {
-  label: string;
-  items: { name: string; href: string }[];
-  isActive: boolean;
-}
-
-const DropdownMenu = ({ label, items, isActive }: DropdownMenuProps) => {
-  return (
-    <div className="relative group">
-      <button
-        className={cn(
-          "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200",
-          isActive
-            ? "text-primary"
-            : "text-foreground/80 hover:text-primary"
-        )}
-      >
-        {label}
-        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
-      </button>
-      
-      {/* Dropdown */}
-      <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div className="bg-white rounded-lg shadow-lg border border-border/50 py-2 min-w-[240px]">
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors duration-200"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openMobileMenu, setOpenMobileMenu] = useState<string | null>(null);
   const location = useLocation();
 
-  const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(path + "/");
-
-  const toggleMobileSubmenu = (menu: string) => {
-    setOpenMobileMenu(openMobileMenu === menu ? null : menu);
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
@@ -93,55 +45,14 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation - Right of logo */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {/* Accueil */}
-            <Link
-              to="/"
-              className={cn(
-                "px-4 py-2 text-sm font-medium transition-colors duration-200",
-                location.pathname === "/"
-                  ? "text-primary"
-                  : "text-foreground/80 hover:text-primary"
-              )}
-            >
-              Accueil
-            </Link>
-
-            {/* Le Cabinet - Dropdown */}
-            <DropdownMenu
-              label="Le Cabinet"
-              items={cabinetSubPages}
-              isActive={isActive("/cabinet")}
-            />
-
-            {/* Soins & Techniques - Dropdown */}
-            <DropdownMenu
-              label="Soins & Techniques"
-              items={soinsSubPages}
-              isActive={isActive("/soins")}
-            />
-
-            {/* Infos Pratiques - Dropdown */}
-            <DropdownMenu
-              label="Infos Pratiques"
-              items={infosPratiquesSubPages}
-              isActive={isActive("/infos-pratiques")}
-            />
-
-            {/* Contact */}
-            <Link
-              to="/contact"
-              className={cn(
-                "px-4 py-2 text-sm font-medium transition-colors duration-200",
-                isActive("/contact")
-                  ? "text-primary"
-                  : "text-foreground/80 hover:text-primary"
-              )}
-            >
-              Contact
-            </Link>
-          </nav>
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
@@ -164,129 +75,44 @@ const Header = () => {
               </a>
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Menu"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
+
+        {/* Desktop Navigation - Horizontal under logo */}
+        <nav className="hidden lg:flex items-center justify-center gap-1 pb-3 flex-wrap">
+          {allPages.map((page) => (
+            <Link
+              key={page.href}
+              to={page.href}
+              className={cn(
+                "px-3 py-1.5 text-sm font-medium transition-colors duration-200 rounded-lg",
+                isActive(page.href)
+                  ? "text-primary bg-secondary/50"
+                  : "text-foreground/80 hover:text-primary hover:bg-secondary/30"
+              )}
+            >
+              {page.name}
+            </Link>
+          ))}
+        </nav>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="lg:hidden border-t border-border/50 bg-white animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
-            {/* Accueil */}
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                location.pathname === "/" ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-              )}
-            >
-              Accueil
-            </Link>
-
-            {/* Cabinet mobile dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileSubmenu("cabinet")}
+            {allPages.map((page) => (
+              <Link
+                key={page.href}
+                to={page.href}
+                onClick={() => setIsOpen(false)}
                 className={cn(
-                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
-                  isActive("/cabinet") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                  "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                  isActive(page.href) ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
                 )}
               >
-                Le Cabinet
-                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "cabinet" && "rotate-180")} />
-              </button>
-              {openMobileMenu === "cabinet" && (
-                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
-                  {cabinetSubPages.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Soins mobile dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileSubmenu("soins")}
-                className={cn(
-                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
-                  isActive("/soins") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-                )}
-              >
-                Soins & Techniques
-                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "soins" && "rotate-180")} />
-              </button>
-              {openMobileMenu === "soins" && (
-                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
-                  {soinsSubPages.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Infos pratiques mobile dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileSubmenu("infos")}
-                className={cn(
-                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
-                  isActive("/infos-pratiques") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-                )}
-              >
-                Infos Pratiques
-                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "infos" && "rotate-180")} />
-              </button>
-              {openMobileMenu === "infos" && (
-                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
-                  {infosPratiquesSubPages.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Contact */}
-            <Link
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-              className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                isActive("/contact") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-              )}
-            >
-              Contact
-            </Link>
+                {page.name}
+              </Link>
+            ))}
 
             {/* Mobile CTA */}
             <div className="mt-4 pt-4 border-t border-border/50 flex flex-col gap-3">
