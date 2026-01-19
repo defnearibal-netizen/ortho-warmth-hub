@@ -8,25 +8,25 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    content: "123 Avenue du Panorama\n75008 Paris",
-    link: "https://maps.google.com/?q=123+Avenue+du+Panorama+75008+Paris",
+    content: "Boulevard de Marseille\nZone 4 Abidjan",
+    link: "https://maps.google.com/?q=Boulevard+de+Marseille+Zone+4+Abidjan",
   },
   {
     icon: Phone,
     title: "Téléphone",
-    content: "01 23 45 67 89",
-    link: "tel:+33123456789",
+    content: "+225 05 75 43 00 00\n+225 27 21 59 12 99",
+    link: "tel:+2250575430000",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "contact@panorama-dentaire.fr",
-    link: "mailto:contact@panorama-dentaire.fr",
+    content: "aribalorthodontie.abidjan@gmail.com",
+    link: "mailto:aribalorthodontie.abidjan@gmail.com",
   },
   {
     icon: Clock,
     title: "Horaires",
-    content: "Lun - Ven: 9h - 19h\nSamedi: 9h - 13h",
+    content: "Lundi - Vendredi\n9h - 18h",
     link: null,
   },
 ];
@@ -123,13 +123,13 @@ const Contact = () => {
               Nous trouver
             </h2>
             <p className="text-muted-foreground">
-              Notre cabinet est situé au cœur de Paris, facilement accessible en transport.
+              Notre cabinet est situé au Boulevard de Marseille, Zone 4 à Abidjan.
             </p>
           </div>
 
           <div className="rounded-2xl overflow-hidden shadow-soft max-w-4xl mx-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2157707855694!2d2.304955776975677!3d48.870502000274665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4e8f8ee69%3A0x109c73d6e0ce0e47!2sAv.%20des%20Champs-%C3%89lys%C3%A9es%2C%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1705600000000!5m2!1sen!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5029044851397!2d-3.9983099!3d5.3182599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb9c1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sBoulevard%20de%20Marseille%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1705600000000!5m2!1sfr!2sci"
               width="100%"
               height="400"
               style={{ border: 0 }}

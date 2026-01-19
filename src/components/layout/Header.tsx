@@ -146,11 +146,11 @@ const Header = () => {
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+33123456789"
+              href="tel:+2250575430000"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <Phone className="h-4 w-4" />
-              <span>01 23 45 67 89</span>
+              <span>+225 05 75 43 00 00</span>
             </a>
             <Button variant="cta" size="sm" asChild>
               <a
@@ -291,11 +291,11 @@ const Header = () => {
             {/* Mobile CTA */}
             <div className="mt-4 pt-4 border-t border-border/50 flex flex-col gap-3">
               <a
-                href="tel:+33123456789"
+                href="tel:+2250575430000"
                 className="flex items-center justify-center gap-2 px-4 py-3 text-sm text-muted-foreground hover:text-primary rounded-lg border border-border transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                01 23 45 67 89
+                +225 05 75 43 00 00
               </a>
               <Button variant="cta" className="w-full" asChild>
                 <a
