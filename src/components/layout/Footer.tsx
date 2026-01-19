@@ -117,25 +117,30 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  123 Avenue du Panorama<br />75008 Paris
+                  Boulevard de Marseille<br />Zone 4 Abidjan
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:+33123456789" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
-                  01 23 45 67 89
-                </a>
+              <li className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <div className="text-sm text-muted-foreground">
+                  <a href="tel:+2250575430000" className="hover:text-primary transition-colors duration-200 block">
+                    +225 05 75 43 00 00
+                  </a>
+                  <a href="tel:+2252721591299" className="hover:text-primary transition-colors duration-200 block">
+                    +225 27 21 59 12 99
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <a href="mailto:contact@panorama-dentaire.fr" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
-                  contact@panorama-dentaire.fr
+                <a href="mailto:aribalorthodontie.abidjan@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 break-all">
+                  aribalorthodontie.abidjan@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  Lun - Ven: 9h - 19h<br />Sam: 9h - 13h
+                  Lun - Ven: 9h - 18h
                 </span>
               </li>
             </ul>
