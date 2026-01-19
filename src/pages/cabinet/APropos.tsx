@@ -1,12 +1,21 @@
 import Layout from "@/components/layout/Layout";
 import { Quote } from "lucide-react";
+import cabinetBackground from "@/assets/cabinet-background.jpg";
 
 const APropos = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background */}
+      <section className="relative py-16 overflow-hidden">
+        {/* Background Image with Muted Colors */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${cabinetBackground})` }}
+        />
+        {/* Overlay to mute colors */}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
               Notre cabinet d'orthodontie
