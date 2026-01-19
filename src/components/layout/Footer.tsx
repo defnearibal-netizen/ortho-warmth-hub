@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 
+const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-white">
@@ -12,9 +14,9 @@ const Footer = () => {
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
                 <span className="text-xl font-bold text-primary">P</span>
               </div>
-              <span className="text-lg font-bold">Clinique Dentaire Panorama</span>
+              <span className="text-lg font-bold font-heading">Clinique Dentaire Panorama</span>
             </div>
-            <p className="text-white/70 text-sm leading-relaxed">
+            <p className="text-white/75 text-sm leading-relaxed">
               Votre cabinet d'orthodontie et de soins dentaires. 
               Un sourire radieux pour toute la famille, dans un environnement moderne et bienveillant.
             </p>
@@ -38,35 +40,35 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
+            <h4 className="text-lg font-semibold mb-4 font-heading">Navigation</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/" className="text-white/75 hover:text-white transition-colors">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link to="/cabinet" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/cabinet" className="text-white/75 hover:text-white transition-colors">
                   Notre cabinet
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/equipe" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/equipe" className="text-white/75 hover:text-white transition-colors">
                   Équipe
                 </Link>
               </li>
               <li>
-                <Link to="/infos-pratiques" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/infos-pratiques" className="text-white/75 hover:text-white transition-colors">
                   Infos pratiques
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/faq" className="text-white/75 hover:text-white transition-colors">
                   FAQ
                 </Link>
               </li>
@@ -75,56 +77,66 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Nos Services</h4>
+            <h4 className="text-lg font-semibold mb-4 font-heading">Nos Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/services" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
                   Orthodontie classique
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
                   Orthodontie invisible
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
                   Traitement enfants
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/70 hover:text-white transition-colors">
+                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
                   Traitement adultes
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={RDV_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-white transition-colors font-medium"
+                >
+                  Prendre RDV →
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4 font-heading">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm">
+                <span className="text-white/75 text-sm">
                   123 Avenue du Panorama<br />75008 Paris
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent shrink-0" />
-                <a href="tel:+33123456789" className="text-white/70 hover:text-white text-sm">
+                <a href="tel:+33123456789" className="text-white/75 hover:text-white text-sm">
                   01 23 45 67 89
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
-                <a href="mailto:contact@panorama-dentaire.fr" className="text-white/70 hover:text-white text-sm">
+                <a href="mailto:contact@panorama-dentaire.fr" className="text-white/75 hover:text-white text-sm">
                   contact@panorama-dentaire.fr
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm">
+                <span className="text-white/75 text-sm">
                   Lun - Ven: 9h - 19h<br />Sam: 9h - 13h
                 </span>
               </li>

@@ -1,70 +1,85 @@
 import { Link } from "react-router-dom";
-import { Calendar, Award, Users, Sparkles, ArrowRight, CheckCircle } from "lucide-react";
+import { Calendar, Heart, Shield, Sparkles, Users, ArrowRight, Baby, User, UserCheck, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import heroClinic from "@/assets/hero-clinic.jpg";
-import doctorPortrait from "@/assets/doctor-portrait.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 
-const services = [
+const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+
+const engagements = [
   {
-    icon: Award,
-    title: "Expertise Certifiée",
-    description: "Plus de 15 ans d'expérience en orthodontie avec les dernières techniques.",
+    icon: Heart,
+    title: "Pédagogie",
+    description: "Nous prenons le temps d'expliquer chaque étape du traitement à nos patients.",
+  },
+  {
+    icon: Shield,
+    title: "Transparence",
+    description: "Des devis clairs et détaillés, sans surprise sur les tarifs.",
   },
   {
     icon: Sparkles,
-    title: "Technologie Avancée",
-    description: "Équipements de pointe pour des traitements précis et confortables.",
-  },
-  {
-    icon: Users,
-    title: "Approche Personnalisée",
-    description: "Chaque patient bénéficie d'un plan de traitement sur mesure.",
+    title: "Technologie",
+    description: "Équipements de dernière génération pour des soins de qualité optimale.",
   },
 ];
 
-const features = [
-  "Première consultation gratuite",
-  "Facilités de paiement",
-  "Urgences prises en charge",
-  "Suivi personnalisé",
+const treatments = [
+  {
+    icon: Baby,
+    title: "Orthodontie de l'enfant",
+    description: "Traitement précoce pour corriger les problèmes de croissance.",
+    link: "/orthodontie/techniques",
+  },
+  {
+    icon: User,
+    title: "Orthodontie de l'adolescent",
+    description: "Solutions adaptées aux besoins des adolescents.",
+    link: "/orthodontie/techniques",
+  },
+  {
+    icon: UserCheck,
+    title: "Orthodontie de l'adulte",
+    description: "Il n'est jamais trop tard pour un beau sourire.",
+    link: "/orthodontie/techniques",
+  },
+  {
+    icon: Eye,
+    title: "Orthodontie invisible",
+    description: "Aligneurs transparents pour un traitement discret.",
+    link: "/orthodontie/techniques",
+  },
 ];
 
 const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroClinic})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl animate-fade-up">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium mb-6">
-              <Sparkles className="h-4 w-4" />
-              Cabinet d'Orthodontie à Paris
-            </span>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Un sourire parfait,
-              <span className="block text-accent">c'est notre métier</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 font-heading">
+              Un sourire confiant et harmonieux,
+              <span className="block text-accent">ça fait toute la différence !</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
-              Spécialistes en orthodontie pour enfants et adultes. Nous utilisons 
-              les techniques les plus modernes pour vous offrir le sourire dont 
-              vous avez toujours rêvé.
+            <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed">
+              La Clinique Dentaire Panorama vous accueille dans un cadre moderne et chaleureux 
+              pour tous vos traitements d'orthodontie.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="hero" size="xl" asChild>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="cta" size="xl" asChild>
                 <a
-                  href="https://www.doctolib.fr"
+                  href={RDV_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -74,101 +89,170 @@ const Index = () => {
                 </a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/orthodontie" className="flex items-center gap-2">
-                  Découvrir nos services
+                <Link to="/cabinet-dentaire" className="flex items-center gap-2">
+                  Découvrir la chirurgie dentaire
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 text-white/80 text-sm"
-                >
-                  <CheckCircle className="h-4 w-4 text-accent" />
-                  {feature}
-                </div>
-              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Cabinet Presentation */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                Notre cabinet d'orthodontie
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
+                Une expertise au service de votre sourire
+              </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                La Clinique Dentaire Panorama est spécialisée dans les traitements d'orthodontie 
+                pour enfants, adolescents et adultes. Notre équipe de praticiens qualifiés vous 
+                accompagne tout au long de votre parcours vers un sourire harmonieux.
+              </p>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Nous utilisons les dernières technologies et techniques pour vous offrir des 
+                soins de qualité optimale dans un environnement moderne et accueillant.
+              </p>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/cabinet" className="flex items-center gap-2">
+                  En savoir plus
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-card">
+                <img
+                  src={waitingRoom}
+                  alt="Salle d'attente moderne de la Clinique Dentaire Panorama"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-2xl bg-accent/30 -z-10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Engagements */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-medium text-sm uppercase tracking-wider">
-              Nos Services
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              Nos engagements
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
               Pourquoi nous choisir ?
             </h2>
             <p className="text-muted-foreground">
-              Notre équipe de spécialistes vous accompagne tout au long de votre 
-              traitement orthodontique avec professionnalisme et bienveillance.
+              Nous mettons tout en œuvre pour vous offrir une expérience de soins 
+              exceptionnelle et des résultats durables.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {engagements.map((item, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1"
+                className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 rounded-xl gradient-hero flex items-center justify-center mb-6">
-                  <service.icon className="h-7 w-7 text-white" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                  <item.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {service.title}
+                <h3 className="text-xl font-bold text-foreground mb-3 font-heading">
+                  {item.title}
                 </h3>
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-24">
+      {/* Treatments */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              Les différentes techniques
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
+              Nos traitements d'orthodontie
+            </h2>
+            <p className="text-muted-foreground">
+              Des solutions adaptées à chaque âge et chaque besoin pour un sourire parfait.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {treatments.map((treatment, index) => (
+              <Link
+                key={index}
+                to={treatment.link}
+                className="group bg-card rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-accent/30 flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors">
+                  <treatment.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2 font-heading group-hover:text-primary transition-colors">
+                  {treatment.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">{treatment.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* High-tech & Eco */}
+      <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-card">
+            <div className="order-2 lg:order-1">
+              <div className="rounded-2xl overflow-hidden shadow-card">
                 <img
-                  src={doctorPortrait}
-                  alt="Dr. Martin, Orthodontiste"
+                  src={heroClinic}
+                  alt="Équipements modernes du cabinet"
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-72 h-72 rounded-2xl gradient-hero opacity-20" />
             </div>
 
-            <div>
-              <span className="text-primary font-medium text-sm uppercase tracking-wider">
-                À Propos
+            <div className="order-1 lg:order-2">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                Cabinet High-Tech & Écoresponsable
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                Dr. Sophie Martin
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
+                L'innovation au service de votre santé
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Diplômée de la Faculté de Chirurgie Dentaire de Paris, spécialisée 
-                en orthodontie depuis plus de 15 ans. Je m'engage à offrir à chaque 
-                patient des soins de la plus haute qualité dans un environnement 
-                chaleureux et moderne.
+                Notre cabinet est équipé des technologies les plus récentes : radiographie 
+                numérique, scanner 3D, empreintes optiques... pour des diagnostics précis 
+                et des traitements optimisés.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Ma philosophie : prendre le temps d'écouter, expliquer et accompagner 
-                chaque patient vers le sourire qu'il mérite.
+                Nous sommes également engagés dans une démarche écoresponsable avec la 
+                réduction des déchets, l'utilisation de matériaux recyclables et une 
+                gestion énergétique optimisée.
               </p>
-              <Button variant="cta" size="lg" asChild>
-                <Link to="/orthodontie/diplomes" className="flex items-center gap-2">
-                  En savoir plus
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-accent/30 text-foreground rounded-full text-sm font-medium">
+                  Scanner 3D
+                </span>
+                <span className="px-4 py-2 bg-accent/30 text-foreground rounded-full text-sm font-medium">
+                  Radiographie numérique
+                </span>
+                <span className="px-4 py-2 bg-accent/30 text-foreground rounded-full text-sm font-medium">
+                  Empreintes optiques
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -177,65 +261,24 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 gradient-hero">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading">
             Prêt à transformer votre sourire ?
           </h2>
-          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-white/85 text-lg mb-10 max-w-2xl mx-auto">
             Prenez rendez-vous dès aujourd'hui pour une première consultation 
-            gratuite et découvrez comment nous pouvons vous aider.
+            et découvrez comment nous pouvons vous accompagner.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild>
-              <a
-                href="https://www.doctolib.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
-                Prendre rendez-vous
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/contact" className="flex items-center gap-2">
-                Nous contacter
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-medium text-sm uppercase tracking-wider">
-              Notre Cabinet
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-              Un environnement moderne et accueillant
-            </h2>
-            <p className="text-muted-foreground">
-              Découvrez notre cabinet équipé des dernières technologies pour votre confort.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-card">
-              <img
-                src={heroClinic}
-                alt="Salle de soins"
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-card">
-              <img
-                src={waitingRoom}
-                alt="Salle d'attente"
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
+          <Button variant="hero" size="xl" asChild>
+            <a
+              href={RDV_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <Calendar className="h-5 w-5" />
+              Prendre rendez-vous
+            </a>
+          </Button>
         </div>
       </section>
     </Layout>

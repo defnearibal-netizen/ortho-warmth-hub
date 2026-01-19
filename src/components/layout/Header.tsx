@@ -4,6 +4,8 @@ import { Menu, X, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+
 const navItems = [
   { name: "Accueil", href: "/" },
   { name: "Notre cabinet", href: "/cabinet" },
@@ -26,11 +28,11 @@ const Header = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-              <span className="text-xl font-bold text-white">P</span>
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary">
+              <span className="text-lg font-bold text-white">P</span>
             </div>
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-primary">
+              <span className="text-lg font-bold text-primary font-heading">
                 Clinique Dentaire Panorama
               </span>
               <p className="text-xs text-muted-foreground">Orthodontie & Soins dentaires</p>
@@ -66,7 +68,7 @@ const Header = () => {
             </a>
             <Button variant="cta" size="default" asChild>
               <a
-                href="https://www.doctolib.fr"
+                href={RDV_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -116,7 +118,7 @@ const Header = () => {
                 </Button>
                 <Button variant="cta" asChild>
                   <a
-                    href="https://www.doctolib.fr"
+                    href={RDV_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
