@@ -69,7 +69,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Open Sans', 'Arial', 'sans-serif'],
+        sans: ['Aptos', 'Montserrat', 'Calibri', 'Arial', 'sans-serif'],
         heading: ['Aptos', 'Montserrat', 'Calibri', 'Arial', 'sans-serif'],
       },
       keyframes: {
