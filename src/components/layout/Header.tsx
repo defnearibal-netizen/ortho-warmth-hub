@@ -48,33 +48,54 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background border-b border-border/50 shadow-soft">
-      <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary">
-              <span className="text-lg font-bold text-primary-foreground">P</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold text-primary font-heading">
-                Clinique Dentaire Panorama
+      {/* Top bar with clinic name */}
+      <div className="bg-primary py-3">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="text-primary-foreground">
+              <span className="text-xl md:text-2xl font-bold font-heading tracking-wide">
+                CLINIQUE DENTAIRE PANORAMA
               </span>
-              <p className="text-xs text-muted-foreground">Orthodontie & Soins dentaires</p>
+            </Link>
+            <div className="hidden md:flex items-center gap-6">
+              <a
+                href="tel:+33123456789"
+                className="flex items-center gap-2 text-sm text-primary-foreground/90 hover:text-primary-foreground transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                01 23 45 67 89
+              </a>
+              <Button variant="secondary" size="sm" asChild>
+                <a
+                  href={RDV_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Calendar className="h-4 w-4" />
+                  Prendre RDV
+                </a>
+              </Button>
             </div>
-          </Link>
+          </div>
+        </div>
+      </div>
 
+      {/* Main navigation */}
+      <div className="container mx-auto px-4">
+        <div className="flex h-14 items-center justify-between">
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden xl:flex">
-            <NavigationMenuList className="gap-1">
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList className="gap-0">
               {/* Accueil */}
               <NavigationMenuItem>
                 <Link
                   to="/"
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center",
-                    isActive("/") && location.pathname === "/"
-                      ? "text-primary bg-secondary"
-                      : "text-muted-foreground hover:text-primary hover:bg-muted"
+                    "px-5 py-4 text-sm font-semibold uppercase tracking-wider transition-colors inline-flex items-center border-b-2",
+                    location.pathname === "/"
+                      ? "text-primary border-primary"
+                      : "text-foreground hover:text-primary border-transparent hover:border-primary/50"
                   )}
                 >
                   Accueil
@@ -85,13 +106,13 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-transparent",
+                    "px-5 py-4 text-sm font-semibold uppercase tracking-wider transition-colors bg-transparent border-b-2 rounded-none h-auto",
                     isActive("/cabinet")
-                      ? "text-primary bg-secondary"
-                      : "text-muted-foreground hover:text-primary hover:bg-muted"
+                      ? "text-primary border-primary"
+                      : "text-foreground hover:text-primary border-transparent hover:border-primary/50"
                   )}
                 >
-                  Le cabinet d'orthodontie
+                  Le Cabinet
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[280px] gap-1 p-3 bg-background border border-border rounded-lg shadow-lg">
@@ -102,8 +123,8 @@ const Header = () => {
                             to={item.href}
                             className={cn(
                               "block select-none rounded-md p-3 text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                              isActive(item.href) ? "bg-accent text-accent-foreground" : "text-foreground"
+                              "hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary",
+                              isActive(item.href) ? "bg-secondary text-primary" : "text-foreground"
                             )}
                           >
                             {item.name}
@@ -119,13 +140,13 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-transparent",
+                    "px-5 py-4 text-sm font-semibold uppercase tracking-wider transition-colors bg-transparent border-b-2 rounded-none h-auto",
                     isActive("/soins")
-                      ? "text-primary bg-secondary"
-                      : "text-muted-foreground hover:text-primary hover:bg-muted"
+                      ? "text-primary border-primary"
+                      : "text-foreground hover:text-primary border-transparent hover:border-primary/50"
                   )}
                 >
-                  Les soins et techniques
+                  Soins & Techniques
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[320px] gap-1 p-3 bg-background border border-border rounded-lg shadow-lg">
@@ -136,8 +157,8 @@ const Header = () => {
                             to={item.href}
                             className={cn(
                               "block select-none rounded-md p-3 text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                              isActive(item.href) ? "bg-accent text-accent-foreground" : "text-foreground"
+                              "hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary",
+                              isActive(item.href) ? "bg-secondary text-primary" : "text-foreground"
                             )}
                           >
                             {item.name}
@@ -153,13 +174,13 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-transparent",
+                    "px-5 py-4 text-sm font-semibold uppercase tracking-wider transition-colors bg-transparent border-b-2 rounded-none h-auto",
                     isActive("/infos-pratiques")
-                      ? "text-primary bg-secondary"
-                      : "text-muted-foreground hover:text-primary hover:bg-muted"
+                      ? "text-primary border-primary"
+                      : "text-foreground hover:text-primary border-transparent hover:border-primary/50"
                   )}
                 >
-                  Info pratiques
+                  Infos Pratiques
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[280px] gap-1 p-3 bg-background border border-border rounded-lg shadow-lg">
@@ -170,8 +191,8 @@ const Header = () => {
                             to={item.href}
                             className={cn(
                               "block select-none rounded-md p-3 text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                              isActive(item.href) ? "bg-accent text-accent-foreground" : "text-foreground"
+                              "hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary",
+                              isActive(item.href) ? "bg-secondary text-primary" : "text-foreground"
                             )}
                           >
                             {item.name}
@@ -188,10 +209,10 @@ const Header = () => {
                 <Link
                   to="/contact"
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center",
+                    "px-5 py-4 text-sm font-semibold uppercase tracking-wider transition-colors inline-flex items-center border-b-2",
                     isActive("/contact")
-                      ? "text-primary bg-secondary"
-                      : "text-muted-foreground hover:text-primary hover:bg-muted"
+                      ? "text-primary border-primary"
+                      : "text-foreground hover:text-primary border-transparent hover:border-primary/50"
                   )}
                 >
                   Contact
@@ -200,31 +221,19 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="tel:+33123456789"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Phone className="h-4 w-4" />
-              <span className="hidden xl:inline">01 23 45 67 89</span>
-            </a>
-            <Button variant="cta" size="default" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-4 w-4" />
-                Prendre RDV
-              </a>
-            </Button>
-          </div>
+          {/* Empty div for spacing on desktop */}
+          <div className="hidden lg:block" />
+
+          {/* Mobile: Logo and menu button */}
+          <Link to="/" className="lg:hidden">
+            <span className="text-lg font-bold text-primary font-heading">
+              Clinique Panorama
+            </span>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="xl:hidden p-2 rounded-lg hover:bg-muted"
+            className="lg:hidden p-2 rounded-lg hover:bg-muted"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >
@@ -234,15 +243,15 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="xl:hidden py-4 border-t border-border animate-fade-in">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-1">
               {/* Accueil */}
               <Link
                 to="/"
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "px-4 py-3 rounded-lg font-medium transition-colors",
-                  location.pathname === "/" ? "text-primary bg-secondary" : "text-muted-foreground hover:bg-muted"
+                  "px-4 py-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition-colors",
+                  location.pathname === "/" ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
                 )}
               >
                 Accueil
@@ -253,11 +262,11 @@ const Header = () => {
                 <button
                   onClick={() => toggleMobileSubmenu("cabinet")}
                   className={cn(
-                    "w-full px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-between",
-                    isActive("/cabinet") ? "text-primary bg-secondary" : "text-muted-foreground hover:bg-muted"
+                    "w-full px-4 py-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition-colors flex items-center justify-between",
+                    isActive("/cabinet") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
                   )}
                 >
-                  Le cabinet d'orthodontie
+                  Le Cabinet
                   <ChevronDown className={cn("h-4 w-4 transition-transform", openMobileMenu === "cabinet" && "rotate-180")} />
                 </button>
                 {openMobileMenu === "cabinet" && (
@@ -281,11 +290,11 @@ const Header = () => {
                 <button
                   onClick={() => toggleMobileSubmenu("soins")}
                   className={cn(
-                    "w-full px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-between",
-                    isActive("/soins") ? "text-primary bg-secondary" : "text-muted-foreground hover:bg-muted"
+                    "w-full px-4 py-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition-colors flex items-center justify-between",
+                    isActive("/soins") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
                   )}
                 >
-                  Les soins et techniques
+                  Soins & Techniques
                   <ChevronDown className={cn("h-4 w-4 transition-transform", openMobileMenu === "soins" && "rotate-180")} />
                 </button>
                 {openMobileMenu === "soins" && (
@@ -309,11 +318,11 @@ const Header = () => {
                 <button
                   onClick={() => toggleMobileSubmenu("infos")}
                   className={cn(
-                    "w-full px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-between",
-                    isActive("/infos-pratiques") ? "text-primary bg-secondary" : "text-muted-foreground hover:bg-muted"
+                    "w-full px-4 py-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition-colors flex items-center justify-between",
+                    isActive("/infos-pratiques") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
                   )}
                 >
-                  Info pratiques
+                  Infos Pratiques
                   <ChevronDown className={cn("h-4 w-4 transition-transform", openMobileMenu === "infos" && "rotate-180")} />
                 </button>
                 {openMobileMenu === "infos" && (
@@ -337,8 +346,8 @@ const Header = () => {
                 to="/contact"
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "px-4 py-3 rounded-lg font-medium transition-colors",
-                  isActive("/contact") ? "text-primary bg-secondary" : "text-muted-foreground hover:bg-muted"
+                  "px-4 py-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition-colors",
+                  isActive("/contact") ? "text-primary bg-secondary" : "text-foreground hover:bg-muted"
                 )}
               >
                 Contact
