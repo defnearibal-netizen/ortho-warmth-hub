@@ -5,71 +5,72 @@ const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-white border-t border-border/50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo & Description */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
-                <span className="text-xl font-bold text-primary">P</span>
+            <Link to="/" className="block mb-4">
+              <div className="flex flex-col">
+                <span className="text-xl font-light font-heading tracking-wide text-foreground">
+                  Clinique Dentaire Panorama
+                </span>
+                <span className="text-xs text-muted-foreground font-light tracking-wider">
+                  Orthodontie et soins dentaires
+                </span>
               </div>
-              <span className="text-lg font-bold font-heading">Clinique Dentaire Panorama</span>
-            </div>
-            <p className="text-white/75 text-sm leading-relaxed">
+            </Link>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Votre cabinet d'orthodontie et de soins dentaires. 
-              Un sourire radieux pour toute la famille, dans un environnement moderne et bienveillant.
+              Un sourire radieux pour toute la famille.
             </p>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 mt-6">
               <a
                 href="#"
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                className="p-2 rounded-full bg-secondary hover:bg-primary/10 transition-colors duration-200"
                 aria-label="Facebook"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-4 w-4 text-foreground/70" />
               </a>
               <a
                 href="#"
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                className="p-2 rounded-full bg-secondary hover:bg-primary/10 transition-colors duration-200"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-4 w-4 text-foreground/70" />
               </a>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 font-heading">Navigation</h4>
-            <ul className="space-y-3">
+            <h4 className="text-sm font-semibold text-foreground mb-4 font-heading uppercase tracking-wider">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5">
               <li>
-                <Link to="/" className="text-white/75 hover:text-white transition-colors">
+                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link to="/cabinet" className="text-white/75 hover:text-white transition-colors">
-                  Notre cabinet
+                <Link to="/cabinet/a-propos" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Le Cabinet
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
-                  Services
+                <Link to="/soins/enfants" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Soins & Techniques
                 </Link>
               </li>
               <li>
-                <Link to="/equipe" className="text-white/75 hover:text-white transition-colors">
-                  Équipe
-                </Link>
-              </li>
-              <li>
-                <Link to="/infos-pratiques" className="text-white/75 hover:text-white transition-colors">
+                <Link to="/infos-pratiques/parcours" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   Infos pratiques
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-white/75 hover:text-white transition-colors">
-                  FAQ
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -77,26 +78,28 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 font-heading">Nos Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-sm font-semibold text-foreground mb-4 font-heading uppercase tracking-wider">
+              Nos Soins
+            </h4>
+            <ul className="space-y-2.5">
               <li>
-                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
-                  Orthodontie classique
+                <Link to="/soins/enfants" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Jeunes enfants
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
-                  Orthodontie invisible
+                <Link to="/soins/autoligaturantes" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Attaches autoligaturantes
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
-                  Traitement enfants
+                <Link to="/soins/aligneurs" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Aligneurs
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/75 hover:text-white transition-colors">
-                  Traitement adultes
+                <Link to="/soins/linguale-win" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  Technique linguale
                 </Link>
               </li>
               <li>
@@ -104,7 +107,7 @@ const Footer = () => {
                   href={RDV_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent hover:text-white transition-colors font-medium"
+                  className="text-sm text-primary hover:text-primary/80 transition-colors duration-200 font-medium"
                 >
                   Prendre RDV →
                 </a>
@@ -114,29 +117,31 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 font-heading">Contact</h4>
-            <ul className="space-y-4">
+            <h4 className="text-sm font-semibold text-foreground mb-4 font-heading uppercase tracking-wider">
+              Contact
+            </h4>
+            <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-                <span className="text-white/75 text-sm">
+                <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <span className="text-sm text-muted-foreground">
                   123 Avenue du Panorama<br />75008 Paris
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent shrink-0" />
-                <a href="tel:+33123456789" className="text-white/75 hover:text-white text-sm">
+                <Phone className="h-4 w-4 text-primary shrink-0" />
+                <a href="tel:+33123456789" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   01 23 45 67 89
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-accent shrink-0" />
-                <a href="mailto:contact@panorama-dentaire.fr" className="text-white/75 hover:text-white text-sm">
+                <Mail className="h-4 w-4 text-primary shrink-0" />
+                <a href="mailto:contact@panorama-dentaire.fr" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   contact@panorama-dentaire.fr
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-                <span className="text-white/75 text-sm">
+                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <span className="text-sm text-muted-foreground">
                   Lun - Ven: 9h - 19h<br />Sam: 9h - 13h
                 </span>
               </li>
@@ -144,15 +149,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/50 text-sm">
+        <div className="mt-10 pt-6 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground text-xs">
             © {new Date().getFullYear()} Clinique Dentaire Panorama. Tous droits réservés.
           </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-white/50 hover:text-white transition-colors">
+          <div className="flex gap-6 text-xs">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
               Mentions légales
             </a>
-            <a href="#" className="text-white/50 hover:text-white transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
               Politique de confidentialité
             </a>
           </div>
