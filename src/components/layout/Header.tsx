@@ -47,25 +47,25 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background border-b border-border/50 shadow-soft">
+    <header className="sticky top-0 z-50 w-full bg-background shadow-soft">
       {/* Top bar with clinic name */}
-      <div className="bg-primary py-3">
+      <div className="bg-background border-b border-border/30 py-4">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="text-primary-foreground">
-              <span className="text-xl md:text-2xl font-bold font-heading tracking-wide">
+            <Link to="/" className="text-foreground">
+              <span className="text-xl md:text-2xl font-light font-heading tracking-widest text-foreground">
                 CLINIQUE DENTAIRE PANORAMA
               </span>
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <a
                 href="tel:+33123456789"
-                className="flex items-center gap-2 text-sm text-primary-foreground/90 hover:text-primary-foreground transition-colors"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="h-4 w-4" />
                 01 23 45 67 89
               </a>
-              <Button variant="secondary" size="sm" asChild>
+              <Button variant="cta" size="sm" asChild>
                 <a
                   href={RDV_LINK}
                   target="_blank"
