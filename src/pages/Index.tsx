@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import heroBackground from "@/assets/hero-background.jpg";
+import logoCabinet from "@/assets/logo-cabinet.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -109,10 +110,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-primary font-semibold text-base md:text-lg tracking-wide">
-                Notre cabinet d'orthodontie
-              </span>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground mt-4 mb-6 font-heading">
+              <div className="flex items-center gap-6 mb-6">
+                <img 
+                  src={logoCabinet} 
+                  alt="Logo Cabinet d'Orthodontie" 
+                  className="w-20 h-20 md:w-24 md:h-24 object-contain rounded-xl shadow-soft"
+                />
+                <span className="text-primary font-semibold text-base md:text-lg tracking-wide">
+                  Notre cabinet d'orthodontie
+                </span>
+              </div>
+              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6 font-heading">
                 Une expertise au service de votre sourire
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
