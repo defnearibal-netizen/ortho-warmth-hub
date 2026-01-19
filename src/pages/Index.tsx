@@ -65,15 +65,19 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl animate-fade-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 font-heading">
-              Un sourire confiant et harmonieux,
-              <span className="block text-accent">ça fait toute la différence !</span>
+          <div className="max-w-3xl animate-fade-up">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 font-heading">
+              Clinique Dentaire Panorama
             </h1>
+            
+            <p className="text-lg md:text-xl text-white/90 mb-6 italic">
+              « Un sourire confiant et harmonieux, ça fait toute la différence ! »
+            </p>
 
-            <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed">
-              La Clinique Dentaire Panorama vous accueille dans un cadre moderne et chaleureux 
-              pour tous vos traitements d'orthodontie.
+            <p className="text-base md:text-lg text-white/85 mb-10 leading-relaxed max-w-2xl">
+              Notre clinique dentaire propose des soins pluridisciplinaires. Allant de l'orthodontie 
+              aux soins dentaires, chirurgicaux d'implantologie et de parodontologie, notre cabinet 
+              dentaire moderne allie technologie et soins personnalisés pour votre santé bucco-dentaire.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
