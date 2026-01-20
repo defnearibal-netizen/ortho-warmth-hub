@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import heroClinic from "@/assets/hero-clinic.jpg";
-
+import dentalServicesBg from "@/assets/dental-services-bg.jpg";
 const services = [
   {
     icon: Stethoscope,
@@ -117,8 +117,18 @@ const SoinsDentaires = () => {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+      <section 
+        className="py-20 relative"
+        style={{
+          backgroundImage: `url(${dentalServicesBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay dégradé */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/90" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Nos Services
@@ -132,7 +142,7 @@ const SoinsDentaires = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1"
+                className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-14 h-14 rounded-xl gradient-hero flex items-center justify-center mb-6">
                   <service.icon className="h-7 w-7 text-white" />
