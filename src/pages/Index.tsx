@@ -143,12 +143,12 @@ const Index = () => {
                   className="flex items-center gap-2"
                 >
                   <Calendar className="h-5 w-5" />
-                  Prendre rendez-vous
+                  Prendre rendez-vous en orthodontie
                 </a>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
                 <Link to="/cabinet-dentaire" className="flex items-center gap-2">
-                  Découvrir la chirurgie dentaire
+                  Découvrir nos soins dentaires
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
