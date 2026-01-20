@@ -1,12 +1,22 @@
 import Layout from "@/components/layout/Layout";
-import { Award, GraduationCap, Heart } from "lucide-react";
+import { Award, GraduationCap, Heart, BookOpen, Building2, Users } from "lucide-react";
+import doctorPortrait from "@/assets/doctor-portrait.jpg";
 
-const team = [
-  {
-    name: "Dr. Sophie Martin",
-    role: "Orthodontiste spécialiste",
-    specialties: ["Orthodontie adulte", "Orthodontie enfant", "Aligneurs invisibles", "Technique linguale"],
-  },
+const diplomes = [
+  "Diplôme de Docteur en Chirurgie-dentaire (Université de Paris)",
+  "Diplôme d'études spécialisées en Orthopédie dento-faciale (Université de Paris)",
+  "Ancienne Interne des Hôpitaux de Paris : Hôpital Rothschild AP-HP (Centre de référence des maladies rares), Hôpital Universitaire Pitié-Salpêtrière",
+];
+
+const certifications = [
+  "Certification en technique linguale : WIN Lingual Systems",
+  "Certification en technique par aligneurs : Invisalign, Spark, Angel",
+  "Diplôme Universitaire Clinique des traitements odonto-stomatologiques du syndrome d'apnées obstructives du sommeil – Paris",
+];
+
+const memberships = [
+  "Membre de la Société Française d'Orthopédie Dento-Faciale (SFODF)",
+  "Membre de la Société Bioprogressive de Ricketts (SBR)",
 ];
 
 const staff = [
@@ -33,40 +43,91 @@ const EquipePage = () => {
         </div>
       </section>
 
-      {/* Orthodontistes Section */}
+      {/* Dr Defné Aribal Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center font-heading">
-              Nos orthodontistes
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {team.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-secondary rounded-2xl p-8 text-center shadow-soft"
-                >
-                  <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-3xl font-bold text-primary">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Photo à gauche */}
+              <div className="flex flex-col items-center lg:items-start">
+                <div className="relative">
+                  <div className="w-72 h-96 md:w-80 md:h-[28rem] rounded-2xl overflow-hidden shadow-elegant">
+                    <img
+                      src={doctorPortrait}
+                      alt="Dr Defné Aribal - Orthodontiste spécialiste"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary font-medium mb-4">{member.role}</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {member.specialties.map((specialty, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
-                      >
-                        {specialty}
-                      </span>
-                    ))}
+                  <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg">
+                    <p className="font-semibold">Orthodontiste spécialiste</p>
                   </div>
                 </div>
-              ))}
+                <div className="mt-8 text-center lg:text-left">
+                  <h2 className="text-3xl font-bold text-foreground font-heading">
+                    Dr Defné Aribal
+                  </h2>
+                  <p className="text-primary font-medium text-lg mt-2">
+                    Orthodontiste spécialiste qualifiée
+                  </p>
+                </div>
+              </div>
+
+              {/* Diplômes et certifications à droite */}
+              <div className="space-y-8">
+                {/* Diplômes */}
+                <div className="bg-secondary rounded-2xl p-6 shadow-soft">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <GraduationCap className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">Formation</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {diplomes.map((diplome, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{diplome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Certifications */}
+                <div className="bg-secondary rounded-2xl p-6 shadow-soft">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Award className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">Certifications</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {certifications.map((cert, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{cert}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Affiliations */}
+                <div className="bg-secondary rounded-2xl p-6 shadow-soft">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Users className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">Affiliations professionnelles</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {memberships.map((membership, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{membership}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
