@@ -129,6 +129,19 @@ const Header = () => {
               isActive={isActive("/infos-pratiques")}
             />
 
+            {/* Soins Dentaires */}
+            <Link
+              to="/soins-dentaires"
+              className={cn(
+                "px-4 py-2 text-sm font-medium transition-colors duration-200",
+                isActive("/soins-dentaires")
+                  ? "text-primary"
+                  : "text-foreground/80 hover:text-primary"
+              )}
+            >
+              Soins Dentaires
+            </Link>
+
             {/* Contact */}
             <Link
               to="/contact"
@@ -275,6 +288,18 @@ const Header = () => {
                 </div>
               )}
             </div>
+
+            {/* Soins Dentaires */}
+            <Link
+              to="/soins-dentaires"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                isActive("/soins-dentaires") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+              )}
+            >
+              Soins Dentaires
+            </Link>
 
             {/* Contact */}
             <Link

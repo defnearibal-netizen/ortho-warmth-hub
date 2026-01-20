@@ -83,6 +83,11 @@ const dentalServices = [
     title: "Soins parodontaux",
     description: "Traitement des gencives.",
   },
+  {
+    icon: Award,
+    title: "Implantologie",
+    description: "Pose d'implants dentaires.",
+  },
 ];
 
 const practicalInfos = [
@@ -374,12 +379,9 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
               Soins dentaires complets
             </h2>
-            <p className="text-muted-foreground">
-              Des soins dentaires dans un environnement moderne et chaleureux.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
             {dentalServices.map((service, index) => (
               <div
                 key={index}
