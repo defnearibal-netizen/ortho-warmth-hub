@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Eye, CheckCircle, Calendar } from "lucide-react";
+import winTechniqueBg from "@/assets/win-technique-bg.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -8,8 +9,12 @@ const LingualeWin = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${winTechniqueBg})` }}
+      >
+        <div className="absolute inset-0 bg-white/60" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Eye className="h-8 w-8 text-primary" />
