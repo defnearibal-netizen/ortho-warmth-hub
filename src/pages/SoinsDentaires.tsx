@@ -14,7 +14,7 @@ const services = [
   {
     icon: Heart,
     title: "Esthétique dentaire",
-    description: "Blanchiment, facettes et restaurations esthétiques pour un sourire éclatant et harmonieux.",
+    description: "Éclaircissement, facettes et restaurations esthétiques pour un sourire éclatant et harmonieux.",
   },
   {
     icon: Sparkles,
