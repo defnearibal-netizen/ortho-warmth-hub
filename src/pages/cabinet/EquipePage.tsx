@@ -3,14 +3,9 @@ import { Award, GraduationCap, Heart } from "lucide-react";
 
 const team = [
   {
-    name: "Dr. Marie Dupont",
-    role: "Orthodontiste",
-    specialties: ["Orthodontie adulte", "Aligneurs invisibles"],
-  },
-  {
-    name: "Dr. Pierre Martin",
-    role: "Orthodontiste",
-    specialties: ["Orthodontie enfant", "Technique linguale"],
+    name: "Dr. Sophie Martin",
+    role: "Orthodontiste spécialiste",
+    specialties: ["Orthodontie adulte", "Orthodontie enfant", "Aligneurs invisibles", "Technique linguale"],
   },
 ];
 
