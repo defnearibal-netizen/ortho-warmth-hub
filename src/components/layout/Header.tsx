@@ -108,9 +108,9 @@ const Header = () => {
               Accueil
             </Link>
 
-            {/* Le Cabinet - Dropdown */}
+            {/* Le Cabinet d'orthodontie - Dropdown */}
             <DropdownMenu
-              label="Le Cabinet"
+              label="Le Cabinet d'orthodontie"
               items={cabinetSubPages}
               isActive={isActive("/cabinet")}
             />
@@ -201,7 +201,7 @@ const Header = () => {
                   isActive("/cabinet") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
                 )}
               >
-                Le Cabinet
+                Le Cabinet d'orthodontie
                 <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "cabinet" && "rotate-180")} />
               </button>
               {openMobileMenu === "cabinet" && (
