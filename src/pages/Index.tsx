@@ -163,9 +163,9 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex items-center gap-6 mb-6">
-                <span className="text-primary font-semibold text-base md:text-lg tracking-wide">
+                <h2 className="text-2xl md:text-3xl font-light text-foreground tracking-wide">
                   Le cabinet d'orthodontie
-                </span>
+                </h2>
                 <img 
                   src={logoCabinet} 
                   alt="Logo Cabinet d'Orthodontie" 
