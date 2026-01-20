@@ -63,16 +63,16 @@ const EquipePage = () => {
                   <p className="text-primary font-medium text-lg mt-2">
                     Orthodontiste spécialiste qualifiée
                   </p>
-                  <div className="flex items-center gap-4 mt-4">
+                  <div className="flex items-center gap-6 mt-4">
                     <img 
                       src={logoOrthospe} 
                       alt="Orthospé - Label de qualité en orthodontie" 
-                      className="h-12 object-contain"
+                      className="h-20 object-contain"
                     />
                     <img 
                       src={logoCode36} 
                       alt="Code 36 - Spécialiste qualifié en orthodontie" 
-                      className="h-12 object-contain"
+                      className="h-20 object-contain"
                     />
                   </div>
                 </div>
