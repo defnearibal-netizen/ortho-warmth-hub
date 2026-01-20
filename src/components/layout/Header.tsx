@@ -88,7 +88,7 @@ const Header = () => {
                 Clinique Dentaire Panorama
               </span>
               <span className="text-xs text-muted-foreground font-light tracking-wider">
-                Orthodontie et soins dentaires
+                Orthodontie & Soins dentaires
               </span>
             </div>
           </Link>
