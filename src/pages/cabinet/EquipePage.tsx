@@ -1,6 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import { Award, GraduationCap, Heart, BookOpen, Building2, Users } from "lucide-react";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
+import logoOrthospe from "@/assets/logo-orthospe.png";
+import logoCode36 from "@/assets/logo-code36.png";
 
 const diplomes = [
   "Diplôme de Docteur en Chirurgie-dentaire (Université de Paris)",
@@ -53,9 +55,6 @@ const EquipePage = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg">
-                    <p className="font-semibold">Orthodontiste spécialiste</p>
-                  </div>
                 </div>
                 <div className="mt-8 text-center lg:text-left">
                   <h2 className="text-3xl font-bold text-foreground font-heading">
@@ -64,6 +63,18 @@ const EquipePage = () => {
                   <p className="text-primary font-medium text-lg mt-2">
                     Orthodontiste spécialiste qualifiée
                   </p>
+                  <div className="flex items-center gap-4 mt-4">
+                    <img 
+                      src={logoOrthospe} 
+                      alt="Orthospé - Label de qualité en orthodontie" 
+                      className="h-12 object-contain"
+                    />
+                    <img 
+                      src={logoCode36} 
+                      alt="Code 36 - Spécialiste qualifié en orthodontie" 
+                      className="h-12 object-contain"
+                    />
+                  </div>
                 </div>
               </div>
 
