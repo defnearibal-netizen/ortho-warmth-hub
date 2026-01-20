@@ -163,7 +163,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex items-center gap-6 mb-6">
-                <span className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-foreground animate-fade-in">
+                <span className="text-primary font-semibold text-sm uppercase tracking-wider">
                   Le cabinet d'orthodontie
                 </span>
                 <img 
