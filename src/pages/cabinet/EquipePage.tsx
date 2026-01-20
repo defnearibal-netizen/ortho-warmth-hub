@@ -20,10 +20,8 @@ const memberships = [
 ];
 
 const staff = [
-  { name: "Sophie Laurent", role: "Assistante dentaire qualifiée" },
-  { name: "Julie Bernard", role: "Assistante dentaire qualifiée" },
-  { name: "Camille Moreau", role: "Secrétaire médicale" },
-  { name: "Émilie Petit", role: "Secrétaire médicale" },
+  { name: "Sylvain", role: "Assistant dentaire" },
+  { name: "Ange", role: "Assistant dentaire" },
 ];
 
 const EquipePage = () => {
