@@ -198,7 +198,7 @@ const InfosPratiques = () => {
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-card max-w-4xl mx-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2157707855694!2d2.304955776975677!3d48.870502000274665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4e8f8ee69%3A0x109c73d6e0ce0e47!2sAv.%20des%20Champs-%C3%89lys%C3%A9es%2C%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1705600000000!5m2!1sen!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.822818619379!2d-3.990759124119335!3d5.288554894689882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1e952c590ed45%3A0xdfc663c655fddfb5!2sClinique%20dentaire%20Panorama!5e0!3m2!1sfr!2sci!4v1705600000000!5m2!1sfr!2sci"
               width="100%"
               height="400"
               style={{ border: 0 }}

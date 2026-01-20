@@ -129,7 +129,7 @@ const Contact = () => {
 
           <div className="rounded-2xl overflow-hidden shadow-soft max-w-4xl mx-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5835894854!2d-4.0127!3d5.3101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb9e0b24b9e9%3A0x8c7c3c3c3c3c3c3c!2sAribal%20Orthodontie!5e0!3m2!1sfr!2sci!4v1705600000000!5m2!1sfr!2sci"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.822818619379!2d-3.990759124119335!3d5.288554894689882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1e952c590ed45%3A0xdfc663c655fddfb5!2sClinique%20dentaire%20Panorama!5e0!3m2!1sfr!2sci!4v1705600000000!5m2!1sfr!2sci"
               width="100%"
               height="400"
               style={{ border: 0 }}
