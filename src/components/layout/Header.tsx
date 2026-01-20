@@ -160,7 +160,7 @@ const Header = () => {
                 className="flex items-center gap-2"
               >
                 <Calendar className="h-4 w-4" />
-                Prendre RDV
+                1ère consultation
               </a>
             </Button>
           </div>
@@ -305,7 +305,7 @@ const Header = () => {
                   className="flex items-center justify-center gap-2"
                 >
                   <Calendar className="h-4 w-4" />
-                  Prendre RDV
+                  1ère consultation en orthodontie
                 </a>
               </Button>
             </div>
