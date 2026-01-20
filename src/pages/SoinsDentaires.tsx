@@ -75,7 +75,7 @@ const SoinsDentaires = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-primary font-medium text-sm uppercase tracking-wider">
-                Notre Cabinet
+                Notre cabinet dentaire
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
                 Un espace dédié à votre bien-être
@@ -91,15 +91,13 @@ const SoinsDentaires = () => {
                 notre équipe vous accompagne avec professionnalisme et bienveillance.
               </p>
               <Button variant="cta" size="lg" asChild>
-                <a
-                  href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/contact"
                   className="flex items-center gap-2"
                 >
                   <Calendar className="h-5 w-5" />
-                  Prendre rendez-vous
-                </a>
+                  Prendre rendez-vous pour vos soins
+                </Link>
               </Button>
             </div>
             <div className="relative">
