@@ -94,10 +94,10 @@ const Contact = () => {
             {/* CTA */}
             <div className="bg-primary rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-semibold text-primary-foreground mb-3 font-heading">
-                Prenez rendez-vous en ligne
+                Prenez rendez-vous en ligne en orthodontie
               </h3>
               <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
-                Réservez votre consultation directement sur notre plateforme de prise de rendez-vous.
+                Inscription en ligne sur la plateforme, des créneaux de rendez-vous vous seront ensuite proposés.
               </p>
               <Button variant="secondary" size="lg" asChild>
                 <a
