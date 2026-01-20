@@ -10,8 +10,12 @@ const LingualeWin = () => {
     <Layout>
       {/* Hero Section */}
       <section 
-        className="relative py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${winTechniqueBg})` }}
+        className="relative py-24 bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${winTechniqueBg})`,
+          backgroundPosition: 'center center',
+          backgroundSize: 'contain'
+        }}
       >
         <div className="absolute inset-0 bg-white/60" />
         <div className="container mx-auto px-4 relative z-10">
