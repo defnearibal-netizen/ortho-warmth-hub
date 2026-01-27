@@ -170,6 +170,15 @@ const Index = () => {
             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-6 block">
               Le cabinet dentaire d'orthodontie DA
             </span>
+            
+            <div className="flex justify-center mb-8">
+              <img 
+                src={logoDA} 
+                alt="Logo DA" 
+                className="h-16 md:h-20 object-contain"
+              />
+            </div>
+
             <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Une approche centrée sur vous
             </h2>
@@ -194,20 +203,12 @@ const Index = () => {
               ))}
             </div>
 
-            <Button variant="cta" size="lg" asChild className="mb-12">
+            <Button variant="cta" size="lg" asChild>
               <Link to="/cabinet" className="flex items-center gap-2">
                 Découvrir le cabinet
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
-
-            <div className="flex justify-center">
-              <img 
-                src={logoDA} 
-                alt="Logo DA" 
-                className="h-16 md:h-20 object-contain"
-              />
-            </div>
           </div>
         </div>
       </section>
