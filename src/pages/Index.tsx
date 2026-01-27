@@ -163,63 +163,49 @@ const Index = () => {
       </section>
 
       {/* Le Cabinet d'Orthodontie */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-secondary" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="flex items-center gap-6 mb-6">
-                <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                  Le cabinet d'orthodontie
-                </span>
-                <img 
-                  src={logoCabinet} 
-                  alt="Logo Cabinet d'Orthodontie" 
-                  className="w-28 h-28 md:w-36 md:h-36 object-contain"
-                />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6 font-heading">
-                Une approche centrée sur vous
-              </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                À la Clinique Dentaire Panorama, nous croyons que chaque sourire raconte une histoire. 
-                C'est pourquoi nous adoptons une approche personnalisée, en prenant le temps de 
-                comprendre vos attentes et vos préoccupations.
-              </p>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Notre équipe pluridisciplinaire travaille en synergie pour vous proposer 
-                des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
-              </p>
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-6 mb-6">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                Le cabinet d'orthodontie DA
+              </span>
+              <img 
+                src={logoCabinet} 
+                alt="Logo Cabinet d'Orthodontie" 
+                className="w-20 h-20 md:w-24 md:h-24 object-contain"
+              />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              Une approche centrée sur vous
+            </h2>
+            <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto text-center">
+              À la Clinique Dentaire Panorama, nous croyons que chaque sourire raconte une histoire. 
+              C'est pourquoi nous adoptons une approche personnalisée, en prenant le temps de 
+              comprendre vos attentes et vos préoccupations.
+            </p>
+            <p className="text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto text-center">
+              Notre équipe pluridisciplinaire travaille en synergie pour vous proposer 
+              des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
+            </p>
 
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {cabinetValues.map((value, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <value.icon className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-semibold text-foreground text-sm">{value.title}</span>
-                      <p className="text-muted-foreground text-xs">{value.description}</p>
-                    </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+              {cabinetValues.map((value, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4">
+                    <value.icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
                   </div>
-                ))}
-              </div>
-
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/cabinet" className="flex items-center gap-2">
-                  Découvrir le cabinet
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
+                  <span className="text-muted-foreground text-sm">{value.title}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-card">
-                <img
-                  src={waitingRoom}
-                  alt="Salle d'attente moderne de la Clinique Dentaire Panorama"
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-2xl bg-accent/30 -z-10" />
-            </div>
+            <Button variant="cta" size="lg" asChild>
+              <Link to="/cabinet" className="flex items-center gap-2">
+                Découvrir le cabinet
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
