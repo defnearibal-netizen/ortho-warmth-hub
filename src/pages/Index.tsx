@@ -164,11 +164,11 @@ const Index = () => {
       </section>
 
       {/* Le Cabinet d'Orthodontie */}
-      <section className="py-24 bg-secondary" style={{ fontFamily: "'Poppins', sans-serif" }}>
+      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-6 block">
-              Le cabinet dentaire d'orthodontie DA
+            <span className="text-primary font-semibold text-base md:text-lg uppercase tracking-wider mb-6 block">
+              Le cabinet dentaire d'orthodontie
             </span>
             
             <div className="flex justify-center mb-8">
@@ -179,15 +179,15 @@ const Index = () => {
               />
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h2 className="text-3xl md:text-4xl font-semibold text-primary mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Une approche centrée sur vous
             </h2>
-            <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto text-center">
+            <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto text-center text-base md:text-lg">
               À la Clinique Dentaire Panorama, nous croyons que chaque sourire raconte une histoire. 
               C'est pourquoi nous adoptons une approche personnalisée, en prenant le temps de 
               comprendre vos attentes et vos préoccupations.
             </p>
-            <p className="text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto text-center">
+            <p className="text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto text-center text-base md:text-lg">
               Notre équipe pluridisciplinaire travaille en synergie pour vous proposer 
               des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
             </p>
