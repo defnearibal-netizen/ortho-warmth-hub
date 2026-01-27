@@ -9,6 +9,7 @@ import Layout from "@/components/layout/Layout";
 import heroBackground from "@/assets/hero-background.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
+import logoDA from "@/assets/logo-da.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -166,16 +167,9 @@ const Index = () => {
       <section className="py-24 bg-secondary" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-6 mb-6">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                Le cabinet d'orthodontie DA
-              </span>
-              <img 
-                src={logoCabinet} 
-                alt="Logo Cabinet d'Orthodontie" 
-                className="w-20 h-20 md:w-24 md:h-24 object-contain"
-              />
-            </div>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-6 block">
+              Le cabinet dentaire d'orthodontie DA
+            </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Une approche centrée sur vous
             </h2>
@@ -200,12 +194,20 @@ const Index = () => {
               ))}
             </div>
 
-            <Button variant="cta" size="lg" asChild>
+            <Button variant="cta" size="lg" asChild className="mb-12">
               <Link to="/cabinet" className="flex items-center gap-2">
                 Découvrir le cabinet
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
+
+            <div className="flex justify-center">
+              <img 
+                src={logoDA} 
+                alt="Logo DA" 
+                className="h-16 md:h-20 object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
