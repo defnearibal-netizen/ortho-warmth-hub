@@ -267,58 +267,87 @@ const Index = () => {
       <InfosPratiquesSection />
 
       {/* Contact */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                Contact
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
-                Nous trouver
-              </h2>
-            </div>
+          {/* Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary uppercase tracking-wider">
+              Accès
+            </h2>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-              <div className="bg-card rounded-xl p-6 text-center shadow-soft">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-6 w-6 text-primary" />
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+            {/* Left - Info */}
+            <div className="space-y-10">
+              {/* Horaires */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                  Horaires d'ouverture
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex gap-8">
+                    <span className="text-foreground font-medium w-28">Lundi</span>
+                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                  </div>
+                  <div className="flex gap-8">
+                    <span className="text-foreground font-medium w-28">Mardi</span>
+                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                  </div>
+                  <div className="flex gap-8">
+                    <span className="text-foreground font-medium w-28">Mercredi</span>
+                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                  </div>
+                  <div className="flex gap-8">
+                    <span className="text-foreground font-medium w-28">Jeudi</span>
+                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                  </div>
+                  <div className="flex gap-8">
+                    <span className="text-foreground font-medium w-28">Vendredi</span>
+                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Adresse</h3>
-                <p className="text-muted-foreground text-sm">
-                  Boulevard de Marseille<br />Zone 4 Abidjan
-                </p>
               </div>
 
-              <div className="bg-card rounded-xl p-6 text-center shadow-soft">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-6 w-6 text-primary" />
+              {/* Contact */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                  Contact
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <Phone className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                    <span className="text-foreground">+225 05 75 43 00 00</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Phone className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                    <span className="text-foreground">+225 27 21 59 12 99</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="h-5 w-5 text-primary mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <p className="text-foreground">Boulevard de Marseille</p>
+                      <p className="text-foreground">Zone 4 Abidjan</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Téléphone</h3>
-                <p className="text-muted-foreground text-sm">
-                  +225 05 75 43 00 00<br />+225 27 21 59 12 99
-                </p>
-              </div>
-
-              <div className="bg-card rounded-xl p-6 text-center shadow-soft">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Horaires</h3>
-                <p className="text-muted-foreground text-sm">
-                  Lundi - Vendredi<br />9h - 18h
-                </p>
               </div>
             </div>
 
-            <div className="text-center">
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/contact" className="flex items-center gap-2">
-                  Voir la page contact
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
+            {/* Right - Image Placeholder */}
+            <div className="aspect-[4/3] rounded-xl bg-accent/20 flex items-center justify-center overflow-hidden">
+              <Clock className="h-24 w-24 text-primary/30" />
             </div>
+          </div>
+
+          {/* Button */}
+          <div className="text-center mt-12">
+            <Button variant="cta" size="lg" asChild>
+              <Link to="/contact" className="flex items-center gap-2">
+                Voir la page contact
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
