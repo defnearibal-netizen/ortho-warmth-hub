@@ -10,6 +10,7 @@ import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
 import logoDA from "@/assets/logo-da.png";
+import treatmentEnfant from "@/assets/treatment-enfant.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -19,24 +20,28 @@ const treatments = [
     title: "Orthodontie de l'enfant",
     description: "Traitement précoce pour corriger les problèmes de croissance.",
     link: "/soins/enfants",
+    image: treatmentEnfant,
   },
   {
     icon: User,
     title: "Multi-attaches autoligaturantes",
     description: "Brackets modernes pour un traitement efficace.",
     link: "/soins/autoligaturantes",
+    image: null,
   },
   {
     icon: Eye,
     title: "Aligneurs invisibles",
     description: "Solution discrète et amovible pour adultes.",
     link: "/soins/aligneurs",
+    image: null,
   },
   {
     icon: UserCheck,
     title: "Technique linguale WIN",
     description: "Appareil totalement invisible placé à l'intérieur.",
     link: "/soins/linguale-win",
+    image: null,
   },
 ];
 
@@ -241,12 +246,19 @@ const Index = () => {
                 to={treatment.link}
                 className="group block flex-1 min-w-[200px]"
               >
-                {/* Placeholder pour l'image */}
+                {/* Image du traitement */}
                 <div className="aspect-[4/3] rounded-xl bg-muted/50 mb-4 overflow-hidden">
-                  {/* Image à ajouter ici */}
-                  <div className="w-full h-full flex items-center justify-center bg-accent/20">
-                    <treatment.icon className="h-12 w-12 text-primary/40" />
-                  </div>
+                  {treatment.image ? (
+                    <img 
+                      src={treatment.image} 
+                      alt={treatment.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-accent/20">
+                      <treatment.icon className="h-12 w-12 text-primary/40" />
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors text-center">
                   {treatment.title}
