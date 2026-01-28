@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { 
   Calendar, Heart, Shield, Sparkles, ArrowRight, 
   Baby, User, UserCheck, Eye, MapPin, Phone, Clock,
-  CheckCircle, Award, Stethoscope, AlertTriangle, FileText
+  CheckCircle, Award, Stethoscope
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import InfosPratiquesSection from "@/components/home/InfosPratiquesSection";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
@@ -99,26 +100,6 @@ const dentalServices = [
   },
 ];
 
-const practicalInfos = [
-  {
-    icon: MapPin,
-    title: "Votre parcours",
-    description: "De la consultation à la fin du traitement, nous vous accompagnons.",
-    link: "/infos-pratiques/parcours",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Urgences",
-    description: "Bracket décollé, fil qui pique ? Nous sommes là pour vous.",
-    link: "/infos-pratiques/urgences",
-  },
-  {
-    icon: FileText,
-    title: "Conseils",
-    description: "Recommandations pour bien vivre votre traitement.",
-    link: "/infos-pratiques/conseils",
-  },
-];
 
 const Index = () => {
   return (
@@ -282,49 +263,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Infos Pratiques */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Infos pratiques
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
-              Tout ce qu'il faut savoir
-            </h2>
-            <p className="text-muted-foreground">
-              Préparez votre visite et vivez votre traitement sereinement.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            {practicalInfos.map((info, index) => (
-              <Link
-                key={index}
-                to={info.link}
-                className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                  <info.icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3 font-heading group-hover:text-primary transition-colors">
-                  {info.title}
-                </h3>
-                <p className="text-muted-foreground">{info.description}</p>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/infos-pratiques" className="flex items-center gap-2">
-                Toutes les infos pratiques
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Infos Pratiques - Section interactive avec tabs */}
+      <InfosPratiquesSection />
 
       {/* Contact */}
       <section className="py-24 bg-secondary">
