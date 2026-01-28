@@ -13,6 +13,7 @@ import logoDA from "@/assets/logo-da.png";
 import treatmentEnfant from "@/assets/treatment-enfant.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 import treatmentAligneurs from "@/assets/treatment-aligneurs.jpg";
+import treatmentLinguale from "@/assets/treatment-linguale.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -43,7 +44,7 @@ const treatments = [
     title: "Technique linguale WIN",
     description: "Appareil totalement invisible placé à l'intérieur.",
     link: "/soins/linguale-win",
-    image: null,
+    image: treatmentLinguale,
   },
 ];
 
