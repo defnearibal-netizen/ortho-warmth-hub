@@ -54,7 +54,7 @@ const InfosPratiquesSection = () => {
 
         {/* Tabs Navigation */}
         <div className="border-b border-border mb-12">
-          <nav className="flex justify-center gap-12 md:gap-20 lg:gap-28">
+          <nav className="flex justify-center gap-16 md:gap-28 lg:gap-40">
             {practicalInfos.map((info) => (
               <button
                 key={info.id}
@@ -82,21 +82,15 @@ const InfosPratiquesSection = () => {
             <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
               {activeInfo.title}
             </h3>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               {activeInfo.details}
             </p>
-            <Button variant="cta" size="lg" asChild>
-              <Link to={activeInfo.link} className="inline-flex items-center gap-2">
-                En savoir plus
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
           </div>
         </div>
 
         {/* Link to all infos */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="cta" size="lg" asChild>
             <Link to="/infos-pratiques" className="flex items-center gap-2">
               Toutes les infos pratiques
               <ArrowRight className="h-5 w-5" />
