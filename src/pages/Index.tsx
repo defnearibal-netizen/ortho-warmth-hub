@@ -13,7 +13,7 @@ import logoCabinet from "@/assets/logo-cabinet.jpg";
 import logoDA from "@/assets/logo-da.png";
 import treatmentEnfant from "@/assets/treatment-enfant.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
-import treatmentAligneurs from "@/assets/treatment-aligneurs.jpg";
+import treatmentAligneurs from "@/assets/treatment-aligneurs-new.png";
 import treatmentLinguale from "@/assets/treatment-linguale.jpg";
 import ctaBackground from "@/assets/cta-background.png";
 
