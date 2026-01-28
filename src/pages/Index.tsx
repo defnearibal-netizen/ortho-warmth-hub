@@ -267,6 +267,49 @@ const Index = () => {
       {/* Infos Pratiques - Section interactive avec tabs */}
       <InfosPratiquesSection />
 
+      {/* Cabinet Dentaire */}
+      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
+        <div className="container mx-auto px-4">
+          {/* Card with brown background */}
+          <div className="bg-cta-hover rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Soins dentaires complets
+              </h2>
+              <p className="text-white/80 text-base md:text-lg">
+                En plus de l'orthodontie, nous proposons une gamme complète de soins dentaires.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+              {dentalServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center hover:bg-white/20 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-base font-semibold text-white mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/70 text-sm">{service.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/cabinet-dentaire" className="flex items-center gap-2">
+                  En savoir plus
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
@@ -359,49 +402,6 @@ const Index = () => {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Cabinet Dentaire */}
-      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
-        <div className="container mx-auto px-4">
-          {/* Card with brown background */}
-          <div className="bg-cta-hover rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Soins dentaires complets
-              </h2>
-              <p className="text-white/80 text-base md:text-lg">
-                En plus de l'orthodontie, nous proposons une gamme complète de soins dentaires.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
-              {dentalServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-base font-semibold text-white mb-1">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/70 text-sm">{service.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <Button variant="hero" size="lg" asChild>
-                <Link to="/cabinet-dentaire" className="flex items-center gap-2">
-                  En savoir plus
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
