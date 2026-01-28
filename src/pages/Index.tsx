@@ -16,6 +16,7 @@ import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 import treatmentAligneurs from "@/assets/treatment-aligneurs-new.png";
 import treatmentLinguale from "@/assets/treatment-linguale.jpg";
 import ctaBackground from "@/assets/cta-background.png";
+import toothMirror from "@/assets/tooth-mirror.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -162,7 +163,8 @@ const Index = () => {
       {/* Le Cabinet d'Orthodontie */}
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
+          {/* Header centered */}
+          <div className="text-center max-w-4xl mx-auto mb-12">
             <span className="text-primary font-normal text-base md:text-lg uppercase tracking-wider mb-6 block" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Le cabinet dentaire d'orthodontie
             </span>
@@ -175,36 +177,54 @@ const Index = () => {
               />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-normal text-primary mb-8" style={{ fontFamily: "'Tenor Sans', serif" }}>
+            <h2 className="text-3xl md:text-4xl font-normal text-primary mb-4" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Une approche centrée sur vous
             </h2>
-            <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto text-center text-base md:text-lg">
-              À la Clinique Dentaire Panorama, nous croyons que chaque sourire raconte une histoire. 
-              C'est pourquoi nous adoptons une approche personnalisée, en prenant le temps de 
-              comprendre vos attentes et vos préoccupations.
-            </p>
-            <p className="text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto text-center text-base md:text-lg">
-              Notre équipe pluridisciplinaire travaille en synergie pour vous proposer 
-              des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
-            </p>
+          </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              {cabinetValues.map((value, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4">
-                    <value.icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
+          {/* Content with image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-12">
+            {/* Left - Text */}
+            <div>
+              <p className="text-muted-foreground mb-6 leading-relaxed text-base md:text-lg">
+                À la Clinique Dentaire Panorama, nous croyons que chaque sourire raconte une histoire. 
+                C'est pourquoi nous adoptons une approche personnalisée, en prenant le temps de 
+                comprendre vos attentes et vos préoccupations.
+              </p>
+              <p className="text-muted-foreground mb-8 leading-relaxed text-base md:text-lg">
+                Notre équipe pluridisciplinaire travaille en synergie pour vous proposer 
+                des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                {cabinetValues.map((value, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full border-2 border-primary/40 flex items-center justify-center flex-shrink-0">
+                      <value.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                    </div>
+                    <span className="text-muted-foreground text-sm">{value.title}</span>
                   </div>
-                  <span className="text-muted-foreground text-sm">{value.title}</span>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <Button variant="cta" size="lg" asChild>
+                <Link to="/cabinet" className="flex items-center gap-2">
+                  Découvrir le cabinet
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
             </div>
 
-            <Button variant="cta" size="lg" asChild>
-              <Link to="/cabinet" className="flex items-center gap-2">
-                Découvrir le cabinet
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+            {/* Right - Image */}
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
+                <img 
+                  src={toothMirror} 
+                  alt="Cabinet dentaire équipement moderne" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
