@@ -205,100 +205,40 @@ const Header = () => {
               Accueil
             </Link>
 
-            {/* Cabinet mobile dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileSubmenu("cabinet")}
-                className={cn(
-                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
-                  isActive("/cabinet") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-                )}
-              >
-                Le Cabinet d'orthodontie
-                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "cabinet" && "rotate-180")} />
-              </button>
-              {openMobileMenu === "cabinet" && (
-                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
-                  {cabinetSubPages.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Soins mobile dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileSubmenu("soins")}
-                className={cn(
-                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
-                  isActive("/soins") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-                )}
-              >
-                Soins & Techniques
-                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "soins" && "rotate-180")} />
-              </button>
-              {openMobileMenu === "soins" && (
-                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
-                  {soinsSubPages.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Infos pratiques mobile dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileSubmenu("infos")}
-                className={cn(
-                  "w-full px-4 py-3 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
-                  isActive("/infos-pratiques") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
-                )}
-              >
-                Infos Pratiques
-                <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", openMobileMenu === "infos" && "rotate-180")} />
-              </button>
-              {openMobileMenu === "infos" && (
-                <div className="pl-4 mt-1 space-y-1 animate-fade-in">
-                  {infosPratiquesSubPages.map((item) => (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Soins Dentaires */}
+            {/* Cabinet - simple links */}
             <Link
-              to="/soins-dentaires"
+              to="/cabinet/a-propos"
               onClick={() => setIsOpen(false)}
               className={cn(
                 "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                isActive("/soins-dentaires") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                isActive("/cabinet") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
               )}
             >
-              Soins Dentaires
+              Le Cabinet d'orthodontie
+            </Link>
+
+            {/* Soins & Techniques */}
+            <Link
+              to="/soins/enfants"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                isActive("/soins") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+              )}
+            >
+              Soins & Techniques
+            </Link>
+
+            {/* Infos Pratiques */}
+            <Link
+              to="/infos-pratiques/parcours"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                isActive("/infos-pratiques") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+              )}
+            >
+              Infos Pratiques
             </Link>
 
             {/* Contact */}
@@ -313,15 +253,17 @@ const Header = () => {
               Contact
             </Link>
 
+            {/* Soins Dentaires - Dark chocolate block */}
+            <Link
+              to="/soins-dentaires"
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl text-sm font-medium transition-colors bg-[#3D2314] text-white hover:bg-[#4A2A1A] mt-2"
+            >
+              Soins Dentaires
+            </Link>
+
             {/* Mobile CTA */}
-            <div className="mt-4 pt-4 border-t border-border/50 flex flex-col gap-3">
-              <a
-                href="tel:+2250575430000"
-                className="flex items-center justify-center gap-2 px-4 py-3 text-sm text-muted-foreground hover:text-primary rounded-lg border border-border transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                +225 05 75 43 00 00
-              </a>
+            <div className="mt-4 pt-4 border-t border-border/50">
               <Button variant="cta" className="w-full" asChild>
                 <a
                   href={RDV_LINK}
