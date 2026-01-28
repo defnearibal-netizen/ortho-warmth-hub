@@ -44,6 +44,7 @@ export default {
           foreground: "hsl(var(--cta-foreground))",
           hover: "hsl(var(--cta-hover))",
         },
+        "cta-hover": "hsl(var(--cta-hover))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

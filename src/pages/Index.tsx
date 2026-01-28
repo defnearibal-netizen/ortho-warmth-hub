@@ -366,7 +366,7 @@ const Index = () => {
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
           {/* Card with brown background */}
-          <div className="bg-primary rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+          <div className="bg-cta-hover rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Soins dentaires complets
