@@ -277,7 +277,7 @@ const Index = () => {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch max-w-6xl mx-auto">
             {/* Left - Info */}
             <div className="space-y-10 pl-4 md:pl-8 lg:pl-16">
               {/* Horaires */}
@@ -335,7 +335,7 @@ const Index = () => {
             </div>
 
             {/* Right - Google Map */}
-            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-soft">
+            <div className="h-full min-h-[400px] lg:min-h-[450px] rounded-xl overflow-hidden shadow-soft">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4LjAiVw!5e0!3m2!1sfr!2sci!4v1706000000000!5m2!1sfr!2sci"
                 width="100%"
