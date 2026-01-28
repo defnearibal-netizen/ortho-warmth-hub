@@ -71,7 +71,7 @@ export default {
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
+        heading: ['Tenor Sans', 'serif'],
       },
       keyframes: {
         "accordion-down": {
