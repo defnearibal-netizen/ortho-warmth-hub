@@ -277,9 +277,9 @@ const Index = () => {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch max-w-5xl mx-auto">
             {/* Left - Info */}
-            <div className="space-y-10 pl-4 md:pl-8 lg:pl-16">
+            <div className="space-y-10 flex flex-col justify-center">
               {/* Horaires */}
               <div>
                 <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
