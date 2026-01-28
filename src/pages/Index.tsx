@@ -15,6 +15,7 @@ import treatmentEnfant from "@/assets/treatment-enfant.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 import treatmentAligneurs from "@/assets/treatment-aligneurs.jpg";
 import treatmentLinguale from "@/assets/treatment-linguale.jpg";
+import ctaBackground from "@/assets/cta-background.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -406,8 +407,15 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 gradient-hero">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-24 relative overflow-hidden">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${ctaBackground})` }}
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading">
             Prêt à transformer votre sourire ?
           </h2>
