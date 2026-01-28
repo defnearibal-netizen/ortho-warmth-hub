@@ -125,38 +125,43 @@ const Index = () => {
         {/* Frosted glass overlay */}
         <div className="absolute inset-0 backdrop-blur-sm bg-foreground/50" />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-4 animate-fade-in">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
+          <div className="max-w-4xl ml-4 md:ml-8 lg:ml-12">
+            {/* Small uppercase label */}
+            <p className="text-sm md:text-base text-primary font-medium uppercase tracking-[0.2em] mb-4 animate-fade-in">
+              Orthodontie & Soins dentaires
+            </p>
+            
+            {/* Large main title - serif style */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.15] mb-8 animate-fade-in" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               Clinique Dentaire Panorama
             </h1>
             
-            <p className="text-xs md:text-sm text-white/90 mb-6 font-light italic tracking-wide animate-[fade-in_1s_ease-out_0.2s_both,scale-in_0.8s_ease-out_0.2s_both] hover:scale-105 transition-transform duration-300 cursor-default">
+            <p className="text-sm md:text-base text-white/85 mb-6 font-light italic tracking-wide animate-[fade-in_1s_ease-out_0.2s_both] max-w-xl">
               « Un sourire confiant et harmonieux, ça fait toute la différence ! »
             </p>
 
-            <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base md:text-lg text-white/80 mb-10 leading-relaxed max-w-2xl animate-fade-in font-light" style={{ animationDelay: '0.2s' }}>
               Notre clinique dentaire propose des soins pluridisciplinaires. Allant de l'orthodontie 
               aux soins dentaires, chirurgicaux d'implantologie et de parodontologie, notre cabinet 
               dentaire moderne allie technologie et soins personnalisés pour votre santé bucco-dentaire.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Button variant="cta" size="xl" asChild>
+              <Button variant="heroOutline" size="xl" asChild className="border-white/80 text-white hover:bg-white/10 uppercase tracking-widest text-sm font-medium px-8 py-6">
                 <a
                   href={RDV_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
-                  <Calendar className="h-5 w-5" />
-                  Prendre rendez-vous en orthodontie
+                  Prendre RDV
                 </a>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild>
+              <Button variant="ghost" size="xl" asChild className="text-white hover:bg-white/10 uppercase tracking-widest text-sm font-medium">
                 <Link to="/cabinet-dentaire" className="flex items-center gap-2">
-                  Découvrir nos soins dentaires
-                  <ArrowRight className="h-5 w-5" />
+                  Nos soins dentaires
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
             </div>
