@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Calendar, ChevronDown } from "lucide-react";
+import { Menu, X, Calendar, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -156,15 +156,8 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* CTA Buttons - Desktop */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:+2250575430000"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <Phone className="h-4 w-4" />
-              <span>+225 05 75 43 00 00</span>
-            </a>
+          {/* CTA Button - Desktop */}
+          <div className="hidden lg:flex items-center">
             <Button variant="cta" size="sm" asChild>
               <a
                 href={RDV_LINK}
