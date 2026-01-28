@@ -222,24 +222,24 @@ const Index = () => {
       {/* Les Soins et Techniques */}
       <section className="py-24 bg-secondary" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          {/* Header avec titre et description alignés à gauche */}
-          <div className="max-w-4xl mb-16">
+          {/* Header avec titre et description centrés */}
+          <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               Nos Traitements
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-3xl">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
               En fonction de l'âge du patient, de sa denture et des objectifs thérapeutiques à accomplir, 
               nous utilisons différents types de traitements orthodontiques :
             </p>
           </div>
 
-          {/* Grille des 4 traitements avec placeholders d'images */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {/* Grille des 4 traitements sur une seule ligne */}
+          <div className="flex flex-wrap lg:flex-nowrap gap-6 mb-10">
             {treatments.map((treatment, index) => (
               <Link
                 key={index}
                 to={treatment.link}
-                className="group block"
+                className="group block flex-1 min-w-[200px]"
               >
                 {/* Placeholder pour l'image */}
                 <div className="aspect-[4/3] rounded-xl bg-muted/50 mb-4 overflow-hidden">
@@ -248,10 +248,10 @@ const Index = () => {
                     <treatment.icon className="h-12 w-12 text-primary/40" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors text-center">
                   {treatment.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mt-1">{treatment.description}</p>
+                <p className="text-muted-foreground text-sm mt-1 text-center">{treatment.description}</p>
               </Link>
             ))}
           </div>
