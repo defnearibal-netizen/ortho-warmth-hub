@@ -12,6 +12,7 @@ import logoCabinet from "@/assets/logo-cabinet.jpg";
 import logoDA from "@/assets/logo-da.png";
 import treatmentEnfant from "@/assets/treatment-enfant.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
+import treatmentAligneurs from "@/assets/treatment-aligneurs.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -35,7 +36,7 @@ const treatments = [
     title: "Aligneurs invisibles",
     description: "Solution discrète et amovible pour adultes.",
     link: "/soins/aligneurs",
-    image: null,
+    image: treatmentAligneurs,
   },
   {
     icon: UserCheck,
