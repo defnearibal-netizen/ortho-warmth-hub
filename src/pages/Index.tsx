@@ -122,8 +122,8 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{ backgroundImage: `url(${heroClinic})` }}
         />
-        {/* Frosted glass overlay */}
-        <div className="absolute inset-0 backdrop-blur-sm bg-foreground/50" />
+        {/* Gradient overlay - less blur on left, more visible image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/40 to-transparent" />
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
           <div className="max-w-4xl ml-4 md:ml-8 lg:ml-12">
