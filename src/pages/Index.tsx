@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
 import logoDA from "@/assets/logo-da.png";
@@ -116,25 +116,26 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden" style={{ fontFamily: "'Poppins', sans-serif" }}>
+        {/* Background image with blur effect */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBackground})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-transparent" />
-        </div>
+          className="absolute inset-0 bg-cover bg-center scale-105"
+          style={{ backgroundImage: `url(${heroClinic})` }}
+        />
+        {/* Frosted glass overlay */}
+        <div className="absolute inset-0 backdrop-blur-sm bg-foreground/50" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 font-heading animate-fade-in">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-4 animate-fade-in">
               Clinique Dentaire Panorama
             </h1>
             
-            <p className="text-xs md:text-sm text-white/85 mb-6 font-light italic tracking-wide animate-[fade-in_1s_ease-out_0.2s_both,scale-in_0.8s_ease-out_0.2s_both] hover:scale-105 transition-transform duration-300 cursor-default">
+            <p className="text-xs md:text-sm text-white/90 mb-6 font-light italic tracking-wide animate-[fade-in_1s_ease-out_0.2s_both,scale-in_0.8s_ease-out_0.2s_both] hover:scale-105 transition-transform duration-300 cursor-default">
               « Un sourire confiant et harmonieux, ça fait toute la différence ! »
             </p>
 
-            <p className="text-base md:text-lg text-white/85 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Notre clinique dentaire propose des soins pluridisciplinaires. Allant de l'orthodontie 
               aux soins dentaires, chirurgicaux d'implantologie et de parodontologie, notre cabinet 
               dentaire moderne allie technologie et soins personnalisés pour votre santé bucco-dentaire.
