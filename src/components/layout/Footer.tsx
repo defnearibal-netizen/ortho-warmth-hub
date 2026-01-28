@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="block mb-4">
               <div className="flex flex-col">
-                <span className="text-xl font-light font-heading tracking-wide text-foreground">
+                <span className="text-xl font-normal tracking-wide text-foreground" style={{ fontFamily: "'Tenor Sans', serif" }}>
                   Clinique Dentaire Panorama
                 </span>
                 <span className="text-xs text-muted-foreground font-light tracking-wider">
