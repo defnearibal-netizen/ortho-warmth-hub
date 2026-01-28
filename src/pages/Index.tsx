@@ -10,7 +10,6 @@ import heroBackground from "@/assets/hero-background.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
 import logoDA from "@/assets/logo-da.png";
-import cabinetInterior from "@/assets/cabinet-interior.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -165,16 +164,8 @@ const Index = () => {
       </section>
 
       {/* Le Cabinet d'Orthodontie */}
-      <section className="relative py-24 overflow-hidden" style={{ fontFamily: "'Poppins', sans-serif" }}>
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${cabinetInterior})` }}
-        />
-        {/* Glass effect overlay */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
+        <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <span className="text-primary font-semibold text-base md:text-lg uppercase tracking-wider mb-6 block">
               Le cabinet dentaire d'orthodontie
