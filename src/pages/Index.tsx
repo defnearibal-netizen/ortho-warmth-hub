@@ -220,39 +220,43 @@ const Index = () => {
       </section>
 
       {/* Les Soins et Techniques */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-secondary" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Les soins et techniques
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
-              Nos traitements d'orthodontie
+          {/* Header avec titre et description alignés à gauche */}
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Nos Traitements
             </h2>
-            <p className="text-muted-foreground">
-              Des solutions adaptées à chaque âge et chaque besoin pour un sourire parfait.
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-3xl">
+              En fonction de l'âge du patient, de sa denture et des objectifs thérapeutiques à accomplir, 
+              nous utilisons différents types de traitements orthodontiques :
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {/* Grille des 4 traitements avec placeholders d'images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {treatments.map((treatment, index) => (
               <Link
                 key={index}
                 to={treatment.link}
-                className="group bg-card rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-2 hover-scale"
+                className="group block"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent/30 flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors">
-                  <treatment.icon className="h-6 w-6 text-primary" />
+                {/* Placeholder pour l'image */}
+                <div className="aspect-[4/3] rounded-xl bg-muted/50 mb-4 overflow-hidden">
+                  {/* Image à ajouter ici */}
+                  <div className="w-full h-full flex items-center justify-center bg-accent/20">
+                    <treatment.icon className="h-12 w-12 text-primary/40" />
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2 font-heading group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                   {treatment.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{treatment.description}</p>
+                <p className="text-muted-foreground text-sm mt-1">{treatment.description}</p>
               </Link>
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <Link to="/services" className="flex items-center gap-2">
                 Voir tous les soins
