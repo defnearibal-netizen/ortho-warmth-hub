@@ -128,7 +128,7 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
           <div className="max-w-4xl ml-4 md:ml-8 lg:ml-12">
             {/* Small uppercase label */}
-            <p className="text-sm md:text-base text-primary font-medium uppercase tracking-[0.2em] mb-4 animate-fade-in">
+            <p className="text-sm md:text-base text-white font-medium uppercase tracking-[0.2em] mb-4 animate-fade-in">
               Orthodontie & Soins dentaires
             </p>
             
@@ -158,7 +158,7 @@ const Index = () => {
                   Prendre RDV
                 </a>
               </Button>
-              <Button variant="ghost" size="xl" asChild className="text-white hover:bg-white/10 uppercase tracking-widest text-sm font-medium">
+              <Button variant="cta" size="xl" asChild className="uppercase tracking-widest text-sm font-medium">
                 <Link to="/cabinet-dentaire" className="flex items-center gap-2">
                   Nos soins dentaires
                   <ArrowRight className="h-4 w-4" />
