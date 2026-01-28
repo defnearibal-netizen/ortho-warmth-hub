@@ -11,6 +11,7 @@ import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
 import logoDA from "@/assets/logo-da.png";
 import treatmentEnfant from "@/assets/treatment-enfant.png";
+import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -27,7 +28,7 @@ const treatments = [
     title: "Multi-attaches autoligaturantes",
     description: "Brackets modernes pour un traitement efficace.",
     link: "/soins/autoligaturantes",
-    image: null,
+    image: treatmentAutoligaturantes,
   },
   {
     icon: Eye,
