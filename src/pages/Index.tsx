@@ -277,41 +277,41 @@ const Index = () => {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
             {/* Left - Info */}
-            <div className="space-y-10">
+            <div className="space-y-10 pl-4 md:pl-8 lg:pl-16">
               {/* Horaires */}
               <div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
                   Horaires d'ouverture
                 </h3>
                 <div className="space-y-3">
                   <div className="flex gap-8">
-                    <span className="text-foreground font-medium w-28">Lundi</span>
-                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                    <span className="text-primary font-medium w-28">Lundi</span>
+                    <span className="text-foreground">09h00 - 18h00</span>
                   </div>
                   <div className="flex gap-8">
-                    <span className="text-foreground font-medium w-28">Mardi</span>
-                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                    <span className="text-primary font-medium w-28">Mardi</span>
+                    <span className="text-foreground">09h00 - 18h00</span>
                   </div>
                   <div className="flex gap-8">
-                    <span className="text-foreground font-medium w-28">Mercredi</span>
-                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                    <span className="text-primary font-medium w-28">Mercredi</span>
+                    <span className="text-foreground">09h00 - 18h00</span>
                   </div>
                   <div className="flex gap-8">
-                    <span className="text-foreground font-medium w-28">Jeudi</span>
-                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                    <span className="text-primary font-medium w-28">Jeudi</span>
+                    <span className="text-foreground">09h00 - 18h00</span>
                   </div>
                   <div className="flex gap-8">
-                    <span className="text-foreground font-medium w-28">Vendredi</span>
-                    <span className="text-muted-foreground">09h00 - 18h00</span>
+                    <span className="text-primary font-medium w-28">Vendredi</span>
+                    <span className="text-foreground">09h00 - 18h00</span>
                   </div>
                 </div>
               </div>
 
               {/* Contact */}
               <div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
                   Contact
                 </h3>
                 <div className="space-y-4">
