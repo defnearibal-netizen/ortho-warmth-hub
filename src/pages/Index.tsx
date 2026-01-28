@@ -123,7 +123,7 @@ const Index = () => {
             </p>
             
             {/* Large main title - serif style */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.15] mb-8 animate-fade-in" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-[1.15] mb-8 animate-fade-in" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Clinique Dentaire Panorama
             </h1>
             
@@ -163,7 +163,7 @@ const Index = () => {
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <span className="text-primary font-semibold text-base md:text-lg uppercase tracking-wider mb-6 block">
+            <span className="text-primary font-normal text-base md:text-lg uppercase tracking-wider mb-6 block" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Le cabinet dentaire d'orthodontie
             </span>
             
@@ -175,7 +175,7 @@ const Index = () => {
               />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-semibold text-primary mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h2 className="text-3xl md:text-4xl font-normal text-primary mb-8" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Une approche centrée sur vous
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto text-center text-base md:text-lg">
