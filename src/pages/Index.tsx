@@ -365,13 +365,13 @@ const Index = () => {
       {/* Cabinet Dentaire */}
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          {/* Card with light brown background */}
-          <div className="bg-secondary rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+          {/* Card with brown background */}
+          <div className="bg-primary rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Soins dentaires complets
               </h2>
-              <p className="text-muted-foreground text-base md:text-lg">
+              <p className="text-white/80 text-base md:text-lg">
                 En plus de l'orthodontie, nous proposons une gamme complète de soins dentaires.
               </p>
             </div>
@@ -380,21 +380,21 @@ const Index = () => {
               {dentalServices.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 backdrop-blur-sm rounded-xl p-5 text-center hover:bg-white/80 transition-all duration-300 shadow-soft"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-base font-semibold text-foreground mb-1">
+                  <h3 className="text-base font-semibold text-white mb-1">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">{service.description}</p>
+                  <p className="text-white/70 text-sm">{service.description}</p>
                 </div>
               ))}
             </div>
 
             <div className="text-center">
-              <Button variant="cta" size="lg" asChild>
+              <Button variant="hero" size="lg" asChild>
                 <Link to="/cabinet-dentaire" className="flex items-center gap-2">
                   En savoir plus
                   <ArrowRight className="h-5 w-5" />
