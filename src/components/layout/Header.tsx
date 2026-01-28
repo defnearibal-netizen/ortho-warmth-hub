@@ -198,8 +198,8 @@ const Header = () => {
               to="/"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                location.pathname === "/" ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                "py-2 text-sm font-medium transition-colors whitespace-nowrap",
+                location.pathname === "/" ? "text-primary" : "text-foreground hover:text-primary"
               )}
             >
               Accueil
@@ -210,11 +210,11 @@ const Header = () => {
               to="/cabinet/a-propos"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                isActive("/cabinet") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                "py-2 text-sm font-medium transition-colors whitespace-nowrap",
+                isActive("/cabinet") ? "text-primary" : "text-foreground hover:text-primary"
               )}
             >
-              Le Cabinet d'orthodontie
+              Le Cabinet
             </Link>
 
             {/* Soins & Techniques */}
@@ -222,8 +222,8 @@ const Header = () => {
               to="/soins/enfants"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                isActive("/soins") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                "py-2 text-sm font-medium transition-colors whitespace-nowrap",
+                isActive("/soins") ? "text-primary" : "text-foreground hover:text-primary"
               )}
             >
               Soins & Techniques
@@ -234,8 +234,8 @@ const Header = () => {
               to="/infos-pratiques/parcours"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                isActive("/infos-pratiques") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                "py-2 text-sm font-medium transition-colors whitespace-nowrap",
+                isActive("/infos-pratiques") ? "text-primary" : "text-foreground hover:text-primary"
               )}
             >
               Infos Pratiques
@@ -246,8 +246,8 @@ const Header = () => {
               to="/contact"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                isActive("/contact") ? "text-primary bg-secondary/50" : "text-foreground hover:bg-muted"
+                "py-2 text-sm font-medium transition-colors whitespace-nowrap",
+                isActive("/contact") ? "text-primary" : "text-foreground hover:text-primary"
               )}
             >
               Contact
@@ -257,7 +257,7 @@ const Header = () => {
             <Link
               to="/soins-dentaires"
               onClick={() => setIsOpen(false)}
-              className="px-4 py-3 rounded-xl text-sm font-medium transition-colors bg-[#3D2314] text-white hover:bg-[#4A2A1A] mt-2"
+              className="py-2 px-4 rounded-lg text-sm font-medium transition-colors whitespace-nowrap bg-[#3D2314] text-white hover:bg-[#4A2A1A] mt-3 text-center"
             >
               Soins Dentaires
             </Link>
