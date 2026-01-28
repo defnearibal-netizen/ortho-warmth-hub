@@ -334,9 +334,19 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right - Image Placeholder */}
-            <div className="aspect-[4/3] rounded-xl bg-accent/20 flex items-center justify-center overflow-hidden">
-              <Clock className="h-24 w-24 text-primary/30" />
+            {/* Right - Google Map */}
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-soft">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4LjAiVw!5e0!3m2!1sfr!2sci!4v1706000000000!5m2!1sfr!2sci"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localisation Clinique Dentaire Panorama"
+                className="w-full h-full"
+              />
             </div>
           </div>
 
