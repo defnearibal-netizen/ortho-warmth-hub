@@ -84,7 +84,7 @@ const Header = () => {
           {/* Logo - Left aligned */}
           <Link to="/" className="flex-shrink-0">
             <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-light font-heading tracking-wide text-foreground">
+              <span className="text-xl md:text-2xl font-normal tracking-wide text-foreground" style={{ fontFamily: "'Tenor Sans', serif" }}>
                 Clinique Dentaire Panorama
               </span>
               <span className="text-xs text-muted-foreground font-light tracking-wider">
