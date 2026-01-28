@@ -363,41 +363,44 @@ const Index = () => {
       </section>
 
       {/* Cabinet Dentaire */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Cabinet dentaire
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6 font-heading">
-              Soins dentaires complets
-            </h2>
-          </div>
+          {/* Card with brown background */}
+          <div className="bg-primary rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Soins dentaires complets
+              </h2>
+              <p className="text-white/80 text-base md:text-lg">
+                En plus de l'orthodontie, nous proposons une gamme complète de soins dentaires.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
-            {dentalServices.map((service, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                  <service.icon className="h-6 w-6 text-primary" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+              {dentalServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center hover:bg-white/20 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-base font-semibold text-white mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/70 text-sm">{service.description}</p>
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2 font-heading">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">{service.description}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/cabinet-dentaire" className="flex items-center gap-2">
-                En savoir plus
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="text-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/cabinet-dentaire" className="flex items-center gap-2">
+                  En savoir plus
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
