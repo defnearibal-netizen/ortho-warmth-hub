@@ -43,7 +43,7 @@ const InfosPratiquesSection = () => {
     <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="max-w-4xl mb-12">
+        <div className="text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Tout ce qu'il faut savoir
           </h2>
@@ -54,7 +54,7 @@ const InfosPratiquesSection = () => {
 
         {/* Tabs Navigation */}
         <div className="border-b border-border mb-10">
-          <nav className="flex gap-8 md:gap-12">
+          <nav className="flex justify-center gap-8 md:gap-12">
             {practicalInfos.map((info) => (
               <button
                 key={info.id}
