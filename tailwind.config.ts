@@ -70,8 +70,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Aptos', 'Montserrat', 'Calibri', 'Arial', 'sans-serif'],
-        heading: ['Aptos', 'Montserrat', 'Calibri', 'Arial', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
