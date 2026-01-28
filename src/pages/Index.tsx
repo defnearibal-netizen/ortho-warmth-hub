@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { 
   Calendar, Heart, Shield, Sparkles, ArrowRight, 
   Baby, User, UserCheck, Eye, MapPin, Phone, Clock,
-  CheckCircle, Award, Stethoscope, AlertTriangle, FileText
+  Award, Stethoscope, AlertTriangle, FileText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import ToothSparkle from "@/components/icons/ToothSparkle";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
@@ -57,7 +58,7 @@ const cabinetValues = [
     description: "Transparence sur les traitements et tarifs.",
   },
   {
-    icon: Sparkles,
+    icon: ToothSparkle,
     title: "Résultats",
     description: "Des milliers de sourires transformés.",
   },
