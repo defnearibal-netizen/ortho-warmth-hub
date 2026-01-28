@@ -53,8 +53,8 @@ const InfosPratiquesSection = () => {
         </div>
 
         {/* Tabs Navigation */}
-        <div className="border-b border-border mb-10">
-          <nav className="flex justify-center gap-8 md:gap-12">
+        <div className="border-b border-border mb-12">
+          <nav className="flex justify-center gap-12 md:gap-20 lg:gap-28">
             {practicalInfos.map((info) => (
               <button
                 key={info.id}
@@ -76,26 +76,21 @@ const InfosPratiquesSection = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-10">
-          {/* Text Content */}
-          <div className="animate-fade-in" key={activeTab}>
-            <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-6">
+        <div className="max-w-4xl mx-auto mb-10">
+          {/* Text Content - Centered */}
+          <div className="animate-fade-in text-center" key={activeTab}>
+            <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
               {activeInfo.title}
             </h3>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
               {activeInfo.details}
             </p>
             <Button variant="cta" size="lg" asChild>
-              <Link to={activeInfo.link} className="flex items-center gap-2">
+              <Link to={activeInfo.link} className="inline-flex items-center gap-2">
                 En savoir plus
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
-          </div>
-
-          {/* Placeholder for Image */}
-          <div className="aspect-[4/3] rounded-xl bg-accent/20 flex items-center justify-center overflow-hidden">
-            <activeInfo.icon className="h-24 w-24 text-primary/30" />
           </div>
         </div>
 
