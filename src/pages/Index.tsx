@@ -57,7 +57,7 @@ const cabinetValues = [
     description: "Transparence sur les traitements et tarifs.",
   },
   {
-    icon: Sparkles,
+    icon: CheckCircle,
     title: "Résultats",
     description: "Des milliers de sourires transformés.",
   },
