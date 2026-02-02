@@ -96,26 +96,29 @@ const APropos = () => {
       <section id="a-propos" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
-              Notre cabinet d'orthodontie
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-              <div className="flex flex-col justify-center">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start">
+              {/* Text Column */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 font-heading">
+                  Notre cabinet d'orthodontie
+                </h2>
+                <div className="w-12 h-0.5 bg-primary mb-6" />
+                <p className="text-muted-foreground leading-relaxed mb-5">
                   Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-5">
                   Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
                 </p>
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-soft">
+              {/* Image Column */}
+              <div className="lg:w-80 xl:w-96 rounded-2xl overflow-hidden shadow-soft">
                 <img
                   src={dentistPatient}
                   alt="Dentiste avec patient"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
