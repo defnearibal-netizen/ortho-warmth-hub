@@ -46,8 +46,8 @@ const APropos = () => {
         />
         
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-2xl">
+        <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16">
+          <div className="max-w-2xl ml-4 md:ml-12 lg:ml-20">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-10 leading-tight" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Présentation du cabinet et informations pratiques
             </h1>
