@@ -6,11 +6,10 @@ import cabinetInterior from "@/assets/cabinet-interior.png";
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const navItems = [
-  { id: "formation", label: "Formation" },
+  { id: "a-propos", label: "À propos" },
   { id: "philosophie", label: "Philosophie" },
-  { id: "specialisation", label: "Notre spécialisation en orthodontie invisible" },
-  { id: "cabinet", label: "Se rendre au cabinet" },
-  { id: "contact", label: "Nous contacter" },
+  { id: "equipe", label: "Notre équipe" },
+  { id: "emplacement", label: "Emplacement et contact" },
   { id: "faq", label: "FAQ Administratif" },
 ];
 
@@ -32,28 +31,30 @@ const APropos = () => {
   return (
     <Layout>
       {/* Hero Section - Full Screen */}
-      <section className="relative min-h-screen flex items-center justify-center">
+      <section className="relative min-h-screen flex items-center">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${cabinetInterior})` }}
         />
-        {/* Glass Effect Overlay */}
-        <div className="absolute inset-0 backdrop-blur-[2px] bg-foreground/40" />
+        {/* Dark chocolate overlay on left side - gradient fade to right */}
+        <div 
+          className="absolute inset-0"
+          style={{ 
+            background: 'linear-gradient(to right, rgba(62, 39, 35, 0.75) 0%, rgba(62, 39, 35, 0.6) 40%, rgba(62, 39, 35, 0.2) 60%, transparent 80%)' 
+          }}
+        />
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8" style={{ fontFamily: "'Tenor Sans', serif" }}>
-              Notre cabinet d'orthodontie
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-10 leading-tight" style={{ fontFamily: "'Tenor Sans', serif" }}>
+              Présentation du cabinet et informations pratiques
             </h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-2xl">
-              Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
-            </p>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-foreground bg-transparent uppercase tracking-wider"
+              className="border-white/80 text-white hover:bg-white hover:text-foreground bg-white/10 backdrop-blur-sm uppercase tracking-wider px-8"
               asChild
             >
               <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
@@ -76,7 +77,7 @@ const APropos = () => {
       {/* Navigation Bar */}
       <nav id="nav-bar" className="sticky top-0 z-50 bg-white border-b border-border/50 shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-2 md:gap-6 py-4 overflow-x-auto scrollbar-hide">
+          <div className="flex items-center justify-center gap-4 md:gap-8 py-4 overflow-x-auto scrollbar-hide">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -90,13 +91,16 @@ const APropos = () => {
         </div>
       </nav>
 
-      {/* Formation Section */}
-      <section id="formation" className="py-20 bg-background">
+      {/* À propos Section */}
+      <section id="a-propos" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
-              Formation
+              Notre cabinet d'orthodontie
             </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
+            </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
             </p>
@@ -124,33 +128,33 @@ const APropos = () => {
         </div>
       </section>
 
-      {/* Spécialisation Section */}
-      <section id="specialisation" className="py-20 bg-background">
+      {/* Notre équipe Section */}
+      <section id="equipe" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
-              Notre spécialisation en orthodontie invisible
+              Notre équipe
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
+              Notre équipe pluridisciplinaire travaille en synergie pour vous proposer des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Ces techniques permettent de corriger les malpositions dentaires de manière discrète, pour un traitement esthétique adapté à votre vie quotidienne.
+              Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Se rendre au cabinet Section */}
-      <section id="cabinet" className="py-20 bg-secondary">
+      {/* Emplacement et contact Section */}
+      <section id="emplacement" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
-              Se rendre au cabinet
+              Emplacement et contact
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <div className="flex items-start gap-3 mb-4">
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-1 shrink-0" />
                   <div>
                     <p className="font-semibold text-foreground mb-1">Adresse</p>
@@ -170,24 +174,6 @@ const APropos = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-card rounded-xl p-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  Notre cabinet est facilement accessible en transport en commun et dispose d'un parking à proximité.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Nous contacter Section */}
-      <section id="contact" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
-              Nous contacter
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary shrink-0" />
@@ -206,9 +192,7 @@ const APropos = () => {
                     aribalorthodontie.abidjan@gmail.com
                   </a>
                 </div>
-              </div>
-              <div>
-                <Button variant="cta" size="lg" asChild className="w-full md:w-auto">
+                <Button variant="cta" size="lg" asChild className="mt-4">
                   <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
                     Prendre rendez-vous
                   </a>
@@ -220,26 +204,26 @@ const APropos = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-secondary">
+      <section id="faq" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
               FAQ Administratif
             </h2>
             <div className="space-y-6">
-              <div className="bg-card rounded-xl p-6">
+              <div className="bg-card rounded-xl p-6 shadow-soft">
                 <h3 className="font-semibold text-foreground mb-2">Quels documents apporter lors de la première consultation ?</h3>
                 <p className="text-muted-foreground">
                   Votre carte vitale, votre carte de mutuelle, et tout document médical pertinent (radiographies récentes, compte-rendu d'autres spécialistes).
                 </p>
               </div>
-              <div className="bg-card rounded-xl p-6">
+              <div className="bg-card rounded-xl p-6 shadow-soft">
                 <h3 className="font-semibold text-foreground mb-2">Comment se déroule la prise en charge ?</h3>
                 <p className="text-muted-foreground">
                   Un devis détaillé vous sera remis lors de la première consultation. Nous vous accompagnons dans les démarches administratives avec votre mutuelle.
                 </p>
               </div>
-              <div className="bg-card rounded-xl p-6">
+              <div className="bg-card rounded-xl p-6 shadow-soft">
                 <h3 className="font-semibold text-foreground mb-2">Quels moyens de paiement acceptez-vous ?</h3>
                 <p className="text-muted-foreground">
                   Nous acceptons les paiements par carte bancaire, chèque et espèces. Des facilités de paiement peuvent être proposées.
