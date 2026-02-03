@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, MapPin, Phone, Mail, Clock } from "lucide-react";
 import cabinetInterior from "@/assets/cabinet-interior.png";
 import dentistPatient from "@/assets/dentist-patient.jpg";
+import philosophiePatient from "@/assets/philosophie-patient.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -127,18 +128,25 @@ const APropos = () => {
       </section>
 
       {/* Philosophie Section */}
-      <section id="philosophie" className="py-20 bg-secondary">
+      <section id="philosophie" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
-              Philosophie
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+              Notre philosophie
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Notre approche est centrée sur le patient. Nous prenons le temps d'écouter vos besoins et vos inquiétudes pour vous proposer un traitement personnalisé.
+              Notre approche est centrée sur le patient. Nous prenons le temps d'écouter vos besoins et vos inquiétudes pour vous proposer un traitement personnalisé. Nous accordons une importance particulière au confort et à la sérénité de nos patients.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Nous accordons une importance particulière au confort et à la sérénité de nos patients. Notre cabinet a été conçu pour être un espace apaisant où vous vous sentirez en confiance.
-            </p>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
+            <div className="relative max-w-2xl mx-auto">
+              <img
+                src={philosophiePatient}
+                alt="Patient souriant lors d'un traitement orthodontique"
+                className="w-full h-auto rounded-lg shadow-soft"
+              />
+              {/* Decorative accent block */}
+              <div className="absolute -right-4 top-1/4 bottom-1/4 w-8 bg-secondary -z-10 hidden md:block" />
+            </div>
           </div>
         </div>
       </section>
