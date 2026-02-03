@@ -110,7 +110,7 @@ const APropos = () => {
               Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
             </p>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
-            <div className="relative max-w-2xl mx-auto">
+            <div className="relative max-w-md mx-auto">
               <img
                 src={dentistPatient}
                 alt="Dentiste avec patient"
