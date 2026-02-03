@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Calendar } from "lucide-react";
 import enfantsHero from "@/assets/enfants-hero.png";
 import momDaughterCta from "@/assets/mom-daughter-cta.png";
+import appareilExpansion from "@/assets/appareil-expansion.png";
+import appareilFonctionnel from "@/assets/appareil-fonctionnel.png";
+import appareilMainteneur from "@/assets/appareil-mainteneur.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -79,24 +82,57 @@ const Enfants = () => {
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold text-foreground mb-4">
+              <h3 className="text-xl font-semibold text-foreground mb-6">
                 Les appareils utilisés
               </h3>
-              <div className="bg-secondary rounded-2xl p-6 mb-8">
-                <ul className="space-y-4">
-                  <li className="text-muted-foreground">
-                    <strong className="text-foreground">Appareils d'expansion :</strong> Permettent 
-                    d'élargir le palais et de créer de l'espace pour les dents définitives.
-                  </li>
-                  <li className="text-muted-foreground">
-                    <strong className="text-foreground">Appareils fonctionnels :</strong> Corrigent 
-                    les décalages entre les mâchoires en stimulant la croissance.
-                  </li>
-                  <li className="text-muted-foreground">
-                    <strong className="text-foreground">Mainteneurs d'espace :</strong> Préservent 
-                    l'espace nécessaire après une perte prématurée de dent de lait.
-                  </li>
-                </ul>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                {/* Appareils d'expansion */}
+                <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={appareilExpansion} 
+                      alt="Appareil d'expansion" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <p className="text-muted-foreground">
+                      Permettent d'élargir le palais et de créer de l'espace pour les dents définitives.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Appareils fonctionnels */}
+                <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={appareilFonctionnel} 
+                      alt="Appareil fonctionnel" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <p className="text-muted-foreground">
+                      Corrigent les décalages entre les mâchoires en stimulant la croissance.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Mainteneurs d'espace */}
+                <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={appareilMainteneur} 
+                      alt="Mainteneur d'espace" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <p className="text-muted-foreground">
+                      Préservent l'espace nécessaire après une perte prématurée de dent de lait.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <h3 className="text-xl font-semibold text-foreground mb-4">
