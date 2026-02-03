@@ -1,7 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Eye, CheckCircle, Calendar } from "lucide-react";
-import winTechniqueBg from "@/assets/win-technique-bg.png";
+import { CheckCircle, Calendar } from "lucide-react";
+import lingualeHero from "@/assets/linguale-win-hero.png";
+import ctaBackground from "@/assets/cta-background.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -9,25 +10,30 @@ const LingualeWin = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section 
-        className="relative py-24 bg-no-repeat"
-        style={{ 
-          backgroundImage: `url(${winTechniqueBg})`,
-          backgroundPosition: 'center center',
-          backgroundSize: 'contain'
-        }}
-      >
-        <div className="absolute inset-0 bg-white/60" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Eye className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${lingualeHero})` }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/75" />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[60vh] md:min-h-[70vh] flex items-center">
+          <div className="max-w-xl py-16 md:py-24 ml-4 md:ml-12 lg:ml-20">
+            <p className="text-primary-foreground/80 text-lg mb-4 font-medium">
+              Orthodontie 100% invisible
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
               Technique linguale WIN
             </h1>
-            <p className="text-lg text-muted-foreground">
-              L'orthodontie 100% invisible avec la précision allemande
+            <div className="w-16 h-1 bg-primary mb-8" />
+            <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+              La technique linguale WIN est une méthode d'orthodontie où les brackets sont 
+              collés sur la face interne des dents, les rendant totalement invisibles de 
+              l'extérieur. Développée en Allemagne, cette technique de pointe offre une 
+              précision exceptionnelle grâce à des brackets fabriqués sur mesure pour chaque patient.
             </p>
           </div>
         </div>
@@ -38,16 +44,6 @@ const LingualeWin = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <h2 className="text-2xl font-bold text-foreground mb-6 font-heading">
-                Qu'est-ce que la technique linguale WIN ?
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                La technique linguale WIN est une méthode d'orthodontie où les brackets sont 
-                collés sur la face interne des dents, les rendant totalement invisibles de 
-                l'extérieur. Développée en Allemagne, cette technique de pointe offre une 
-                précision exceptionnelle grâce à des brackets fabriqués sur mesure pour chaque patient.
-              </p>
-
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Les avantages de la technique WIN
               </h3>
@@ -147,25 +143,35 @@ const LingualeWin = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4 font-heading">
-            Découvrez l'orthodontie totalement invisible
-          </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Prenez rendez-vous pour une consultation et découvrez si la technique WIN est adaptée à votre cas.
-          </p>
-          <Button variant="secondary" size="lg" asChild>
-            <a
-              href={RDV_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <Calendar className="h-5 w-5" />
-              Prendre rendez-vous
-            </a>
-          </Button>
+      <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${ctaBackground})` }}
+        />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
+          <div className="bg-background/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+              Découvrez l'orthodontie totalement invisible
+            </h2>
+            <div className="w-12 h-1 bg-primary mb-6" />
+            <p className="text-muted-foreground mb-8">
+              Prenez rendez-vous pour une consultation et découvrez si la technique WIN est adaptée à votre cas.
+            </p>
+            <Button variant="cta" size="lg" asChild>
+              <a
+                href={RDV_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Calendar className="h-5 w-5" />
+                Prendre rendez-vous
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </Layout>
