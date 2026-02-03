@@ -7,6 +7,7 @@ import treatmentEnfant from "@/assets/treatment-enfant.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 import treatmentAligneursNew from "@/assets/treatment-aligneurs-new.png";
 import treatmentLinguale from "@/assets/treatment-linguale.jpg";
+import treatmentComplements from "@/assets/treatment-complements.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -47,7 +48,7 @@ const techniques = [
     title: "Compléments techniques",
     description: "Techniques complémentaires comme les mini-vis, la chirurgie orthognatique et les traitements combinés.",
     icon: Wrench,
-    image: null,
+    image: treatmentComplements,
     href: "/soins/complements",
     features: ["Mini-vis d'ancrage", "Chirurgie orthognatique", "Traitements combinés"],
   },
