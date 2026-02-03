@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Calendar } from "lucide-react";
-import treatmentAligneurs from "@/assets/treatment-aligneurs-new.png";
+import aligneursHero from "@/assets/aligneurs-hero.png";
 import ctaBackground from "@/assets/cta-background.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
@@ -14,7 +14,7 @@ const Aligneurs = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${treatmentAligneurs})` }}
+          style={{ backgroundImage: `url(${aligneursHero})` }}
         />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-foreground/75" />
