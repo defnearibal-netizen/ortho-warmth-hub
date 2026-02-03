@@ -29,24 +29,40 @@ const infosPratiquesSubPages = [
 
 interface DropdownMenuProps {
   label: string;
+  href?: string;
   items: { name: string; href: string }[];
   isActive: boolean;
 }
 
-const DropdownMenu = ({ label, items, isActive }: DropdownMenuProps) => {
+const DropdownMenu = ({ label, href, items, isActive }: DropdownMenuProps) => {
   return (
     <div className="relative group">
-      <button
-        className={cn(
-          "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap",
-          isActive
-            ? "text-primary"
-            : "text-foreground/80 hover:text-primary"
-        )}
-      >
-        {label}
-        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
-      </button>
+      {href ? (
+        <Link
+          to={href}
+          className={cn(
+            "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap",
+            isActive
+              ? "text-primary"
+              : "text-foreground/80 hover:text-primary"
+          )}
+        >
+          {label}
+          <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+        </Link>
+      ) : (
+        <button
+          className={cn(
+            "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap",
+            isActive
+              ? "text-primary"
+              : "text-foreground/80 hover:text-primary"
+          )}
+        >
+          {label}
+          <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+        </button>
+      )}
       
       {/* Dropdown */}
       <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -111,6 +127,7 @@ const Header = () => {
             {/* Le Cabinet d'orthodontie - Dropdown */}
             <DropdownMenu
               label="Le Cabinet d'orthodontie"
+              href="/cabinet/a-propos"
               items={cabinetSubPages}
               isActive={isActive("/cabinet")}
             />
