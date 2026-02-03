@@ -165,60 +165,97 @@ const APropos = () => {
       </section>
 
       {/* Emplacement et contact Section */}
-      <section id="emplacement" className="py-20 bg-background">
+      <section id="emplacement" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
-              Emplacement et contact
-            </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
-              <div className="space-y-6">
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-1 shrink-0" />
-                  <div>
-                    <p className="font-semibold text-foreground mb-1">Adresse</p>
-                    <p className="text-muted-foreground">
-                      Boulevard de Marseille<br />
-                      Zone 4 Abidjan
-                    </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Left: Horaires */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+                  Horaires d'ouvertures
+                </h2>
+                <a 
+                  href="tel:+2250575430000" 
+                  className="text-primary hover:text-primary/80 transition-colors font-medium"
+                >
+                  TEL : +225 05 75 43 00 00
+                </a>
+                <div className="w-12 h-0.5 bg-primary mt-2 mb-8" />
+                
+                {/* Hours table */}
+                <div className="space-y-4">
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Lundi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Mardi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Mercredi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Jeudi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Vendredi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Samedi</span>
+                    <span className="text-muted-foreground">Fermé</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-foreground">Dimanche</span>
+                    <span className="text-muted-foreground">Fermé</span>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Clock className="h-5 w-5 text-primary mt-1 shrink-0" />
-                  <div>
-                    <p className="font-semibold text-foreground mb-1">Horaires</p>
-                    <p className="text-muted-foreground">
-                      Lundi - Vendredi: 9h - 18h
-                    </p>
-                  </div>
-                </div>
+
+                <p className="text-muted-foreground mt-8 text-sm">
+                  Boulevard de Marseille, Zone 4 Abidjan
+                </p>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-primary mt-1 shrink-0" />
-                  <div>
-                    <a href="tel:+2250575430000" className="text-foreground hover:text-primary transition-colors block">
-                      +225 05 75 43 00 00
-                    </a>
-                    <a href="tel:+2252721591299" className="text-foreground hover:text-primary transition-colors block">
-                      +225 27 21 59 12 99
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-primary mt-1 shrink-0" />
-                  <a href="mailto:aribalorthodontie.abidjan@gmail.com" className="text-foreground hover:text-primary transition-colors">
-                    aribalorthodontie.abidjan@gmail.com
-                  </a>
-                </div>
+
+              {/* Right: Google Maps */}
+              <div className="h-[400px] lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-soft">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4IlciZg!5e0!3m2!1sfr!2sci!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localisation du cabinet"
+                />
               </div>
             </div>
-            <Button variant="cta" size="lg" asChild className="mt-8">
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                Prendre rendez-vous
-              </a>
-            </Button>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-end mt-8">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                asChild 
+                className="border-[#3E2723] text-[#3E2723] hover:bg-[#3E2723] hover:text-white"
+              >
+                <a href="tel:+2250575430000">
+                  +225 05 75 43 00 00
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                asChild 
+                className="bg-[#3E2723] hover:bg-[#3E2723]/90 text-white"
+              >
+                <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
+                  PRENDRE RENDEZ-VOUS
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
