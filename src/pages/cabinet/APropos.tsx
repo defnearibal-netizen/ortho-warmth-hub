@@ -96,32 +96,27 @@ const APropos = () => {
       {/* À propos Section */}
       <section id="a-propos" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start">
-              {/* Text Column */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 font-heading">
-                  Notre cabinet d'orthodontie
-                </h2>
-                <div className="w-12 h-0.5 bg-primary mb-6" />
-                <p className="text-muted-foreground leading-relaxed mb-5">
-                  Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-5">
-                  Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
-                </p>
-              </div>
-              {/* Image Column */}
-              <div className="lg:w-80 xl:w-96 rounded-2xl overflow-hidden shadow-soft">
-                <img
-                  src={dentistPatient}
-                  alt="Dentiste avec patient"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+              Notre cabinet d'orthodontie
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
+            </p>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
+            <div className="relative max-w-2xl mx-auto">
+              <img
+                src={dentistPatient}
+                alt="Dentiste avec patient"
+                className="w-full h-auto rounded-lg shadow-soft"
+              />
+              <div className="absolute -right-4 top-1/4 bottom-1/4 w-8 bg-secondary -z-10 hidden md:block" />
             </div>
           </div>
         </div>
@@ -152,30 +147,32 @@ const APropos = () => {
       </section>
 
       {/* Notre équipe Section */}
-      <section id="equipe" className="py-20 bg-background">
+      <section id="equipe" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
               Notre équipe
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Notre équipe pluridisciplinaire travaille en synergie pour vous proposer des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
             </p>
+            <div className="w-16 h-0.5 bg-primary mx-auto mt-6" />
           </div>
         </div>
       </section>
 
       {/* Emplacement et contact Section */}
-      <section id="emplacement" className="py-20 bg-secondary">
+      <section id="emplacement" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
               Emplacement et contact
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
               <div className="space-y-6">
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-1 shrink-0" />
@@ -198,8 +195,8 @@ const APropos = () => {
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary shrink-0" />
+                <div className="flex items-start gap-3">
+                  <Phone className="h-5 w-5 text-primary mt-1 shrink-0" />
                   <div>
                     <a href="tel:+2250575430000" className="text-foreground hover:text-primary transition-colors block">
                       +225 05 75 43 00 00
@@ -209,31 +206,32 @@ const APropos = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary shrink-0" />
+                <div className="flex items-start gap-3">
+                  <Mail className="h-5 w-5 text-primary mt-1 shrink-0" />
                   <a href="mailto:aribalorthodontie.abidjan@gmail.com" className="text-foreground hover:text-primary transition-colors">
                     aribalorthodontie.abidjan@gmail.com
                   </a>
                 </div>
-                <Button variant="cta" size="lg" asChild className="mt-4">
-                  <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                    Prendre rendez-vous
-                  </a>
-                </Button>
               </div>
             </div>
+            <Button variant="cta" size="lg" asChild className="mt-8">
+              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
+                Prendre rendez-vous
+              </a>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-background">
+      <section id="faq" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
               FAQ Administratif
             </h2>
-            <div className="space-y-6">
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
+            <div className="space-y-6 text-left">
               <div className="bg-card rounded-xl p-6 shadow-soft">
                 <h3 className="font-semibold text-foreground mb-2">Quels documents apporter lors de la première consultation ?</h3>
                 <p className="text-muted-foreground">
