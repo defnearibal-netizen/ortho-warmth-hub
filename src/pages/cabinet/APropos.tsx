@@ -4,6 +4,7 @@ import { ChevronDown, MapPin, Phone, Mail, Clock } from "lucide-react";
 import cabinetInterior from "@/assets/cabinet-interior.png";
 import dentistPatient from "@/assets/dentist-patient-2.jpg";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
+import teamPhoto from "@/assets/team-photo.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -184,17 +185,32 @@ const APropos = () => {
       {/* Notre équipe Section */}
       <section id="equipe" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
-              Notre équipe
-            </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-8" />
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Notre équipe pluridisciplinaire travaille en synergie pour vous proposer des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Text */}
+              <div className="text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+                  Notre équipe
+                </h2>
+                <div className="w-16 h-0.5 bg-primary mb-8" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Notre équipe pluridisciplinaire travaille en synergie pour vous proposer des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
+                </p>
+              </div>
+
+              {/* Right: Image with decorative block */}
+              <div className="relative">
+                <div className="absolute -right-4 -top-4 -bottom-4 w-2/3 bg-secondary rounded-lg -z-10 hidden md:block" />
+                <img
+                  src={teamPhoto}
+                  alt="Notre équipe de professionnels"
+                  className="w-full h-auto max-h-80 object-cover rounded-lg shadow-soft relative z-10"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
