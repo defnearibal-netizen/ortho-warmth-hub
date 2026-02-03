@@ -96,27 +96,33 @@ const APropos = () => {
       {/* À propos Section */}
       <section id="a-propos" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading text-center">
               Notre cabinet d'orthodontie
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
-            </p>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
-            <div className="relative max-w-2xl mx-auto">
-              <img
-                src={dentistPatient}
-                alt="Dentiste avec patient"
-                className="w-full h-auto rounded-lg shadow-soft"
-              />
-              <div className="absolute -right-4 top-1/4 bottom-1/4 w-8 bg-secondary -z-10 hidden md:block" />
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+              {/* Text Column */}
+              <div className="flex-1 text-center lg:text-left">
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
+                </p>
+              </div>
+              {/* Image Column */}
+              <div className="relative w-64 lg:w-72 shrink-0">
+                <img
+                  src={dentistPatient}
+                  alt="Dentiste avec patient"
+                  className="w-full h-auto rounded-lg shadow-soft"
+                />
+                <div className="absolute -right-3 top-1/4 bottom-1/4 w-6 bg-secondary -z-10 hidden md:block" />
+              </div>
             </div>
           </div>
         </div>
