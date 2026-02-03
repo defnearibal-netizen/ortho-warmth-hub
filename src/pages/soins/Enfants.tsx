@@ -143,7 +143,7 @@ const Enfants = () => {
         
         {/* Content */}
         <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
-          <div className="bg-background/70 backdrop-blur-md rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
+          <div className="bg-background/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
               Prenez rendez-vous pour un bilan
             </h2>
