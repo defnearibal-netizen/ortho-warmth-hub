@@ -96,27 +96,34 @@ const APropos = () => {
       {/* À propos Section */}
       <section id="a-propos" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
-              Notre cabinet d'orthodontie
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
-            </p>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
-            <div className="relative max-w-md mx-auto">
-              <img
-                src={dentistPatient}
-                alt="Dentiste avec patient"
-                className="w-full h-auto rounded-lg shadow-soft"
-              />
-              <div className="absolute -right-4 top-1/4 bottom-1/4 w-8 bg-secondary -z-10 hidden md:block" />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Text */}
+              <div className="text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+                  Notre cabinet d'orthodontie
+                </h2>
+                <div className="w-16 h-0.5 bg-primary mb-8" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Un traitement orthodontique consiste à détecter, prévenir et, si nécessaire, traiter les malocclusions dentaires et/ou des mâchoires chez l'enfant, l'adolescent et l'adulte. Il doit être personnalisé, entrepris et suivi par un spécialiste en orthodontie.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Tous les orthodontistes sont initialement chirurgiens-dentistes. La reconnaissance du titre de spécialiste nécessite toutefois trois années d'études hospitalo-universitaires supplémentaires, accessibles après un concours national.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Cette spécialisation nous permet de maîtriser les technologies les plus avancées et d'entreprendre le traitement avec précision, rigueur et sécurité.
+                </p>
+              </div>
+
+              {/* Right: Image with decorative block */}
+              <div className="relative">
+                <div className="absolute -right-4 -top-4 -bottom-4 w-2/3 bg-secondary rounded-lg -z-10 hidden md:block" />
+                <img
+                  src={dentistPatient}
+                  alt="Dentiste avec patient"
+                  className="w-full h-auto rounded-lg shadow-soft relative z-10"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -125,22 +132,31 @@ const APropos = () => {
       {/* Philosophie Section */}
       <section id="philosophie" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
-              Notre philosophie
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Notre approche est centrée sur le patient. Nous prenons le temps d'écouter vos besoins et vos inquiétudes pour vous proposer un traitement personnalisé. Nous accordons une importance particulière au confort et à la sérénité de nos patients.
-            </p>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
-            <div className="relative max-w-2xl mx-auto">
-              <img
-                src={philosophiePatient}
-                alt="Patient souriant lors d'un traitement orthodontique"
-                className="w-full h-auto rounded-lg shadow-soft"
-              />
-              {/* Decorative accent block */}
-              <div className="absolute -right-4 top-1/4 bottom-1/4 w-8 bg-secondary -z-10 hidden md:block" />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Text */}
+              <div className="text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+                  Notre philosophie
+                </h2>
+                <div className="w-16 h-0.5 bg-primary mb-8" />
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Notre approche est centrée sur le patient. Nous prenons le temps d'écouter vos besoins et vos inquiétudes pour vous proposer un traitement personnalisé.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nous accordons une importance particulière au confort et à la sérénité de nos patients, en privilégiant des techniques modernes et peu invasives.
+                </p>
+              </div>
+
+              {/* Right: Image with decorative block */}
+              <div className="relative">
+                <div className="absolute -right-4 -top-4 -bottom-4 w-2/3 bg-secondary rounded-lg -z-10 hidden md:block" />
+                <img
+                  src={philosophiePatient}
+                  alt="Patient souriant lors d'un traitement orthodontique"
+                  className="w-full h-auto rounded-lg shadow-soft relative z-10"
+                />
+              </div>
             </div>
           </div>
         </div>
