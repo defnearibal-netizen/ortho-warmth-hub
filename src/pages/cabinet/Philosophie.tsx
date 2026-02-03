@@ -5,28 +5,28 @@ import philosophiePatient from "@/assets/philosophie-patient.jpg";
 const Philosophie = () => {
   return (
     <Layout>
+      {/* Title Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground text-center" style={{ fontFamily: "'Tenor Sans', serif" }}>
+            Notre philosophie
+          </h1>
+          <div className="w-16 h-0.5 bg-primary mx-auto mt-6" />
+        </div>
+      </section>
+
       {/* Hero Section - Two Column Layout */}
-      <section className="min-h-[70vh] grid grid-cols-1 lg:grid-cols-2">
+      <section className="min-h-[60vh] grid grid-cols-1 lg:grid-cols-2">
         {/* Left: Dark Chocolate Background with Content */}
         <div className="bg-[hsl(25_45%_30%)] flex items-center justify-center p-8 lg:p-16">
           <div className="max-w-lg text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8" style={{ fontFamily: "'Tenor Sans', serif" }}>
-              Notre philosophie
-            </h1>
-            
             {/* Quote marks */}
             <div className="text-6xl text-white/40 mb-4" style={{ fontFamily: "serif" }}>
               ❝
             </div>
             
-            <p className="text-white/90 text-lg leading-relaxed mb-8">
+            <p className="text-white/90 text-lg leading-relaxed">
               Chaque traitement vous est expliqué de manière claire et détaillée, afin que vous compreniez pleinement chaque étape de votre prise en charge. Nous prenons le temps d'échanger avec vous, de répondre à toutes vos questions et de vous accompagner avec attention tout au long de votre parcours orthodontique.
-            </p>
-
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-4" />
-            
-            <p className="text-white/70 italic">
-              - Dr. Stefano Troiani
             </p>
           </div>
         </div>
