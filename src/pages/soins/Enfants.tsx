@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Calendar } from "lucide-react";
 import enfantsHero from "@/assets/enfants-hero.png";
+import momDaughterCta from "@/assets/mom-daughter-cta.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -133,25 +134,35 @@ const Enfants = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4 font-heading">
-            Prenez rendez-vous pour un bilan
-          </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Un premier bilan permettra d'évaluer si un traitement précoce est nécessaire pour votre enfant.
-          </p>
-          <Button variant="secondary" size="lg" asChild>
-            <a
-              href={RDV_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <Calendar className="h-5 w-5" />
-              Prendre rendez-vous
-            </a>
-          </Button>
+      <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${momDaughterCta})` }}
+        />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
+          <div className="bg-background rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-4 md:ml-12 lg:ml-20">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+              Prenez rendez-vous pour un bilan
+            </h2>
+            <div className="w-12 h-1 bg-primary mb-6" />
+            <p className="text-muted-foreground mb-8">
+              Un premier bilan permettra d'évaluer si un traitement précoce est nécessaire pour votre enfant.
+            </p>
+            <Button variant="cta" size="lg" asChild>
+              <a
+                href={RDV_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Calendar className="h-5 w-5" />
+                Prendre rendez-vous
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </Layout>
