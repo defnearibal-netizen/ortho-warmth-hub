@@ -1,6 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Sparkles, CheckCircle, Calendar } from "lucide-react";
+import { CheckCircle, Calendar } from "lucide-react";
+import treatmentAligneurs from "@/assets/treatment-aligneurs-new.png";
+import ctaBackground from "@/assets/cta-background.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -8,17 +10,30 @@ const Aligneurs = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Sparkles className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${treatmentAligneurs})` }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/75" />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[60vh] md:min-h-[70vh] flex items-center">
+          <div className="max-w-xl py-16 md:py-24 ml-4 md:ml-12 lg:ml-20">
+            <p className="text-primary-foreground/80 text-lg mb-4 font-medium">
+              Orthodontie invisible
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
               Techniques par aligneurs
             </h1>
-            <p className="text-lg text-muted-foreground">
-              L'orthodontie invisible pour un sourire parfait en toute discrétion
+            <div className="w-16 h-1 bg-primary mb-8" />
+            <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+              Les aligneurs sont des gouttières transparentes sur mesure qui déplacent 
+              progressivement vos dents vers leur position idéale. Quasi invisibles, ils 
+              offrent une alternative esthétique aux appareils traditionnels tout en garantissant 
+              des résultats excellents.
             </p>
           </div>
         </div>
@@ -29,16 +44,6 @@ const Aligneurs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <h2 className="text-2xl font-bold text-foreground mb-6 font-heading">
-                Qu'est-ce que l'orthodontie par aligneurs ?
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Les aligneurs sont des gouttières transparentes sur mesure qui déplacent 
-                progressivement vos dents vers leur position idéale. Quasi invisibles, ils 
-                offrent une alternative esthétique aux appareils traditionnels tout en garantissant 
-                des résultats excellents.
-              </p>
-
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Les avantages des aligneurs
               </h3>
@@ -146,25 +151,35 @@ const Aligneurs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4 font-heading">
-            Découvrez l'orthodontie invisible
-          </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Prenez rendez-vous pour une consultation et découvrez si les aligneurs sont adaptés à votre cas.
-          </p>
-          <Button variant="secondary" size="lg" asChild>
-            <a
-              href={RDV_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <Calendar className="h-5 w-5" />
-              Prendre rendez-vous
-            </a>
-          </Button>
+      <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${ctaBackground})` }}
+        />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
+          <div className="bg-background/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+              Découvrez l'orthodontie invisible
+            </h2>
+            <div className="w-12 h-1 bg-primary mb-6" />
+            <p className="text-muted-foreground mb-8">
+              Prenez rendez-vous pour une consultation et découvrez si les aligneurs sont adaptés à votre cas.
+            </p>
+            <Button variant="cta" size="lg" asChild>
+              <a
+                href={RDV_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Calendar className="h-5 w-5" />
+                Prendre rendez-vous
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </Layout>
