@@ -96,7 +96,8 @@ const Enfants = () => {
                     />
                   </div>
                   <div className="p-6 text-center">
-                    <p className="text-muted-foreground">
+                    <h4 className="font-heading font-semibold text-foreground mb-2">Appareil d'expansion</h4>
+                    <p className="text-muted-foreground text-sm">
                       Permettent d'élargir le palais et de créer de l'espace pour les dents définitives.
                     </p>
                   </div>
@@ -112,7 +113,8 @@ const Enfants = () => {
                     />
                   </div>
                   <div className="p-6 text-center">
-                    <p className="text-muted-foreground">
+                    <h4 className="font-heading font-semibold text-foreground mb-2">Appareil fonctionnel</h4>
+                    <p className="text-muted-foreground text-sm">
                       Corrigent les décalages entre les mâchoires en stimulant la croissance.
                     </p>
                   </div>
@@ -128,7 +130,8 @@ const Enfants = () => {
                     />
                   </div>
                   <div className="p-6 text-center">
-                    <p className="text-muted-foreground">
+                    <h4 className="font-heading font-semibold text-foreground mb-2">Mainteneur d'espace</h4>
+                    <p className="text-muted-foreground text-sm">
                       Préservent l'espace nécessaire après une perte prématurée de dent de lait.
                     </p>
                   </div>
