@@ -15,8 +15,8 @@ const Enfants = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${enfantsHero})` }}
         />
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/60" />
         
         {/* Content */}
         <div className="relative container mx-auto px-4 h-full min-h-[60vh] md:min-h-[70vh] flex items-center">
@@ -25,15 +25,15 @@ const Enfants = () => {
               Orthodontie pédiatrique
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
-              Techniques pour les jeunes enfants
+              L'orthodontie interceptive
             </h1>
             <div className="w-16 h-1 bg-primary mb-8" />
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                <Calendar className="h-5 w-5 mr-2" />
-                Prendre rendez-vous
-              </a>
-            </Button>
+            <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+              L'orthodontie interceptive, aussi appelée orthodontie précoce, intervient chez les 
+              enfants dès l'âge de 4 à 7 ans. Elle permet de corriger les problèmes de croissance 
+              des mâchoires et de guider l'éruption des dents définitives pour éviter des 
+              traitements plus lourds à l'adolescence.
+            </p>
           </div>
         </div>
       </section>
