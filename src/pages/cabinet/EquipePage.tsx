@@ -1,8 +1,28 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { Award, GraduationCap, Users } from "lucide-react";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
+import logoOrthospe from "@/assets/logo-orthospe.png";
+import logoCode36 from "@/assets/logo-code36.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+
+const diplomes = [
+  "Diplôme de Docteur en Chirurgie-dentaire (Université de Paris)",
+  "Diplôme d'études spécialisées en Orthopédie dento-faciale (Université de Paris)",
+  "Ancienne Interne des Hôpitaux de Paris : Hôpital Rothschild AP-HP (Centre de référence des maladies rares), Hôpital Universitaire Pitié-Salpêtrière",
+];
+
+const certifications = [
+  "Certification en technique linguale : WIN Lingual Systems",
+  "Certification en technique par aligneurs : Invisalign, Spark, Angel",
+  "Diplôme Universitaire Clinique des traitements odonto-stomatologiques du syndrome d'apnées obstructives du sommeil – Paris",
+];
+
+const memberships = [
+  "Membre de la Société Française d'Orthopédie Dento-Faciale (SFODF)",
+  "Membre de la Société Bioprogressive de Ricketts (SBR)",
+];
 
 const staff = [
   { name: "Sylvain", role: "Assistant dentaire" },
@@ -74,6 +94,82 @@ const EquipePage = () => {
             <p className="text-white/70 italic leading-relaxed" style={{ fontFamily: "'Tenor Sans', serif" }}>
               "L'orthodontie est une joie pour moi pour de nombreuses raisons, mais ce que je préfère par-dessus tout, ce sont les relations que j'ai l'opportunité de construire avec mes patients."
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Formations & Certifications Section */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-6 mb-12">
+              <img 
+                src={logoOrthospe} 
+                alt="Orthospé - Label de qualité en orthodontie" 
+                className="h-16 object-contain"
+              />
+              <img 
+                src={logoCode36} 
+                alt="Code 36 - Spécialiste qualifié en orthodontie" 
+                className="h-16 object-contain"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Diplômes */}
+              <div className="bg-card rounded-xl p-6 shadow-soft">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <GraduationCap className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">Formation</h3>
+                </div>
+                <ul className="space-y-3">
+                  {diplomes.map((diplome, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{diplome}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Certifications */}
+              <div className="bg-card rounded-xl p-6 shadow-soft">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Award className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">Certifications</h3>
+                </div>
+                <ul className="space-y-3">
+                  {certifications.map((cert, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{cert}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Affiliations */}
+              <div className="bg-card rounded-xl p-6 shadow-soft">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">Affiliations</h3>
+                </div>
+                <ul className="space-y-3">
+                  {memberships.map((membership, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{membership}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
