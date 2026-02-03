@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import cabinetInterior from "@/assets/cabinet-interior.png";
 import dentistPatient from "@/assets/dentist-patient-2.jpg";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
@@ -160,9 +161,12 @@ const APropos = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Notre approche est centrée sur le patient. Nous prenons le temps d'écouter vos besoins et vos inquiétudes pour vous proposer un traitement personnalisé.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   Nous accordons une importance particulière au confort et à la sérénité de nos patients, en privilégiant des techniques modernes et peu invasives.
                 </p>
+                <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <Link to="/cabinet/philosophie">En savoir plus</Link>
+                </Button>
               </div>
 
               {/* Right: Image with decorative block */}
@@ -196,9 +200,12 @@ const APropos = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Notre équipe pluridisciplinaire travaille en synergie pour vous proposer des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
                 </p>
+                <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <Link to="/cabinet/equipe">Découvrir l'équipe</Link>
+                </Button>
               </div>
 
               {/* Right: Image with decorative block */}
