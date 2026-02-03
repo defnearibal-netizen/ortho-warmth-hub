@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Baby, CheckCircle, Calendar } from "lucide-react";
+import { CheckCircle, Calendar } from "lucide-react";
+import enfantsHero from "@/assets/enfants-hero.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -8,18 +9,31 @@ const Enfants = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Baby className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${enfantsHero})` }}
+        />
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 h-full min-h-[60vh] md:min-h-[70vh] flex items-center">
+          <div className="max-w-xl py-16 md:py-24">
+            <p className="text-primary-foreground/80 text-lg mb-4 font-medium">
+              Orthodontie pédiatrique
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
               Techniques pour les jeunes enfants
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Une prise en charge précoce pour un développement harmonieux
-            </p>
+            <div className="w-16 h-1 bg-primary mb-8" />
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
+                <Calendar className="h-5 w-5 mr-2" />
+                Prendre rendez-vous
+              </a>
+            </Button>
           </div>
         </div>
       </section>
