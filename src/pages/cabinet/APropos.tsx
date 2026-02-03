@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, MapPin, Phone, Mail, Clock } from "lucide-react";
 import cabinetInterior from "@/assets/cabinet-interior.png";
-import dentistPatient from "@/assets/dentist-patient.jpg";
+import dentistPatient from "@/assets/dentist-patient-2.jpg";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
@@ -14,6 +14,19 @@ const navItems = [
   { id: "emplacement", label: "Emplacement et contact" },
   { id: "faq", label: "FAQ Administratif" },
 ];
+
+// Section Divider Component
+const SectionDivider = () => (
+  <div className="w-full py-8 bg-background">
+    <div className="container mx-auto px-4">
+      <div className="flex items-center justify-center gap-4">
+        <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent to-primary/30" />
+        <div className="w-2 h-2 rounded-full bg-primary/40" />
+        <div className="h-px flex-1 max-w-24 bg-gradient-to-l from-transparent to-primary/30" />
+      </div>
+    </div>
+  </div>
+);
 
 const APropos = () => {
   const scrollToSection = (id: string) => {
@@ -129,6 +142,9 @@ const APropos = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <SectionDivider />
+
       {/* Philosophie Section */}
       <section id="philosophie" className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -162,23 +178,29 @@ const APropos = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <SectionDivider />
+
       {/* Notre équipe Section */}
-      <section id="equipe" className="py-20 bg-secondary">
+      <section id="equipe" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
               Notre équipe
             </h2>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-8" />
             <p className="text-muted-foreground leading-relaxed mb-4">
               Notre équipe pluridisciplinaire travaille en synergie pour vous proposer des solutions adaptées à votre situation, que vous soyez enfant, adolescent ou adulte.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Nous sommes spécialisés dans les techniques d'orthodontie invisible, incluant les aligneurs transparents et la technique linguale WIN.
             </p>
-            <div className="w-16 h-0.5 bg-primary mx-auto mt-6" />
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <SectionDivider />
 
       {/* Emplacement et contact Section */}
       <section id="emplacement" className="py-20 bg-secondary">
@@ -283,8 +305,11 @@ const APropos = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <SectionDivider />
+
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-secondary">
+      <section id="faq" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
