@@ -14,6 +14,7 @@ import Philosophie from "./pages/cabinet/Philosophie";
 import EquipePage from "./pages/cabinet/EquipePage";
 
 // Soins pages
+import SoinsIndex from "./pages/soins/SoinsIndex";
 import Enfants from "./pages/soins/Enfants";
 import Autoligaturantes from "./pages/soins/Autoligaturantes";
 import Aligneurs from "./pages/soins/Aligneurs";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/cabinet/equipe" element={<EquipePage />} />
           
           {/* Soins routes */}
+          <Route path="/soins" element={<SoinsIndex />} />
           <Route path="/soins/enfants" element={<Enfants />} />
           <Route path="/soins/autoligaturantes" element={<Autoligaturantes />} />
           <Route path="/soins/aligneurs" element={<Aligneurs />} />

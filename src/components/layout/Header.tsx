@@ -135,6 +135,7 @@ const Header = () => {
             {/* Soins & Techniques - Dropdown */}
             <DropdownMenu
               label="Soins & Techniques"
+              href="/soins"
               items={soinsSubPages}
               isActive={isActive("/soins")}
             />
@@ -229,7 +230,7 @@ const Header = () => {
 
             {/* Soins & Techniques */}
             <Link
-              to="/soins/enfants"
+              to="/soins"
               onClick={() => setIsOpen(false)}
               className={cn(
                 "py-2 text-sm font-medium transition-colors whitespace-nowrap",
