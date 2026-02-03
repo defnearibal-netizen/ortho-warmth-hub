@@ -167,13 +167,20 @@ const APropos = () => {
       {/* Emplacement et contact Section */}
       <section id="emplacement" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+              Emplacement et contact
+            </h2>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-12" />
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               {/* Left: Horaires */}
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+              <div className="text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-heading">
                   Horaires d'ouvertures
-                </h2>
+                </h3>
                 <a 
                   href="tel:+2250575430000" 
                   className="text-primary hover:text-primary/80 transition-colors font-medium"
@@ -220,7 +227,7 @@ const APropos = () => {
               </div>
 
               {/* Right: Google Maps */}
-              <div className="h-[400px] lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-soft">
+              <div className="h-[400px] rounded-lg overflow-hidden shadow-soft">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4IlciZg!5e0!3m2!1sfr!2sci!4v1234567890"
                   width="100%"
@@ -235,7 +242,7 @@ const APropos = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-end mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
               <Button 
                 variant="outline" 
                 size="lg" 
