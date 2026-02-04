@@ -73,10 +73,10 @@ const Parcours = () => {
                 <div className="inline-block px-4 py-2 rounded-full bg-cta-hover text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   1ère consultation
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px] flex items-start">
                   Entretien et examen clinique pour cibler vos attentes
                 </p>
-                <div className="w-px h-6 bg-border" />
+                <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
                   <ClipboardList className="w-7 h-7 text-cta-hover" />
                 </div>
@@ -87,10 +87,10 @@ const Parcours = () => {
                 <div className="inline-block px-4 py-2 rounded-full bg-[#6B7B8C] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Bilan
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px] flex items-start">
                   Photos, radios et empreintes numériques 3D
                 </p>
-                <div className="w-px h-6 bg-border" />
+                <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
                   <Camera className="w-7 h-7 text-[#6B7B8C]" />
                 </div>
@@ -101,10 +101,10 @@ const Parcours = () => {
                 <div className="inline-block px-4 py-2 rounded-full bg-[#A8A090] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Plan de traitement
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px] flex items-start">
                   Diagnostic, options et consentement éclairé
                 </p>
-                <div className="w-px h-6 bg-border" />
+                <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
                   <FileText className="w-7 h-7 text-[#A8A090]" />
                 </div>
@@ -115,10 +115,10 @@ const Parcours = () => {
                 <div className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Pose
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px] flex items-start">
                   Installation de l'appareil et conseils de brossage
                 </p>
-                <div className="w-px h-6 bg-border" />
+                <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
                   <Wrench className="w-7 h-7 text-primary" />
                 </div>
@@ -129,10 +129,10 @@ const Parcours = () => {
                 <div className="inline-block px-4 py-2 rounded-full bg-[#C4956A] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Suivi
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px] flex items-start">
                   RDV d'activation toutes les 4 à 5 semaines
                 </p>
-                <div className="w-px h-6 bg-border" />
+                <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
                   <RefreshCw className="w-7 h-7 text-[#C4956A]" />
                 </div>
@@ -143,10 +143,10 @@ const Parcours = () => {
                 <div className="inline-block px-4 py-2 rounded-full bg-[#8B6F5C] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Contention
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed min-h-[60px] flex items-start">
                   Dépose et maintien des résultats
                 </p>
-                <div className="w-px h-6 bg-border" />
+                <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
                   <Shield className="w-7 h-7 text-[#8B6F5C]" />
                 </div>
