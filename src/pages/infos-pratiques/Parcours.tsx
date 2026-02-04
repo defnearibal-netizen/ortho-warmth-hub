@@ -1,7 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Calendar, Phone, ClipboardList, Pencil, FileText, RefreshCw, Smile } from "lucide-react";
-import iconTooth from "@/assets/icon-tooth.png";
+import { Calendar, Phone, ClipboardList, Pencil, FileText, Stethoscope, RefreshCw, Smile } from "lucide-react";
 import dentistPatient from "@/assets/dentist-patient.jpg";
 import dentistPatient2 from "@/assets/dentist-patient-2.jpg";
 import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
@@ -121,7 +120,7 @@ const Parcours = () => {
                 </p>
                 <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
-                  <img src={iconTooth} alt="Dent" className="w-7 h-7" style={{ filter: 'invert(33%) sepia(15%) saturate(1200%) hue-rotate(340deg) brightness(90%) contrast(90%)' }} />
+                  <Stethoscope className="w-7 h-7 text-primary" />
                 </div>
               </div>
 
