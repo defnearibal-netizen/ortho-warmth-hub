@@ -44,33 +44,55 @@ const Aligneurs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Les avantages des aligneurs
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Quasi invisibles au quotidien</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Amovibles pour manger et se brosser les dents</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Confortables, sans irritation</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Hygiène bucco-dentaire facilitée</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Visualisation du résultat final avant traitement</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Moins de rendez-vous au cabinet</span>
+              {/* Avantages - Bloc chocolat */}
+              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
+                <h3 className="text-2xl font-semibold text-primary-foreground mb-6 font-heading">
+                  Les avantages des aligneurs
+                </h3>
+
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Quasi invisibles</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Discrétion au quotidien, personne ne remarque votre traitement</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Amovibles</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Retirez-les pour manger et vous brosser les dents</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Confort optimal</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Pas d'irritation, confortables au quotidien</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Hygiène facilitée</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Brossage des dents sans obstacle</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Visualisation 3D</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Découvrez le résultat final avant de commencer</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Moins de rendez-vous</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Consultations espacées au cabinet</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

@@ -43,61 +43,89 @@ const Complements = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              {/* Mini-vis */}
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Mini-vis orthodontiques (ancrage squelettique)
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Les mini-vis sont de petites vis en titane temporairement placées dans l'os 
-                pour servir de point d'ancrage fixe. Elles permettent des mouvements dentaires 
-                impossibles avec les méthodes conventionnelles.
-              </p>
+              {/* Mini-vis - Bloc chocolat */}
+              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
+                <h3 className="text-2xl font-semibold text-primary-foreground mb-4 font-heading">
+                  Mini-vis orthodontiques (ancrage squelettique)
+                </h3>
+                <p className="text-primary-foreground/80 mb-6">
+                  Les mini-vis sont de petites vis en titane temporairement placées dans l'os 
+                  pour servir de point d'ancrage fixe. Elles permettent des mouvements dentaires 
+                  impossibles avec les méthodes conventionnelles.
+                </p>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Pose simple et indolore</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Retrait facile en fin de traitement</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Permet des mouvements complexes</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Réduit la durée du traitement</span>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Pose simple</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Procédure rapide et indolore sous anesthésie locale</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Retrait facile</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Retrait simple en fin de traitement</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Mouvements complexes</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Permet des déplacements dentaires impossibles autrement</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Durée réduite</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Accélère le temps de traitement global</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Stripping */}
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Stripping dentaire
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Le stripping (ou réduction interproximale) consiste à réduire légèrement 
-                l'émail entre les dents pour créer de l'espace. Cette technique est utilisée 
-                pour éviter les extractions dans les cas d'encombrement modéré.
-              </p>
+              {/* Stripping - Bloc chocolat */}
+              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
+                <h3 className="text-2xl font-semibold text-primary-foreground mb-4 font-heading">
+                  Stripping dentaire
+                </h3>
+                <p className="text-primary-foreground/80 mb-6">
+                  Le stripping (ou réduction interproximale) consiste à réduire légèrement 
+                  l'émail entre les dents pour créer de l'espace. Cette technique est utilisée 
+                  pour éviter les extractions dans les cas d'encombrement modéré.
+                </p>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Alternative aux extractions</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Indolore et sans anesthésie</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Préserve l'intégrité des dents</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Améliore la stabilité du résultat</span>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Alternative aux extractions</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Évite le retrait de dents saines</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Indolore</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Procédure sans anesthésie nécessaire</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Préserve l'intégrité</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Respecte la structure dentaire naturelle</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Stabilité améliorée</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Meilleure stabilité à long terme du résultat</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
