@@ -73,16 +73,13 @@ const Parcours = () => {
           <div className="space-y-0">
             {steps.map((step, index) => (
               <div key={step.number}>
-                {/* Separator line - except for first item */}
-                {index > 0 && (
-                  <div className="w-full py-8">
-                    <div className="h-px w-full bg-border" />
-                  </div>
-                )}
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-8">
-                  {/* Image with number overlay */}
+                  {/* Image with number overlay and top separator line */}
                   <div className="relative">
+                    {/* Separator line at top of image */}
+                    {index > 0 && (
+                      <div className="absolute -top-8 left-0 right-0 h-px bg-cta-hover" />
+                    )}
                     <img
                       src={step.image}
                       alt={step.title}
@@ -135,8 +132,8 @@ const Parcours = () => {
           
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Left: Horaires */}
-              <div className="text-left">
+              {/* Left: Horaires - centered */}
+              <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
                 <h3 className="text-2xl font-bold text-foreground mb-4 font-heading">
                   Horaires d'ouvertures
                 </h3>
@@ -149,7 +146,7 @@ const Parcours = () => {
                 <div className="w-12 h-0.5 bg-primary mt-2 mb-8" />
                 
                 {/* Hours table */}
-                <div className="space-y-4">
+                <div className="space-y-4 w-full max-w-xs">
                   <div className="flex justify-between border-b border-border/30 pb-3">
                     <span className="text-foreground">Lundi</span>
                     <span className="text-muted-foreground">09:00 - 18:00</span>
