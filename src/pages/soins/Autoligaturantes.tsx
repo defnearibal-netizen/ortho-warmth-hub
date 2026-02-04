@@ -44,53 +44,52 @@ const Autoligaturantes = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              {/* Avantages - Bloc chocolat */}
-              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
-                <h3 className="text-2xl font-semibold text-primary-foreground mb-6 font-heading">
-                  Les avantages des brackets autoligaturants
-                </h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                Les avantages des brackets autoligaturants
+              </h3>
 
-                <div className="space-y-5">
+              <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Moins de friction</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Mouvements dentaires plus fluides et naturels</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Mouvements plus fluides</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Rendez-vous plus courts</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Ajustements rapides et efficaces au cabinet</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Ajustements rapides</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Moins de douleur</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Confort amélioré après les ajustements</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Confort amélioré</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Hygiène facilitée</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Pas d'élastiques qui retiennent la plaque</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Pas d'élastiques</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Durée réduite</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Traitement souvent plus court qu'avec brackets classiques</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Traitement plus court</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Design moderne</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Apparence discrète et esthétique</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Apparence discrète</p>
                     </div>
                   </div>
                 </div>

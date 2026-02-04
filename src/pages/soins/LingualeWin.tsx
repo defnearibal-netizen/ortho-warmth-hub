@@ -44,53 +44,52 @@ const LingualeWin = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              {/* Avantages - Bloc chocolat */}
-              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
-                <h3 className="text-2xl font-semibold text-primary-foreground mb-6 font-heading">
-                  Les avantages de la technique WIN
-                </h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                Les avantages de la technique WIN
+              </h3>
 
-                <div className="space-y-5">
+              <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">100% invisible</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Les brackets sont collés à l'intérieur des dents</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Brackets à l'intérieur des dents</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Ultra-plats</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Brackets ultra-fins pour un confort optimal</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Confort optimal</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Précision robotique</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Fabriqués sur mesure avec une technologie de pointe</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Fabriqués sur mesure</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Cas complexes</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Adapté même aux situations orthodontiques difficiles</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Adapté aux situations difficiles</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Résultats prévisibles</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Précision exceptionnelle dans les mouvements dentaires</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Précision exceptionnelle</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Travaille 24h/24</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Appareil fixe qui agit en permanence</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Appareil fixe permanent</p>
                     </div>
                   </div>
                 </div>
