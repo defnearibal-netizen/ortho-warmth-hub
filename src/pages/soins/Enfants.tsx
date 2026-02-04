@@ -47,38 +47,59 @@ const Enfants = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Quand consulter ?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Il est recommandé de faire un premier bilan orthodontique vers l'âge de 6-7 ans, 
-                même si tout semble normal. Certains signes doivent vous alerter :
-              </p>
+              {/* Quand consulter - Bloc chocolat */}
+              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
+                <h3 className="text-2xl font-semibold text-primary-foreground mb-4 font-heading">
+                  Quand consulter ?
+                </h3>
+                <p className="text-primary-foreground/80 mb-6">
+                  Il est recommandé de faire un premier bilan orthodontique vers l'âge de 6-7 ans, 
+                  même si tout semble normal. Certains signes doivent vous alerter :
+                </p>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Succion du pouce persistante</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Respiration par la bouche</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Difficultés à mastiquer</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Dents qui se chevauchent</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Mâchoire en avant ou en retrait</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Perte prématurée de dents de lait</span>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Succion du pouce</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Succion du pouce persistante après 4 ans</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Respiration buccale</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">L'enfant respire principalement par la bouche</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Difficultés à mastiquer</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Problèmes lors de la mastication des aliments</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Chevauchement dentaire</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Les dents se chevauchent ou manquent d'espace</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Décalage des mâchoires</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Mâchoire en avant ou en retrait par rapport à l'autre</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Perte prématurée</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Perte prématurée de dents de lait</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

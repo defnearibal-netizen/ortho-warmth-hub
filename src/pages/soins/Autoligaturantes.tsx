@@ -44,33 +44,55 @@ const Autoligaturantes = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Les avantages des brackets autoligaturants
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Moins de friction, mouvements plus fluides</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Rendez-vous plus courts</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Moins de douleur après les ajustements</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Hygiène facilitée (pas d'élastiques)</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Durée de traitement souvent réduite</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-muted-foreground">Design discret et moderne</span>
+              {/* Avantages - Bloc chocolat */}
+              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
+                <h3 className="text-2xl font-semibold text-primary-foreground mb-6 font-heading">
+                  Les avantages des brackets autoligaturants
+                </h3>
+
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Moins de friction</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Mouvements dentaires plus fluides et naturels</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Rendez-vous plus courts</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Ajustements rapides et efficaces au cabinet</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Moins de douleur</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Confort amélioré après les ajustements</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Hygiène facilitée</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Pas d'élastiques qui retiennent la plaque</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Durée réduite</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Traitement souvent plus court qu'avec brackets classiques</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Design moderne</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Apparence discrète et esthétique</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
