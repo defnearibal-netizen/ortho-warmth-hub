@@ -64,6 +64,83 @@ const Parcours = () => {
               Chez <strong className="text-foreground">la Clinique Dentaire Panorama</strong>, nous comprenons que chaque sourire est unique. C'est pourquoi nous avons mis en place un parcours de soin personnalisé, conçu pour vous accompagner à chaque étape vers un sourire éclatant et en pleine santé.
             </p>
           </div>
+
+          {/* Timeline Chart */}
+          <div className="mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-cta-hover text-primary-foreground font-semibold text-sm mb-4">
+                  1ère consultation
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Entretien et examen clinique pour cibler vos attentes
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#6B7B8C] text-primary-foreground font-semibold text-sm mb-4">
+                  Bilan
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Photos, radios et empreintes numériques 3D
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#A8A090] text-primary-foreground font-semibold text-sm mb-4">
+                  Plan de traitement
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Diagnostic, options et consentement éclairé
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm mb-4">
+                  Pose
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Installation de l'appareil et conseils de brossage
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#C4956A] text-primary-foreground font-semibold text-sm mb-4">
+                  Suivi
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  RDV d'activation toutes les 4 à 5 semaines
+                </p>
+              </div>
+
+              {/* Step 6 */}
+              <div className="text-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#8B6F5C] text-primary-foreground font-semibold text-sm mb-4">
+                  Contention
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Dépose et maintien des résultats
+                </p>
+              </div>
+            </div>
+
+            {/* Timeline line with connectors */}
+            <div className="hidden lg:flex items-center justify-center mt-6 px-8">
+              <div className="flex-1 flex items-center">
+                {[1, 2, 3, 4, 5, 6].map((_, index) => (
+                  <div key={index} className="flex-1 flex items-center">
+                    <div className="w-px h-6 bg-border mx-auto" />
+                    {index < 5 && <div className="flex-1 h-px bg-border" />}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
