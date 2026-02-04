@@ -119,17 +119,6 @@ const UrgencesPage = () => {
         </div>
       </section>
 
-      {/* Separator before Emplacement */}
-      <div className="w-full py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent to-primary/30" />
-            <div className="w-2 h-2 rounded-full bg-primary/40" />
-            <div className="h-px flex-1 max-w-24 bg-gradient-to-l from-transparent to-primary/30" />
-          </div>
-        </div>
-      </div>
-
       {/* Emplacement et contact Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
