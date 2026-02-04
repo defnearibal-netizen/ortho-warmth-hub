@@ -1,8 +1,12 @@
 import Layout from "@/components/layout/Layout";
-import { Lightbulb, UtensilsCrossed, Sparkles, Shield, X, Check, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { UtensilsCrossed, Sparkles, Shield, X, Check, ChevronDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
 import conseilsHero from "@/assets/conseils-hero.png";
+
+const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+const PHONE_NUMBER = "+225 05 75 43 00 00";
 
 const Conseils = () => {
   const [accessoiresOpen, setAccessoiresOpen] = useState(false);
@@ -222,6 +226,119 @@ const Conseils = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Separator before Emplacement */}
+      <div className="w-full py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent to-primary/30" />
+            <div className="w-2 h-2 rounded-full bg-primary/40" />
+            <div className="h-px flex-1 max-w-24 bg-gradient-to-l from-transparent to-primary/30" />
+          </div>
+        </div>
+      </div>
+
+      {/* Emplacement et contact Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+              Emplacement et contact
+            </h2>
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-12" />
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Left: Horaires - centered */}
+              <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-heading">
+                  Horaires d'ouvertures
+                </h3>
+                <a 
+                  href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
+                  className="text-primary hover:text-primary/80 transition-colors font-medium"
+                >
+                  TEL : {PHONE_NUMBER}
+                </a>
+                <div className="w-12 h-0.5 bg-primary mt-2 mb-8" />
+                
+                {/* Hours table */}
+                <div className="space-y-4 w-full max-w-xs">
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Lundi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Mardi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Mercredi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Jeudi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Vendredi</span>
+                    <span className="text-muted-foreground">09:00 - 18:00</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-3">
+                    <span className="text-foreground">Samedi</span>
+                    <span className="text-muted-foreground">Fermé</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-foreground">Dimanche</span>
+                    <span className="text-muted-foreground">Fermé</span>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground mt-8 text-sm">
+                  Boulevard de Marseille, Zone 4 Abidjan
+                </p>
+              </div>
+
+              {/* Right: Google Maps */}
+              <div className="h-[400px] rounded-lg overflow-hidden shadow-soft">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4IlciZg!5e0!3m2!1sfr!2sci!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localisation du cabinet"
+                />
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                asChild 
+                className="border-cta-hover text-cta-hover hover:bg-cta-hover hover:text-primary-foreground"
+              >
+                <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}>
+                  {PHONE_NUMBER}
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                asChild 
+                className="bg-cta-hover hover:bg-cta-hover/90 text-primary-foreground"
+              >
+                <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
+                  PRENDRE RENDEZ-VOUS
+                </a>
+              </Button>
             </div>
           </div>
         </div>
