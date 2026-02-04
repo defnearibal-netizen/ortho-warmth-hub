@@ -73,13 +73,14 @@ const Parcours = () => {
           <div className="space-y-0">
             {steps.map((step, index) => (
               <div key={step.number}>
+                {/* Separator line - full width, except for first item */}
+                {index > 0 && (
+                  <div className="h-px w-full bg-cta-hover my-8" />
+                )}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center py-8">
-                  {/* Image with number overlay and top separator line */}
+                  {/* Image with number overlay */}
                   <div className="relative">
-                    {/* Separator line at top of image */}
-                    {index > 0 && (
-                      <div className="absolute -top-8 left-0 right-0 h-px bg-cta-hover" />
-                    )}
                     <img
                       src={step.image}
                       alt={step.title}
