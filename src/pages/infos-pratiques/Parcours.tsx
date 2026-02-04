@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Calendar, Phone, ClipboardList, Camera, FileText, Wrench, RefreshCw, Shield } from "lucide-react";
+import { Calendar, Phone, ClipboardList, Pencil, FileText, Stethoscope, RefreshCw, Smile } from "lucide-react";
 import dentistPatient from "@/assets/dentist-patient.jpg";
 import dentistPatient2 from "@/assets/dentist-patient-2.jpg";
 import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
@@ -92,7 +92,7 @@ const Parcours = () => {
                 </p>
                 <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
-                  <Camera className="w-7 h-7 text-[#6B7B8C]" />
+                  <Pencil className="w-7 h-7 text-[#6B7B8C]" />
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ const Parcours = () => {
                 </p>
                 <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
-                  <Wrench className="w-7 h-7 text-primary" />
+                  <Stethoscope className="w-7 h-7 text-primary" />
                 </div>
               </div>
 
@@ -148,7 +148,7 @@ const Parcours = () => {
                 </p>
                 <div className="w-px h-6 bg-border mt-auto" />
                 <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
-                  <Shield className="w-7 h-7 text-[#8B6F5C]" />
+                  <Smile className="w-7 h-7 text-[#8B6F5C]" />
                 </div>
               </div>
             </div>
