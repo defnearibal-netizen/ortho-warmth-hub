@@ -1,162 +1,138 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Route, Calendar } from "lucide-react";
+import { Calendar, Phone } from "lucide-react";
+import dentistPatient from "@/assets/dentist-patient.jpg";
+import dentistPatient2 from "@/assets/dentist-patient-2.jpg";
+import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
+import cabinetInterior from "@/assets/cabinet-interior.png";
+import waitingRoom from "@/assets/waiting-room.jpg";
+import toothMirror from "@/assets/tooth-mirror.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+const PHONE_NUMBER = "01 23 45 67 89";
 
 const Parcours = () => {
   const steps = [
     {
       number: 1,
       title: "Première consultation",
-      details: [
-        "Motif de consultation (avis esthétique, fonctionnel).",
-        "Réalisation d'un examen clinique complet (visage, dents, langue).",
-        "Présentation du devis de bilan et du traitement.",
-        "Explication sur la vie au cours du traitement.",
-        "Des réponses à toutes vos questions (durée, techniques innovantes).",
-      ],
+      image: dentistPatient,
+      description: "Lors de la 1ère consultation, un entretien ainsi qu'un examen clinique sont réalisés. Ce 1er rendez-vous vise à cibler vos attentes, déterminer si un traitement est nécessaire et si oui quel est le meilleur moment pour le débuter.",
     },
     {
       number: 2,
       title: "Constitution du dossier (bilan)",
-      details: [
-        "Photographies du visage et des dents.",
-        "Radiographies numérique (panoramique, téléradiographie de profil) et analyse céphalométriques.",
-        "Empreintes numériques.",
-      ],
+      image: orthodonticEquipment,
+      description: "Création du dossier orthodontique : photographies du visage et des dents, radiographies numériques (panoramique, téléradiographie de profil) et empreintes numériques 3D. Ces examens permettent d'établir un diagnostic précis.",
     },
     {
       number: 3,
       title: "Plan de traitement",
-      details: [
-        "Explication du diagnostic.",
-        "Exposition des différentes options et moyens de traitement.",
-        "Signature électronique du consentement éclairé.",
-      ],
+      image: cabinetInterior,
+      description: "Explication du diagnostic et exposition des différentes options et moyens de traitement. Signature électronique du consentement éclairé après avoir répondu à toutes vos questions.",
     },
     {
       number: 4,
       title: "La pose de l'appareil",
-      intro: "C'est le jour J, il est conseillé :",
-      details: [
-        "D'arriver à l'heure et les dents parfaitement brossées.",
-        "D'écouter les explications des techniques de brossage avec un appareil ainsi que les conseils alimentaires.",
-        "De se préparer à son premier selfie avec l'appareil.",
-      ],
+      image: dentistPatient2,
+      description: "C'est le jour J ! Il est conseillé d'arriver à l'heure et les dents parfaitement brossées. Vous recevrez les explications des techniques de brossage avec un appareil ainsi que les conseils alimentaires.",
     },
     {
       number: 5,
       title: "Suivi orthodontique",
-      details: [
-        "RDV d'activation de l'appareil toutes les 4 à 5 semaines.",
-        "Contrôle de l'hygiène dentaire et des gencives.",
-        "Réalisation des radiographies de contrôle.",
-        "Vérification du respect des consignes comme le port des élastiques.",
-      ],
+      image: waitingRoom,
+      description: "RDV d'activation de l'appareil toutes les 4 à 5 semaines. Contrôle de l'hygiène dentaire et des gencives, réalisation des radiographies de contrôle et vérification du respect des consignes.",
     },
     {
       number: 6,
-      title: "Dépose de l'appareil et contention",
-      intro: "Bravo ! C'est la fin du traitement actif.",
-      details: [
-        "Dépose des appareils.",
-        "Nettoyage complet des dents.",
-        "Mise en place de la contention pour maintenir les dents dans leur nouvelle position (le plus souvent fil collé en bas et gouttière nocturne en haut).",
-        "Rendez-vous de contrôle de la contention tous les 3 ou 4 mois pendant 1 an.",
-      ],
+      title: "Dépose et contention",
+      image: toothMirror,
+      description: "Bravo ! C'est la fin du traitement actif. Dépose des appareils, nettoyage complet des dents et mise en place de la contention pour maintenir les dents dans leur nouvelle position.",
     },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Route className="h-8 w-8 text-primary" />
-            </div>
+          <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
-              Votre parcours de soins
+              Le Parcours de soin
             </h1>
             <p className="text-lg text-muted-foreground">
-              Découvrez les étapes de votre traitement orthodontique
+              Chez <strong className="text-foreground">le Cabinet d'Orthodontie Aribal</strong>, nous comprenons que chaque sourire est unique. C'est pourquoi nous avons mis en place un parcours de soin personnalisé, conçu pour vous accompagner à chaque étape vers un sourire éclatant et en pleine santé.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Horizontal Timeline Section */}
-      <section className="py-16 bg-background overflow-hidden">
+      {/* Steps Section */}
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
-          {/* Horizontal scrollable timeline */}
-          <div className="relative">
-            {/* Horizontal line */}
-            <div className="hidden lg:block absolute top-6 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 rounded-full" />
-            
-            {/* Steps grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {steps.map((step) => (
-                <div
-                  key={step.number}
-                  className="relative"
-                >
-                  {/* Step number circle */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10">
+          <div className="space-y-16 md:space-y-24">
+            {steps.map((step) => (
+              <div
+                key={step.number}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+              >
+                {/* Image with number overlay */}
+                <div className="relative">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="w-full h-64 md:h-80 object-cover rounded-lg"
+                  />
+                  {/* Number overlay */}
+                  <div className="absolute top-0 left-0 bg-secondary/80 px-6 py-4">
+                    <span className="text-4xl md:text-5xl font-light text-muted-foreground">
                       {step.number}
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {step.title}
-                    </h3>
-                  </div>
-                  
-                  {/* Step content */}
-                  <div className="bg-secondary rounded-2xl p-5 ml-0 lg:ml-0 border-l-4 border-primary">
-                    {step.intro && (
-                      <p className="text-muted-foreground mb-3 italic">
-                        {step.intro}
-                      </p>
-                    )}
-                    <ul className="space-y-2">
-                      {step.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    </span>
                   </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Content */}
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+                    {step.title}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4 font-heading">
-            Prêt à commencer votre parcours ?
-          </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Prenez rendez-vous pour votre première consultation et découvrez le traitement adapté à vos besoins.
-          </p>
-          <Button variant="secondary" size="lg" asChild>
-            <a
-              href={RDV_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <Calendar className="h-5 w-5" />
-              Prendre rendez-vous
-            </a>
-          </Button>
+      {/* CTA Buttons - Fixed at bottom */}
+      <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border py-4 z-50">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center gap-4">
+            <Button variant="outline" size="lg" asChild className="border-2 border-cta-hover text-cta-hover hover:bg-cta-hover hover:text-primary-foreground">
+              <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                {PHONE_NUMBER}
+              </a>
+            </Button>
+            <Button size="lg" asChild className="bg-cta-hover hover:bg-cta-hover/90 text-primary-foreground">
+              <a
+                href={RDV_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Calendar className="h-5 w-5" />
+                PRENDRE RENDEZ-VOUS
+              </a>
+            </Button>
+          </div>
         </div>
-      </section>
+      </div>
+
+      {/* Bottom spacing for fixed buttons */}
+      <div className="h-24" />
     </Layout>
   );
 };
