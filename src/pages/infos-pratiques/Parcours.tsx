@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Calendar, Phone } from "lucide-react";
+import { Calendar, Phone, ClipboardList, Camera, FileText, Wrench, RefreshCw, Shield } from "lucide-react";
 import dentistPatient from "@/assets/dentist-patient.jpg";
 import dentistPatient2 from "@/assets/dentist-patient-2.jpg";
 import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
@@ -69,75 +69,87 @@ const Parcours = () => {
           <div className="mt-12">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
               {/* Step 1 */}
-              <div className="text-center">
-                <div className="inline-block px-4 py-2 rounded-full bg-cta-hover text-primary-foreground font-semibold text-sm mb-4">
+              <div className="text-center flex flex-col items-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-cta-hover text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   1ère consultation
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Entretien et examen clinique pour cibler vos attentes
                 </p>
+                <div className="w-px h-6 bg-border" />
+                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
+                  <ClipboardList className="w-7 h-7 text-cta-hover" />
+                </div>
               </div>
 
               {/* Step 2 */}
-              <div className="text-center">
-                <div className="inline-block px-4 py-2 rounded-full bg-[#6B7B8C] text-primary-foreground font-semibold text-sm mb-4">
+              <div className="text-center flex flex-col items-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#6B7B8C] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Bilan
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Photos, radios et empreintes numériques 3D
                 </p>
+                <div className="w-px h-6 bg-border" />
+                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
+                  <Camera className="w-7 h-7 text-[#6B7B8C]" />
+                </div>
               </div>
 
               {/* Step 3 */}
-              <div className="text-center">
-                <div className="inline-block px-4 py-2 rounded-full bg-[#A8A090] text-primary-foreground font-semibold text-sm mb-4">
+              <div className="text-center flex flex-col items-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#A8A090] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Plan de traitement
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Diagnostic, options et consentement éclairé
                 </p>
+                <div className="w-px h-6 bg-border" />
+                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
+                  <FileText className="w-7 h-7 text-[#A8A090]" />
+                </div>
               </div>
 
               {/* Step 4 */}
-              <div className="text-center">
-                <div className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm mb-4">
+              <div className="text-center flex flex-col items-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Pose
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Installation de l'appareil et conseils de brossage
                 </p>
+                <div className="w-px h-6 bg-border" />
+                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
+                  <Wrench className="w-7 h-7 text-primary" />
+                </div>
               </div>
 
               {/* Step 5 */}
-              <div className="text-center">
-                <div className="inline-block px-4 py-2 rounded-full bg-[#C4956A] text-primary-foreground font-semibold text-sm mb-4">
+              <div className="text-center flex flex-col items-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#C4956A] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Suivi
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   RDV d'activation toutes les 4 à 5 semaines
                 </p>
+                <div className="w-px h-6 bg-border" />
+                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
+                  <RefreshCw className="w-7 h-7 text-[#C4956A]" />
+                </div>
               </div>
 
               {/* Step 6 */}
-              <div className="text-center">
-                <div className="inline-block px-4 py-2 rounded-full bg-[#8B6F5C] text-primary-foreground font-semibold text-sm mb-4">
+              <div className="text-center flex flex-col items-center">
+                <div className="inline-block px-4 py-2 rounded-full bg-[#8B6F5C] text-primary-foreground font-semibold text-sm mb-4 whitespace-nowrap">
                   Contention
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Dépose et maintien des résultats
                 </p>
-              </div>
-            </div>
-
-            {/* Timeline line with connectors */}
-            <div className="hidden lg:flex items-center justify-center mt-6 px-8">
-              <div className="flex-1 flex items-center">
-                {[1, 2, 3, 4, 5, 6].map((_, index) => (
-                  <div key={index} className="flex-1 flex items-center">
-                    <div className="w-px h-6 bg-border mx-auto" />
-                    {index < 5 && <div className="flex-1 h-px bg-border" />}
-                  </div>
-                ))}
+                <div className="w-px h-6 bg-border" />
+                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mt-2">
+                  <Shield className="w-7 h-7 text-[#8B6F5C]" />
+                </div>
               </div>
             </div>
           </div>
