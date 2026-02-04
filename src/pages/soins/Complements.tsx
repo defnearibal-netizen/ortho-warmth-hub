@@ -43,23 +43,23 @@ const Complements = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              {/* Mini-vis - Bloc chocolat */}
-              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
-                <h3 className="text-2xl font-semibold text-primary-foreground mb-4 font-heading">
-                  Mini-vis orthodontiques (ancrage squelettique)
-                </h3>
-                <p className="text-primary-foreground/80 mb-6">
-                  Les mini-vis sont de petites vis en titane temporairement placées dans l'os 
-                  pour servir de point d'ancrage fixe. Elles permettent des mouvements dentaires 
-                  impossibles avec les méthodes conventionnelles.
-                </p>
+              {/* Mini-vis */}
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Mini-vis orthodontiques (ancrage squelettique)
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Les mini-vis sont de petites vis en titane temporairement placées dans l'os 
+                pour servir de point d'ancrage fixe. Elles permettent des mouvements dentaires 
+                impossibles avec les méthodes conventionnelles.
+              </p>
 
-                <div className="space-y-5">
+              <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Pose simple</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Procédure rapide et indolore sous anesthésie locale</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Procédure rapide et indolore</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -73,31 +73,31 @@ const Complements = () => {
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Mouvements complexes</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Permet des déplacements dentaires impossibles autrement</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Déplacements impossibles autrement</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Durée réduite</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Accélère le temps de traitement global</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Accélère le traitement global</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Stripping - Bloc chocolat */}
-              <div className="bg-cta-hover rounded-2xl p-8 md:p-10 mb-8">
-                <h3 className="text-2xl font-semibold text-primary-foreground mb-4 font-heading">
-                  Stripping dentaire
-                </h3>
-                <p className="text-primary-foreground/80 mb-6">
-                  Le stripping (ou réduction interproximale) consiste à réduire légèrement 
-                  l'émail entre les dents pour créer de l'espace. Cette technique est utilisée 
-                  pour éviter les extractions dans les cas d'encombrement modéré.
-                </p>
+              {/* Stripping */}
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Stripping dentaire
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Le stripping (ou réduction interproximale) consiste à réduire légèrement 
+                l'émail entre les dents pour créer de l'espace. Cette technique est utilisée 
+                pour éviter les extractions dans les cas d'encombrement modéré.
+              </p>
 
-                <div className="space-y-5">
+              <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
+                <div className="grid md:grid-cols-2 gap-5">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
@@ -109,21 +109,21 @@ const Complements = () => {
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Indolore</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Procédure sans anesthésie nécessaire</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Sans anesthésie nécessaire</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Préserve l'intégrité</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Respecte la structure dentaire naturelle</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Respecte la structure dentaire</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Stabilité améliorée</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Meilleure stabilité à long terme du résultat</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Meilleure stabilité à long terme</p>
                     </div>
                   </div>
                 </div>
