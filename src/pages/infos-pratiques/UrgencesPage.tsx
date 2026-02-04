@@ -1,169 +1,153 @@
 import Layout from "@/components/layout/Layout";
-import { AlertTriangle, Phone, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, Calendar } from "lucide-react";
+import { useState } from "react";
+import urgenceHero from "@/assets/urgence-hero.png";
+import momDaughterCta from "@/assets/mom-daughter-cta.png";
+
+const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const UrgencesPage = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const urgences = [
     {
-      title: "Bracket décollé",
-      description: "Un bracket s'est détaché de la dent",
-      solution: "Conservez le bracket. S'il gêne, appliquez de la cire orthodontique. Contactez-nous pour un rendez-vous de recollage.",
-      urgent: false,
+      title: "Fil ou bague blessant",
+      solution: "Utilisez de la cire orthodontique pour couvrir le fil ou la bague qui vous blesse. Si la douleur persiste, contactez-nous pour couper ou ajuster le fil.",
     },
     {
-      title: "Fil qui pique",
-      description: "L'extrémité du fil dépasse et blesse la joue",
-      solution: "Utilisez de la cire orthodontique pour couvrir le fil. Si la douleur persiste, contactez-nous pour couper le fil.",
-      urgent: false,
+      title: "Bague décollée",
+      solution: "Conservez le bracket si possible. S'il gêne, appliquez de la cire orthodontique. Contactez-nous rapidement pour un rendez-vous de recollage.",
     },
     {
-      title: "Douleur importante",
-      description: "Douleurs intenses après un ajustement",
-      solution: "Prenez un antalgique (paracétamol). Si la douleur persiste au-delà de 48h, contactez-nous.",
-      urgent: false,
+      title: "Gouttière cassée ou perdue",
+      solution: "Portez l'aligneur précédent en attendant. Contactez-nous pour commander un nouvel aligneur. Ne restez pas sans appareil.",
     },
     {
-      title: "Appareil amovible cassé",
-      description: "Votre appareil amovible est endommagé",
-      solution: "Cessez de le porter et contactez-nous rapidement pour une réparation ou un remplacement.",
-      urgent: true,
-    },
-    {
-      title: "Aligneur perdu ou cassé",
-      description: "Vous avez perdu ou cassé un aligneur",
-      solution: "Portez l'aligneur précédent en attendant. Contactez-nous pour commander un nouvel aligneur.",
-      urgent: true,
-    },
-    {
-      title: "Gonflement ou infection",
-      description: "Gonflement de la gencive, douleur pulsatile, fièvre",
-      solution: "Contactez-nous immédiatement. En cas de fièvre élevée, consultez les urgences.",
-      urgent: true,
+      title: "Dents sensibles",
+      solution: "Prenez un antalgique (paracétamol). Si la douleur persiste au-delà de 48h après un ajustement, contactez-nous.",
     },
   ];
 
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
+      {/* Hero Section - Style Enfants */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${urgenceHero})` }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/75" />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[60vh] md:min-h-[70vh] flex items-center">
+          <div className="max-w-xl py-16 md:py-24 ml-4 md:ml-12 lg:ml-20">
+            <p className="text-primary-foreground/80 text-lg mb-4 font-medium">
+              Infos pratiques
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
               Urgences orthodontiques
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Comment réagir en cas de problème avec votre appareil
+            <div className="w-16 h-1 bg-primary mb-8" />
+            <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+              Comment réagir en cas de problème avec votre appareil ? Nous répondons à toutes vos questions pour des soins sereins et adaptés.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact urgence */}
-      <section className="py-8 bg-primary">
+      {/* Urgences Accordion Section */}
+      <section className="py-16 md:py-24 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
-            <Phone className="h-8 w-8 text-primary-foreground" />
-            <div>
-              <p className="text-primary-foreground font-semibold">
-                En cas d'urgence, contactez-nous au
-              </p>
-              <a
-                href="tel:+33123456789"
-                className="text-2xl font-bold text-primary-foreground hover:underline"
-              >
-                01 23 45 67 89
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Urgences list */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-foreground mb-8 text-center font-heading">
-              Situations courantes et solutions
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+              Une Urgence ?
             </h2>
-            <div className="space-y-6">
+            <p className="text-muted-foreground text-lg">
+              Nous répondons à toutes vos questions pour des soins sereins et adaptés.
+            </p>
+          </div>
+
+          {/* Accordion Grid */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {urgences.map((urgence, index) => (
-                <div
-                  key={index}
-                  className={`rounded-2xl p-6 ${
-                    urgence.urgent ? "bg-destructive/10 border border-destructive/20" : "bg-secondary"
-                  }`}
-                >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
-                        urgence.urgent ? "bg-destructive/20" : "bg-primary/10"
+                <div key={index} className="bg-background rounded-xl overflow-hidden border border-border">
+                  <button
+                    onClick={() => toggleAccordion(index)}
+                    className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/50 transition-colors"
+                  >
+                    <span className="font-medium text-foreground">{urgence.title}</span>
+                    <ChevronDown 
+                      className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
+                        openIndex === index ? 'rotate-180' : ''
                       }`}
-                    >
-                      {urgence.urgent ? (
-                        <AlertTriangle className="h-5 w-5 text-destructive" />
-                      ) : (
-                        <CheckCircle className="h-5 w-5 text-primary" />
-                      )}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-1">
-                        {urgence.title}
-                        {urgence.urgent && (
-                          <span className="ml-2 text-xs bg-destructive text-destructive-foreground px-2 py-0.5 rounded-full">
-                            Prioritaire
-                          </span>
-                        )}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-3">
-                        {urgence.description}
-                      </p>
-                      <div className="bg-background rounded-lg p-4">
-                        <p className="text-sm text-foreground">
-                          <strong>Solution :</strong> {urgence.solution}
-                        </p>
-                      </div>
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      openIndex === index ? 'max-h-48' : 'max-h-0'
+                    }`}
+                  >
+                    <div className="p-5 pt-0 text-muted-foreground text-sm leading-relaxed">
+                      {urgence.solution}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* CTA Button */}
+            <div className="text-center mt-10">
+              <Button variant="cta" size="lg" asChild>
+                <a
+                  href={RDV_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Nous contacter
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Kit urgence */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-6 font-heading">
-              Votre kit d'urgence
+      {/* CTA Section */}
+      <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${momDaughterCta})` }}
+        />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
+          <div className="bg-background/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
+              Besoin d'aide ?
             </h2>
+            <div className="w-12 h-1 bg-primary mb-6" />
             <p className="text-muted-foreground mb-8">
-              Nous vous remettons un kit d'urgence lors de la pose de votre appareil. 
-              Gardez-le toujours à portée de main.
+              N'hésitez pas à nous contacter pour toute question ou urgence. Notre équipe est là pour vous accompagner.
             </p>
-            <div className="grid sm:grid-cols-3 gap-6">
-              <div className="bg-background rounded-xl p-6 shadow-soft">
-                <h3 className="font-semibold text-foreground mb-2">Cire orthodontique</h3>
-                <p className="text-sm text-muted-foreground">
-                  Pour protéger les muqueuses des frottements
-                </p>
-              </div>
-              <div className="bg-background rounded-xl p-6 shadow-soft">
-                <h3 className="font-semibold text-foreground mb-2">Brossette interdentaire</h3>
-                <p className="text-sm text-muted-foreground">
-                  Pour nettoyer autour de l'appareil
-                </p>
-              </div>
-              <div className="bg-background rounded-xl p-6 shadow-soft">
-                <h3 className="font-semibold text-foreground mb-2">Élastiques de rechange</h3>
-                <p className="text-sm text-muted-foreground">
-                  En cas de rupture de vos élastiques
-                </p>
-              </div>
-            </div>
+            <Button variant="cta" size="lg" asChild>
+              <a
+                href={RDV_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Calendar className="h-5 w-5" />
+                Prendre rendez-vous
+              </a>
+            </Button>
           </div>
         </div>
       </section>
