@@ -1,21 +1,37 @@
 import Layout from "@/components/layout/Layout";
-import { Lightbulb, UtensilsCrossed, Sparkles, Shield } from "lucide-react";
+import { Lightbulb, UtensilsCrossed, Sparkles, Shield, X, Check, ChevronDown } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
+import conseilsHero from "@/assets/conseils-hero.png";
 
 const Conseils = () => {
+  const [accessoiresOpen, setAccessoiresOpen] = useState(false);
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Lightbulb className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
+      {/* Hero Section - Same layout as Enfants.tsx */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${conseilsHero})` }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/75" />
+        
+        {/* Content */}
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[60vh] md:min-h-[70vh] flex items-center">
+          <div className="max-w-xl py-16 md:py-24 ml-4 md:ml-12 lg:ml-20">
+            <p className="text-primary-foreground/80 text-lg mb-4 font-medium">
+              Infos pratiques
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
               Conseils pratiques
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Tout ce qu'il faut savoir pour bien vivre votre traitement
+            <div className="w-16 h-1 bg-primary mb-8" />
+            <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
+              Tout ce qu'il faut savoir pour bien vivre votre traitement orthodontique 
+              au quotidien : alimentation, hygiène, sport et activités.
             </p>
           </div>
         </div>
@@ -35,49 +51,53 @@ const Conseils = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-secondary rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-4 text-destructive">
-                  ❌ À éviter
+              {/* À éviter - Chocolat foncé */}
+              <div className="bg-cta-hover rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-primary-foreground mb-4 flex items-center gap-2">
+                  <X className="h-5 w-5 text-destructive" />
+                  À éviter
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-muted-foreground">
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
                     <span className="w-1.5 h-1.5 bg-destructive rounded-full mt-2" />
                     Aliments durs (pommes entières, carottes crues, noix)
                   </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
                     <span className="w-1.5 h-1.5 bg-destructive rounded-full mt-2" />
                     Aliments collants (caramel, chewing-gum, bonbons)
                   </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
                     <span className="w-1.5 h-1.5 bg-destructive rounded-full mt-2" />
                     Aliments croquants (chips, croûtes de pain)
                   </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
                     <span className="w-1.5 h-1.5 bg-destructive rounded-full mt-2" />
                     Mordre directement dans les aliments durs
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-secondary rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-4 text-primary">
-                  ✓ Recommandé
+              {/* Recommandé - Chocolat foncé with green checkmark */}
+              <div className="bg-cta-hover rounded-2xl p-6">
+                <h3 className="text-lg font-semibold text-primary-foreground mb-4 flex items-center gap-2">
+                  <Check className="h-5 w-5 text-green-500" />
+                  Recommandé
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2" />
                     Couper les aliments en petits morceaux
                   </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2" />
                     Privilégier les aliments tendres les premiers jours
                   </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2" />
                     Mâcher avec les dents du fond
                   </li>
-                  <li className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                  <li className="flex items-start gap-3 text-primary-foreground/80">
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2" />
                     Boire beaucoup d'eau
                   </li>
                 </ul>
@@ -108,47 +128,54 @@ const Conseils = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-semibold text-foreground mb-4">Routine quotidienne</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">1</span>
-                      Brossez-vous les dents après chaque repas (minimum 3 fois par jour)
+                  <h3 className="font-semibold text-foreground mb-6">Routine quotidienne</h3>
+                  <ul className="space-y-5">
+                    <li className="flex items-start gap-4 text-muted-foreground">
+                      <span className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 shadow-lg">1</span>
+                      <span className="pt-2">Brossez-vous les dents après chaque repas (minimum 3 fois par jour)</span>
                     </li>
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">2</span>
-                      Utilisez une brosse à dents orthodontique ou électrique
+                    <li className="flex items-start gap-4 text-muted-foreground">
+                      <span className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 shadow-lg">2</span>
+                      <span className="pt-2">Utilisez une brosse à dents orthodontique ou électrique</span>
                     </li>
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">3</span>
-                      Passez la brossette interdentaire sous le fil
+                    <li className="flex items-start gap-4 text-muted-foreground">
+                      <span className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 shadow-lg">3</span>
+                      <span className="pt-2">Passez la brossette interdentaire sous le fil</span>
                     </li>
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">4</span>
-                      Terminez par un bain de bouche fluoré
+                    <li className="flex items-start gap-4 text-muted-foreground">
+                      <span className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 shadow-lg">4</span>
+                      <span className="pt-2">Terminez par un bain de bouche fluoré</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-foreground mb-4">Accessoires recommandés</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
-                      Brosse à dents orthodontique en V
-                    </li>
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
-                      Brossettes interdentaires de différentes tailles
-                    </li>
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
-                      Fil dentaire spécial orthodontie
-                    </li>
-                    <li className="flex items-start gap-3 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
-                      Jet dentaire (hydropulseur)
-                    </li>
-                  </ul>
+                  <Collapsible open={accessoiresOpen} onOpenChange={setAccessoiresOpen}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full bg-secondary rounded-xl p-4 hover:bg-secondary/80 transition-colors">
+                      <h3 className="font-semibold text-foreground">Accessoires recommandés</h3>
+                      <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform duration-200 ${accessoiresOpen ? 'rotate-180' : ''}`} />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="pt-4 px-2">
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-3 text-muted-foreground">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                          Brosse à dents orthodontique en V
+                        </li>
+                        <li className="flex items-start gap-3 text-muted-foreground">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                          Brossettes interdentaires de différentes tailles
+                        </li>
+                        <li className="flex items-start gap-3 text-muted-foreground">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                          Fil dentaire spécial orthodontie
+                        </li>
+                        <li className="flex items-start gap-3 text-muted-foreground">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2" />
+                          Jet dentaire (hydropulseur)
+                        </li>
+                      </ul>
+                    </CollapsibleContent>
+                  </Collapsible>
                 </div>
               </div>
             </div>
