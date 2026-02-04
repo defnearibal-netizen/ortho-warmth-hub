@@ -61,7 +61,7 @@ const Parcours = () => {
               Le Parcours de soin
             </h1>
             <p className="text-lg text-muted-foreground">
-              Chez <strong className="text-foreground">le Cabinet d'Orthodontie Aribal</strong>, nous comprenons que chaque sourire est unique. C'est pourquoi nous avons mis en place un parcours de soin personnalisé, conçu pour vous accompagner à chaque étape vers un sourire éclatant et en pleine santé.
+              Chez <strong className="text-foreground">la Clinique Dentaire Panorama</strong>, nous comprenons que chaque sourire est unique. C'est pourquoi nous avons mis en place un parcours de soin personnalisé, conçu pour vous accompagner à chaque étape vers un sourire éclatant et en pleine santé.
             </p>
           </div>
         </div>
