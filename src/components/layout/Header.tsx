@@ -143,7 +143,7 @@ const Header = () => {
             {/* Infos Pratiques - Dropdown */}
             <DropdownMenu
               label="Infos Pratiques"
-              href="/infos-pratiques/parcours"
+              href="/infos-pratiques"
               items={infosPratiquesSubPages}
               isActive={isActive("/infos-pratiques")}
             />
@@ -243,7 +243,7 @@ const Header = () => {
 
             {/* Infos Pratiques */}
             <Link
-              to="/infos-pratiques/parcours"
+              to="/infos-pratiques"
               onClick={() => setIsOpen(false)}
               className={cn(
                 "py-2 text-sm font-medium transition-colors whitespace-nowrap",

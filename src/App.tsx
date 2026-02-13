@@ -22,6 +22,7 @@ import LingualeWin from "./pages/soins/LingualeWin";
 import Complements from "./pages/soins/Complements";
 
 // Infos pratiques pages
+import InfosPratiques from "./pages/InfosPratiques";
 import Parcours from "./pages/infos-pratiques/Parcours";
 import UrgencesPage from "./pages/infos-pratiques/UrgencesPage";
 import Conseils from "./pages/infos-pratiques/Conseils";
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/soins/complements" element={<Complements />} />
           
           {/* Infos pratiques routes */}
+          <Route path="/infos-pratiques" element={<InfosPratiques />} />
           <Route path="/infos-pratiques/parcours" element={<Parcours />} />
           <Route path="/infos-pratiques/urgences" element={<UrgencesPage />} />
           <Route path="/infos-pratiques/conseils" element={<Conseils />} />
