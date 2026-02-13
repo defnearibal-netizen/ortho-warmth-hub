@@ -143,6 +143,7 @@ const Header = () => {
             {/* Infos Pratiques - Dropdown */}
             <DropdownMenu
               label="Infos Pratiques"
+              href="/infos-pratiques/parcours"
               items={infosPratiquesSubPages}
               isActive={isActive("/infos-pratiques")}
             />
