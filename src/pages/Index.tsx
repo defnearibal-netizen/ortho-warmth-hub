@@ -208,7 +208,7 @@ const Index = () => {
               </div>
 
               <Button variant="cta" size="lg" asChild>
-                <Link to="/cabinet" className="flex items-center gap-2">
+                <Link to="/cabinet/a-propos" className="flex items-center gap-2">
                   Découvrir le cabinet
                   <ArrowRight className="h-5 w-5" />
                 </Link>
@@ -216,7 +216,7 @@ const Index = () => {
             </div>
 
             {/* Right - Image */}
-            <div className="relative">
+            <Link to="/cabinet/a-propos" className="relative block">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
                 <img 
                   src={toothMirror} 
@@ -224,7 +224,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
