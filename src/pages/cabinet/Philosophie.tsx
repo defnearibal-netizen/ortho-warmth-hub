@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import { Leaf, Smartphone, Camera, MessageCircle } from "lucide-react";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
 
 const Philosophie = () => {
@@ -41,7 +40,7 @@ const Philosophie = () => {
         </div>
       </section>
 
-      {/* Démarche Section - Two Column Layout */}
+      {/* Démarche Section - Reference Layout */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -51,59 +50,28 @@ const Philosophie = () => {
             <div className="w-16 h-0.5 bg-primary mx-auto mb-12" />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* Left: Text Content */}
-              <div className="space-y-8">
-                <p className="text-muted-foreground leading-relaxed">
+              {/* Left: List like schedule layout */}
+              <div>
+                <p className="text-muted-foreground leading-relaxed mb-8">
                   Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons des technologies de pointe pour garantir confort, précision et modernité.
                 </p>
 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <Leaf className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Démarche écoresponsable</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Cabinet entièrement dématérialisé pour réduire notre impact environnemental
-                      </p>
-                    </div>
+                <div className="divide-y divide-border">
+                  <div className="flex justify-between items-baseline py-4">
+                    <span className="font-medium text-foreground">Démarche écoresponsable</span>
+                    <span className="text-sm text-muted-foreground text-right ml-4">Cabinet dématérialisé</span>
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <Smartphone className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Application mobile</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Suivi orthodontique facilité grâce à notre application dédiée
-                      </p>
-                    </div>
+                  <div className="flex justify-between items-baseline py-4">
+                    <span className="font-medium text-foreground">Application mobile</span>
+                    <span className="text-sm text-muted-foreground text-right ml-4">Suivi orthodontique facilité</span>
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <Camera className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Empreintes numériques</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Technologies de pointe pour un confort et une précision optimaux
-                      </p>
-                    </div>
+                  <div className="flex justify-between items-baseline py-4">
+                    <span className="font-medium text-foreground">Empreintes numériques</span>
+                    <span className="text-sm text-muted-foreground text-right ml-4">Confort et précision</span>
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <MessageCircle className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Logiciel patient</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Gestion simplifiée des dossiers et communication facilitée
-                      </p>
-                    </div>
+                  <div className="flex justify-between items-baseline py-4">
+                    <span className="font-medium text-foreground">Logiciel patient</span>
+                    <span className="text-sm text-muted-foreground text-right ml-4">Gestion simplifiée</span>
                   </div>
                 </div>
               </div>
