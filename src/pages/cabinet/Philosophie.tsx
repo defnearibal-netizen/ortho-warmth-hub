@@ -41,57 +41,76 @@ const Philosophie = () => {
         </div>
       </section>
 
-      {/* Démarche écoresponsable Section */}
+      {/* Démarche Section - Two Column Layout */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading text-center">
               Notre démarche
             </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-6" />
-            <p className="text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto mb-12">
-              Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons des technologies de pointe pour garantir confort, précision et modernité.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Leaf className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Démarche écoresponsable</h3>
-                <p className="text-sm text-muted-foreground">
-                  Cabinet entièrement dématérialisé pour réduire notre impact environnemental
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-12" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Left: Text Content */}
+              <div className="space-y-8">
+                <p className="text-muted-foreground leading-relaxed">
+                  Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons des technologies de pointe pour garantir confort, précision et modernité.
                 </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <Leaf className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Démarche écoresponsable</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Cabinet entièrement dématérialisé pour réduire notre impact environnemental
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <Smartphone className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Application mobile</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Suivi orthodontique facilité grâce à notre application dédiée
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <Camera className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Empreintes numériques</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Technologies de pointe pour un confort et une précision optimaux
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <MessageCircle className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Logiciel patient</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Gestion simplifiée des dossiers et communication facilitée
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-              <div className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Smartphone className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Application mobile</h3>
-                <p className="text-sm text-muted-foreground">
-                  Suivi orthodontique facilité grâce à notre application dédiée
-                </p>
-              </div>
-              
-              <div className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <Camera className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Empreintes numériques</h3>
-                <p className="text-sm text-muted-foreground">
-                  Technologies de pointe pour un confort et une précision optimaux
-                </p>
-              </div>
-              
-              <div className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <MessageCircle className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Logiciel patient</h3>
-                <p className="text-sm text-muted-foreground">
-                  Gestion simplifiée des dossiers et communication facilitée
-                </p>
+
+              {/* Right: Image Placeholder */}
+              <div className="h-[400px] lg:h-full min-h-[400px] bg-muted rounded-xl flex items-center justify-center">
+                <p className="text-muted-foreground text-sm">Image à venir</p>
               </div>
             </div>
           </div>
