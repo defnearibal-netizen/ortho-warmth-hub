@@ -18,6 +18,7 @@ import treatmentAligneurs from "@/assets/treatment-aligneurs-new.png";
 import treatmentLinguale from "@/assets/treatment-linguale.jpg";
 import ctaBackground from "@/assets/cta-background.png";
 import toothMirror from "@/assets/tooth-mirror.jpg";
+import dentalCloseup from "@/assets/dental-closeup.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -292,7 +293,16 @@ const Index = () => {
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="container mx-auto px-4">
           {/* Card with brown background */}
-          <div className="bg-cta-hover rounded-3xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+          <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
+            {/* Background image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${dentalCloseup})` }}
+            />
+            {/* Dark overlay for readability */}
+            <div className="absolute inset-0 bg-cta-hover/80" />
+            {/* Content */}
+            <div className="relative z-10 p-8 md:p-12 lg:p-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Soins dentaires complets
@@ -327,6 +337,7 @@ const Index = () => {
                 </Link>
               </Button>
             </div>
+          </div>
           </div>
         </div>
       </section>
