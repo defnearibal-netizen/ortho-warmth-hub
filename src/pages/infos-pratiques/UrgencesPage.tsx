@@ -38,7 +38,7 @@ const UrgencesPage = () => {
     },
     {
       title: "Douleurs après la pose d'un appareil ou d'un RDV d'activation",
-      solution: "Pensez à prendre un antalgique durant 3 jours matin midi et soir. Mangez des aliments mous les trois premiers jours. Pas de panique la douleur va diminuer voir disparaître au bout de 3 jours.",
+      solution: "Pensez à prendre un antalgique durant 3 jours matin midi et soir. Mangez des aliments mous les trois premiers jours. Pas de panique, la douleur va diminuer voir disparaître au bout de 3 jours.",
     },
   ];
 
