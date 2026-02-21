@@ -5,14 +5,18 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import CtaBanner from "@/components/shared/CtaBanner";
 import infosPratiquesHero from "@/assets/infos-pratiques-hero.jpg";
+import infoParcours from "@/assets/info-parcours.png";
+import infoUrgences from "@/assets/info-urgences.png";
+import infoConseils from "@/assets/info-conseils.png";
+import infoFiches from "@/assets/info-fiches.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const subPages = [
-  { name: "Votre parcours", description: "Les étapes de votre traitement orthodontique", href: "/infos-pratiques/parcours", icon: Route },
-  { name: "Urgences", description: "Que faire en cas d'urgence orthodontique", href: "/infos-pratiques/urgences", icon: Siren },
-  { name: "Conseils", description: "Alimentation, hygiène et bons réflexes", href: "/infos-pratiques/conseils", icon: BookOpen },
-  { name: "Fiches d'information", description: "Documents utiles à télécharger", href: "/infos-pratiques/fiches", icon: FileText },
+  { name: "Votre parcours", description: "Les étapes de votre traitement orthodontique", href: "/infos-pratiques/parcours", icon: Route, image: infoParcours },
+  { name: "Urgences", description: "Que faire en cas d'urgence orthodontique", href: "/infos-pratiques/urgences", icon: Siren, image: infoUrgences },
+  { name: "Conseils", description: "Alimentation, hygiène et bons réflexes", href: "/infos-pratiques/conseils", icon: BookOpen, image: infoConseils },
+  { name: "Fiches d'information", description: "Documents utiles à télécharger", href: "/infos-pratiques/fiches", icon: FileText, image: infoFiches },
 ];
 
 
@@ -53,13 +57,19 @@ const InfosPratiques = () => {
               <Link
                 key={page.href}
                 to={page.href}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group"
+                className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                  <page.icon className="h-6 w-6 text-primary" />
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={page.image}
+                    alt={page.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 font-heading">{page.name}</h3>
-                <p className="text-sm text-muted-foreground">{page.description}</p>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-foreground mb-2 font-heading">{page.name}</h3>
+                  <p className="text-sm text-muted-foreground">{page.description}</p>
+                </div>
               </Link>
             ))}
           </div>
