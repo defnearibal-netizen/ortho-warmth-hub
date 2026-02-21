@@ -30,7 +30,7 @@ const Parcours = () => {
       number: 3,
       title: "Plan de traitement",
       image: cabinetInterior,
-      description: "Explication du diagnostic et exposition des différentes options et moyens de traitement. Signature électronique du consentement éclairé après avoir répondu à toutes vos questions.",
+      description: "Le diagnostic est expliqué en détail, les différentes options et moyens de traitement sont présentés, puis le consentement éclairé est validé par signature électronique.",
     },
     {
       number: 4,
