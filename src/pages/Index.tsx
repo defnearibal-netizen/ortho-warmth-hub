@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import InfosPratiquesSection from "@/components/home/InfosPratiquesSection";
 import CtaBanner from "@/components/shared/CtaBanner";
+import NosSouriresSection from "@/components/home/NosSouriresSection";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import logoCabinet from "@/assets/logo-cabinet.jpg";
@@ -104,7 +105,6 @@ const dentalServices = [
     description: "Pose d'implants dentaires.",
   },
 ];
-
 
 const Index = () => {
   return (
@@ -231,6 +231,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Nos Sourires - Before/After */}
+      <NosSouriresSection />
 
       {/* Les Soins et Techniques */}
       <section className="py-24 bg-secondary" style={{ fontFamily: "'Poppins', sans-serif" }}>
