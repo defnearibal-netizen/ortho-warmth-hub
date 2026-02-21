@@ -106,8 +106,7 @@ const Autoligaturantes = () => {
 
                 </p>
                 <p className="text-muted-foreground">
-                  Cette technologie permet également de réduire le nombre de rendez-vous nécessaires 
-                  car les ajustements sont plus simples et plus rapides à effectuer.
+                  Nous utilisons la gamme TGO une approche moderne en orthodontie, promue par GC Orthodontics, pour une mécanique plus précise et efficace.
                 </p>
               </div>
 
