@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Calendar, Route, Siren, BookOpen, FileText } from "lucide-react";
+import { AlertTriangle, Calendar, Route, Siren, BookOpen, FileText } from "lucide-react";
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
@@ -43,10 +43,39 @@ const InfosPratiques = () => {
         </div>
       </section>
 
-      {/* Sub-pages navigation */}
+      {/* Emergency info + Sub-pages navigation */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto">
+            {/* Emergency banner */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 rounded-xl bg-accent/30 flex items-center justify-center">
+                <AlertTriangle className="h-7 w-7 text-primary" />
+              </div>
+              <div>
+                <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                  Urgences
+                </span>
+                <h2 className="text-2xl font-bold text-foreground font-heading">
+                  En cas d'urgence orthodontique
+                </h2>
+              </div>
+            </div>
+
+            <div className="bg-accent/20 border border-accent/40 rounded-xl p-6 mb-12">
+              <p className="text-foreground">
+                <strong>Numéro d'urgence :</strong>{" "}
+                <a href="tel:+2250575430000" className="text-primary hover:underline font-semibold">
+                  +225 05 75 43 00 00
+                </a>
+                <br />
+                <span className="text-sm text-muted-foreground">
+                  Les premiers jours après la pose de l'appareil, une douleur/sensibilité peut s'installer au niveau de l'ensemble des dents. Elle dure en général 3 à 7 jours avant de s'atténuer. Prenez un antalgique en cas de douleurs.
+                </span>
+              </p>
+            </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {subPages.map((page) => (
               <Link
                 key={page.href}
@@ -66,6 +95,7 @@ const InfosPratiques = () => {
                 </div>
               </Link>
             ))}
+          </div>
           </div>
         </div>
       </section>
