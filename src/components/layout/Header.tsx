@@ -23,7 +23,7 @@ const soinsSubPages = [
 const infosPratiquesSubPages = [
   { name: "Votre parcours", href: "/infos-pratiques/parcours" },
   { name: "Urgences", href: "/infos-pratiques/urgences" },
-  { name: "Conseils", href: "/infos-pratiques/conseils" },
+  { name: "Conseils pratiques et vidéos", href: "/infos-pratiques/conseils" },
   { name: "Fiches d'information", href: "/infos-pratiques/fiches" },
 ];
 
