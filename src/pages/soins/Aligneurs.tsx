@@ -11,10 +11,10 @@ const Aligneurs = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${aligneursHero})` }}
-        />
+          style={{ backgroundImage: `url(${aligneursHero})` }} />
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-foreground/75" />
         
@@ -29,10 +29,10 @@ const Aligneurs = () => {
             </h1>
             <div className="w-16 h-1 bg-primary mb-8" />
             <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
-              Les aligneurs sont des gouttières transparentes sur mesure qui déplacent 
-              progressivement vos dents vers leur position idéale. Quasi invisibles, ils 
-              offrent une alternative esthétique aux appareils traditionnels tout en garantissant 
-              des résultats excellents.
+              Les traitements par aligneurs (gouttières transparentes, presque qu’invisible) permettent d’améliorer le sourire en toute discrétion avec un minimum de contrainte.
+
+            
+
             </p>
           </div>
         </div>
@@ -172,8 +172,8 @@ const Aligneurs = () => {
 
 
 
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Aligneurs;
