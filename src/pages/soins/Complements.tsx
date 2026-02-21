@@ -86,13 +86,14 @@ const Complements = () => {
               </div>
 
               {/* Stripping */}
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Stripping dentaire
+              <h3 className="text-xl font-semibold text-foreground mb-4">Chirurgie maxillo-faciale
+
               </h3>
-              <p className="text-muted-foreground mb-6">
-                Le stripping (ou réduction interproximale) consiste à réduire légèrement 
-                l'émail entre les dents pour créer de l'espace. Cette technique est utilisée 
-                pour éviter les extractions dans les cas d'encombrement modéré.
+              <p className="text-muted-foreground mb-6">La chirurgie maxillo-faciale ou chirurgie des mâchoires peut être parfois indispensable dans certaine dysmorphose maxillo-faciale.
+
+
+
+
               </p>
 
               <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
@@ -187,7 +188,6 @@ const Complements = () => {
 
 
     </Layout>);
-
 };
 
 export default Complements;
