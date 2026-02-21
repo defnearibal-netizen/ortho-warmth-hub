@@ -5,6 +5,7 @@ import doctorPortrait from "@/assets/doctor-portrait.jpg";
 import logoOrthospe from "@/assets/logo-orthospe.png";
 import logoCode36 from "@/assets/logo-code36.png";
 import angePhoto from "@/assets/ange.png";
+import sylvainPhoto from "@/assets/sylvain.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -26,7 +27,7 @@ const memberships = [
 ];
 
 const staff = [
-  { name: "Sylvain", role: "Assistant dentaire", image: null },
+  { name: "Sylvain", role: "Assistant dentaire", image: sylvainPhoto },
   { name: "Ange", role: "Assistant dentaire", image: angePhoto },
 ];
 
