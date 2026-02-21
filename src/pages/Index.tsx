@@ -281,7 +281,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
-              <Link to="/services" className="flex items-center gap-2">
+              <Link to="/soins" className="flex items-center gap-2">
                 Voir tous les soins
                 <ArrowRight className="h-5 w-5" />
               </Link>
