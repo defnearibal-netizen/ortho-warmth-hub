@@ -32,10 +32,21 @@ const Enfants = () => {
             </h1>
             <div className="w-16 h-1 bg-primary mb-8" />
             <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
-              L'orthodontie interceptive, aussi appelée orthodontie précoce, intervient chez les 
-              enfants dès l'âge de 4 à 7 ans. Elle permet de corriger les problèmes de croissance 
-              des mâchoires et de guider l'éruption des dents définitives pour éviter des 
-              traitements plus lourds à l'adolescence.
+              L'orthodontie interceptive permet de supprimer les contraintes imposées par les dysfonctions et ainsi permettre à la croissance de s’exprimer en harmonisant les fonctions des lèvres, des joues et de la langue. 
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
             </p>
           </div>
         </div>
@@ -108,10 +119,7 @@ const Enfants = () => {
                 {/* Appareils d'expansion */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={appareilExpansion}
-                      alt="Appareil d'expansion"
-                      className="w-full h-full object-cover" />
+                    <img src={appareilExpansion} alt="Appareil d'expansion" className="w-full h-full object-cover" />
 
                   </div>
                   <div className="p-6 text-center">
@@ -125,10 +133,7 @@ const Enfants = () => {
                 {/* Appareils fonctionnels */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={appareilFonctionnel}
-                      alt="Appareil fonctionnel"
-                      className="w-full h-full object-cover" />
+                    <img src={appareilFonctionnel} alt="Appareil fonctionnel" className="w-full h-full object-cover" />
 
                   </div>
                   <div className="p-6 text-center">
@@ -142,10 +147,7 @@ const Enfants = () => {
                 {/* Mainteneurs d'espace */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={appareilMainteneur}
-                      alt="Mainteneur d'espace"
-                      className="w-full h-full object-cover" />
+                    <img src={appareilMainteneur} alt="Mainteneur d'espace" className="w-full h-full object-cover" />
 
                   </div>
                   <div className="p-6 text-center">
@@ -193,8 +195,6 @@ const Enfants = () => {
 
 
 
-    </Layout>);
-
-};
+    </Layout>);};
 
 export default Enfants;
