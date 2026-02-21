@@ -47,8 +47,8 @@ const Aligneurs = () => {
                 Les avantages des aligneurs
               </h3>
 
-              <p className="text-muted-foreground mb-4">
-                L'alignement dentaire se fait grâce à des gouttières successives conçues sur mesure, qui se retirent lors des repas.
+              <p className="text-muted-foreground mb-4">L'alignement dentaire se fait grâce à des gouttières successives conçues sur mesure,
+qui se retirent lors des repas.
               </p>
               <p className="text-muted-foreground mb-8">
                 Le traitement dépend donc entièrement de vous, et de votre motivation à porter les aligneurs.
