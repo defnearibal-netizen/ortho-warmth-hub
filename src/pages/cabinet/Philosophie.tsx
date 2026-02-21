@@ -40,50 +40,50 @@ const Philosophie = () => {
       </section>
 
       {/* Spécialisation Section - Dark background like reference */}
-      <section className="py-20 bg-cta-hover">
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-8 font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-heading">
               Une spécialisation en orthodontie
             </h2>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-4">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
               Au cœur de notre pratique se trouve une conviction simple : chaque patient est unique et mérite une prise en charge attentive, personnalisée et respectueuse. Nous prenons le temps de comprendre vos besoins, vos attentes et votre rythme afin de vous proposer des solutions adaptées, efficaces et durables.
             </p>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-16">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-16">
               Notre approche repose sur l'écoute, la transparence et la confiance. À chaque étape, nous vous expliquons clairement les traitements proposés, les techniques utilisées et les résultats attendus, afin que vous avanciez sereinement, en toute connaissance.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                  <img src={valeurEcoute} alt="Écoute" className="w-full h-full object-cover" />
+                  <img src={valeurEcoute} alt="Écoute & bienveillance" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-bold text-primary-foreground uppercase tracking-wider mb-3">
-                  Écoute
+                <h3 className="text-lg font-bold text-foreground uppercase tracking-wider mb-3">
+                  Écoute & bienveillance
                 </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Chaque patient est accueilli avec attention. Nous prenons le temps d'écouter, de rassurer et d'accompagner, à chaque étape du traitement.
                 </p>
               </div>
               <div className="text-center">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                  <img src={valeurExigence} alt="Exigence" className="w-full h-full object-cover" />
+                  <img src={valeurExigence} alt="Exigence & précision" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-bold text-primary-foreground uppercase tracking-wider mb-3">
-                  Exigence
+                <h3 className="text-lg font-bold text-foreground uppercase tracking-wider mb-3">
+                  Exigence & précision
                 </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Nous accordons une grande importance à la qualité des soins, à la rigueur des diagnostics et à la précision des traitements pour des résultats fiables et durables.
                 </p>
               </div>
               <div className="text-center">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                  <img src={valeurConfiance} alt="Confiance" className="w-full h-full object-cover" />
+                  <img src={valeurConfiance} alt="Confiance & transparence" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-bold text-primary-foreground uppercase tracking-wider mb-3">
-                  Confiance
+                <h3 className="text-lg font-bold text-foreground uppercase tracking-wider mb-3">
+                  Confiance & transparence
                 </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Nous expliquons chaque décision de manière simple et honnête, afin que vous avanciez en toute confiance, sans surprise, dans votre parcours de soins.
                 </p>
               </div>
