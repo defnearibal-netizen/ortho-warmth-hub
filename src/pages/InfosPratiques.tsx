@@ -60,8 +60,6 @@ const InfosPratiques = () => {
         </div>
       </section>
 
-      <EmplacementContact />
-
       {/* Emergency */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -104,6 +102,8 @@ const InfosPratiques = () => {
           </div>
         </div>
       </section>
+
+      <EmplacementContact />
 
       <CtaBanner />
     </Layout>
