@@ -4,6 +4,7 @@ import { Award, GraduationCap, Users } from "lucide-react";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
 import logoOrthospe from "@/assets/logo-orthospe.png";
 import logoCode36 from "@/assets/logo-code36.png";
+import angePhoto from "@/assets/ange.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -25,8 +26,8 @@ const memberships = [
 ];
 
 const staff = [
-  { name: "Sylvain", role: "Assistant dentaire" },
-  { name: "Ange", role: "Assistant dentaire" },
+  { name: "Sylvain", role: "Assistant dentaire", image: null },
+  { name: "Ange", role: "Assistant dentaire", image: angePhoto },
 ];
 
 const EquipePage = () => {
@@ -189,11 +190,17 @@ const EquipePage = () => {
                   key={index}
                   className="bg-secondary rounded-xl p-6 text-center shadow-soft"
                 >
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-lg font-semibold text-primary">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
-                  </div>
+                  {member.image ? (
+                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                    </div>
+                  ) : (
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-lg font-semibold text-primary">
+                        {member.name.split(" ").map(n => n[0]).join("")}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="font-semibold text-foreground mb-1">{member.name}</h3>
                   <p className="text-sm text-muted-foreground">{member.role}</p>
                 </div>
