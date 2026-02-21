@@ -2,12 +2,12 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Calendar, Phone, ClipboardList, Pencil, FileText, Stethoscope, RefreshCw, Smile } from "lucide-react";
-import dentistPatient from "@/assets/dentist-patient.jpg";
-import dentistPatient2 from "@/assets/dentist-patient-2.jpg";
-import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
-import cabinetInterior from "@/assets/cabinet-interior.png";
-import waitingRoom from "@/assets/waiting-room.jpg";
-import toothMirror from "@/assets/tooth-mirror.jpg";
+import parcours1 from "@/assets/parcours-1.png";
+import parcours2 from "@/assets/parcours-2.jpg";
+import parcours3 from "@/assets/parcours-3.png";
+import parcours4 from "@/assets/parcours-4.png";
+import parcours5 from "@/assets/parcours-5.png";
+import parcours6 from "@/assets/parcours-6.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const PHONE_NUMBER = "+225 05 75 43 00 00";
@@ -17,37 +17,37 @@ const Parcours = () => {
     {
       number: 1,
       title: "Première consultation",
-      image: dentistPatient,
+      image: parcours1,
       description: "Lors de la consultation, un examen clinique complet est réalisé (visage, dents, langue), suivi de la présentation du devis et du traitement proposé.\n\nLe déroulement du traitement est expliqué et toutes vos questions sont abordées, notamment sur la durée et les techniques innovantes.",
     },
     {
       number: 2,
       title: "Constitution du dossier (bilan)",
-      image: orthodonticEquipment,
+      image: parcours2,
       description: "La consultation comprend la réalisation de photographies du visage et des dents, des radiographies numériques (panoramique et téléradiographie de profil) accompagnées d'une analyse céphalométrique, ainsi que des empreintes numériques.",
     },
     {
       number: 3,
       title: "Plan de traitement",
-      image: cabinetInterior,
+      image: parcours3,
       description: "Le diagnostic est expliqué en détail, les différentes options et moyens de traitement sont présentés, puis le consentement éclairé est validé par signature électronique.",
     },
     {
       number: 4,
       title: "La pose de l'appareil",
-      image: dentistPatient2,
+      image: parcours4,
       description: "Le jour J, il est conseillé d'arriver à l'heure avec des dents parfaitement brossées, d'écouter attentivement les explications sur les techniques de brossage avec un appareil ainsi que les conseils alimentaires, et de se préparer à son premier selfie avec l'appareil.\n\nLe suivi orthodontique comprend des rendez-vous d'activation toutes les 4 à 5 semaines, le contrôle de l'hygiène dentaire et des gencives, la réalisation de radiographies de contrôle et la vérification du respect des consignes, notamment le port des élastiques.",
     },
     {
       number: 5,
       title: "Suivi orthodontique",
-      image: waitingRoom,
+      image: parcours5,
       description: "Le suivi orthodontique comprend des rendez-vous d'activation de l'appareil toutes les 4 à 5 semaines, le contrôle de l'hygiène dentaire et des gencives, la réalisation de radiographies de contrôle ainsi que la vérification du respect des consignes, notamment le port des élastiques.",
     },
     {
       number: 6,
       title: "Dépose et contention",
-      image: toothMirror,
+      image: parcours6,
       description: "Bravo, le traitement actif est terminé. Les appareils sont déposés, un nettoyage complet des dents est réalisé et une contention est mise en place afin de maintenir les dents dans leur nouvelle position.\n\nDes rendez-vous de contrôle de la contention sont ensuite programmés tous les 3 à 4 mois pendant un an.",
     },
   ];
