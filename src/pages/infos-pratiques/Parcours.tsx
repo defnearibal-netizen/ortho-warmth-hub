@@ -48,7 +48,7 @@ const Parcours = () => {
       number: 6,
       title: "Dépose et contention",
       image: toothMirror,
-      description: "Bravo ! C'est la fin du traitement actif. Dépose des appareils, nettoyage complet des dents et mise en place de la contention pour maintenir les dents dans leur nouvelle position.",
+      description: "Bravo, le traitement actif est terminé. Les appareils sont déposés, un nettoyage complet des dents est réalisé et une contention est mise en place afin de maintenir les dents dans leur nouvelle position.\n\nDes rendez-vous de contrôle de la contention sont ensuite programmés tous les 3 à 4 mois pendant un an.",
     },
   ];
 
