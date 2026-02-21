@@ -11,10 +11,10 @@ const Complements = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${complementsHero})` }}
-        />
+          style={{ backgroundImage: `url(${complementsHero})` }} />
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-foreground/75" />
         
@@ -47,9 +47,9 @@ const Complements = () => {
                 Mini-vis orthodontiques (ancrage squelettique)
               </h3>
               <p className="text-muted-foreground mb-6">
-                Les mini-vis sont de petites vis en titane temporairement placées dans l'os 
-                pour servir de point d'ancrage fixe. Elles permettent des mouvements dentaires 
-                impossibles avec les méthodes conventionnelles.
+                Très utiles pour étendre le pouvoir du traitement orthodontique et d’en repousser les limites, ces petits dispositifs sont à inclure dans le plan de traitement si nécessaire.
+
+              
               </p>
 
               <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
@@ -186,8 +186,8 @@ const Complements = () => {
 
 
 
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Complements;
