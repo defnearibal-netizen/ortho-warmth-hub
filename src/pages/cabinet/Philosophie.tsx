@@ -92,29 +92,6 @@ const Philosophie = () => {
         </div>
       </section>
 
-      {/* Hero Section - Two Column Layout */}
-      <section className="min-h-[60vh] grid grid-cols-1 lg:grid-cols-2">
-        <div className="bg-[hsl(25_45%_30%)] flex items-center justify-center p-8 lg:p-16">
-          <div className="max-w-lg text-center">
-            <div className="text-6xl text-white/40 mb-4" style={{ fontFamily: "serif" }}>
-              ❝
-            </div>
-            <p className="text-white/90 text-lg leading-relaxed italic">
-              "No bracket system will turn a difficult case into an easy one or change the rules of biology, but we can provide a big help in improving the finishing of your cases in a consistent way."
-            </p>
-            <p className="text-white/70 text-sm mt-6 font-semibold tracking-wide">
-              — Dr Stefano Troiani
-            </p>
-          </div>
-        </div>
-        <div className="h-[50vh] lg:h-auto">
-          <img
-            src={philosophiePatient}
-            alt="Orthodontiste avec patiente"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
 
       {/* Démarche Section - Tabs Layout */}
       <section className="py-20 bg-background">
