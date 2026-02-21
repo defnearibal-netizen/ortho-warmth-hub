@@ -137,11 +137,11 @@ const Complements = () => {
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Orthophonie et Kinésithérapie
               </h3>
-              <p className="text-muted-foreground mb-6">
-                La rééducation linguale et la correction des mauvaises habitudes (respiration 
-                buccale, déglutition atypique) sont parfois nécessaires pour garantir la 
-                stabilité du traitement. Nous travaillons en collaboration avec des orthophonistes 
-                spécialisés pour vous proposer une prise en charge complète.
+              <p className="text-muted-foreground mb-6">Complément à part entière pour le succès des traitements pour lesquels le comportement de la langue, 
+des joues et des lèvres ne sont pas adéquats, ces deux spécialités sont une aide précieuse.
+
+
+
               </p>
 
               <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
