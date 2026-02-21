@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Baby, Sparkles, SmilePlus, Eye, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import CtaBanner from "@/components/shared/CtaBanner";
 
 import treatmentEnfant from "@/assets/treatment-enfant.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
@@ -141,27 +142,7 @@ const SoinsIndex = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4 font-heading">
-            Quelle technique vous convient ?
-          </h2>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Chaque traitement est unique. Prenez rendez-vous pour une évaluation personnalisée 
-            et découvrez la technique la plus adaptée à vos besoins.
-          </p>
-          <Button variant="secondary" size="lg" asChild>
-            <a
-              href={RDV_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Prendre rendez-vous
-            </a>
-          </Button>
-        </div>
-      </section>
+      <CtaBanner />
     </Layout>
   );
 };

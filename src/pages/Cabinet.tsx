@@ -2,6 +2,7 @@ import { CheckCircle, Award, Heart, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import CtaBanner from "@/components/shared/CtaBanner";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import equipment from "@/assets/orthodontic-equipment.jpg";
 
@@ -160,6 +161,8 @@ const Cabinet = () => {
           </div>
         </div>
       </section>
+
+      <CtaBanner />
     </Layout>
   );
 };

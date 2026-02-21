@@ -1,10 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { CheckCircle, Calendar } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import aligneursHero from "@/assets/aligneurs-hero.png";
-import ctaBackground from "@/assets/cta-background.png";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+
+
 
 const Aligneurs = () => {
   return (
@@ -171,38 +170,8 @@ const Aligneurs = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${ctaBackground})` }}
-        />
-        
-        {/* Content */}
-        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
-          <div className="bg-background/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
-              Découvrez l'orthodontie invisible
-            </h2>
-            <div className="w-12 h-1 bg-primary mb-6" />
-            <p className="text-muted-foreground mb-8">
-              Prenez rendez-vous pour une consultation et découvrez si les aligneurs sont adaptés à votre cas.
-            </p>
-            <Button variant="cta" size="lg" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
-                Prendre rendez-vous
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+
+
     </Layout>
   );
 };
