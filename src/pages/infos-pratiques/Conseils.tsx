@@ -201,6 +201,23 @@ const Conseils = () => {
         </div>
       </section>
 
+      {/* Video Hygiène */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="aspect-video rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/feyaEbdJgIU"
+                title="Hygiène bucco-dentaire"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sport et activités */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
