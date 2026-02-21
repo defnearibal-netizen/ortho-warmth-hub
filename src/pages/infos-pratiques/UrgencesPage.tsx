@@ -36,6 +36,10 @@ const UrgencesPage = () => {
       title: "Perte de vos élastiques",
       solution: "Vous pouvez passer au cabinet aux heures d'ouverture pour venir récupérer un sachet. Aucune pharmacie ne pourra vous fournir d'élastiques.",
     },
+    {
+      title: "Douleurs après la pose d'un appareil ou d'un RDV d'activation",
+      solution: "Pensez à prendre un antalgique durant 3 jours matin midi et soir. Mangez des aliments mous les trois premiers jours. Pas de panique la douleur va diminuer voir disparaître au bout de 3 jours.",
+    },
   ];
 
   const toggleAccordion = (index: number) => {
