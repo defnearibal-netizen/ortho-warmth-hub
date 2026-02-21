@@ -36,7 +36,7 @@ const Parcours = () => {
       number: 4,
       title: "La pose de l'appareil",
       image: dentistPatient2,
-      description: "C'est le jour J ! Il est conseillé d'arriver à l'heure et les dents parfaitement brossées. Vous recevrez les explications des techniques de brossage avec un appareil ainsi que les conseils alimentaires.",
+      description: "Le jour J, il est conseillé d'arriver à l'heure avec des dents parfaitement brossées, d'écouter attentivement les explications sur les techniques de brossage avec un appareil ainsi que les conseils alimentaires, et de se préparer à son premier selfie avec l'appareil.\n\nLe suivi orthodontique comprend des rendez-vous d'activation toutes les 4 à 5 semaines, le contrôle de l'hygiène dentaire et des gencives, la réalisation de radiographies de contrôle et la vérification du respect des consignes, notamment le port des élastiques.",
     },
     {
       number: 5,
