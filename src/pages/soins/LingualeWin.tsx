@@ -100,19 +100,11 @@ Cette technique innovante  totalement invisible utilise un appareil fixe collé
               </h3>
               <div className="bg-secondary rounded-2xl p-6 mb-8">
                 <p className="text-muted-foreground mb-4">
-                  Le système WIN se distingue par sa fabrication entièrement personnalisée. 
-                  Chaque bracket est conçu individuellement pour s'adapter parfaitement à 
-                  l'anatomie de chaque dent du patient.
+                  Cet appareil est fixe et individualisé: les attaches, collées sur vos dents, ainsi que les fils qui permettent l'alignement, sont fabriqués pour votre bouche seulement ; c'est donc un appareil unique et propre à vous.
                 </p>
-                <p className="text-muted-foreground mb-4">
-                  Cette personnalisation extrême permet :
+                <p className="text-muted-foreground">
+                  Cette technique requiert une expertise particulière que nous maîtrisons pour vous garantir des résultats discrets et efficaces.
                 </p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Une adaptation parfaite à la face interne de chaque dent</li>
-                  <li>• Un confort optimal grâce à des brackets ultra-fins</li>
-                  <li>• Des mouvements dentaires précis et contrôlés</li>
-                  <li>• Une réduction du temps de traitement</li>
-                </ul>
               </div>
 
               <h3 className="text-xl font-semibold text-foreground mb-4">
