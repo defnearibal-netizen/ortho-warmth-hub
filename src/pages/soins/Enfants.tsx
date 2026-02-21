@@ -14,10 +14,10 @@ const Enfants = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${enfantsHero})` }}
-        />
+          style={{ backgroundImage: `url(${enfantsHero})` }} />
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-foreground/75" />
         
@@ -50,8 +50,8 @@ const Enfants = () => {
                 Quand consulter ?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Il est recommandé de faire un premier bilan orthodontique vers l'âge de 6-7 ans, 
-                même si tout semble normal. Certains signes doivent vous alerter :
+                Une première consultation est recommandée à l’âge de 5/6 ans. Elle aura pour but de prévenir, intercepter ou traitement une dysfonction, par une éducation fonctionnelle.   
+              
               </p>
 
               <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
@@ -108,11 +108,11 @@ const Enfants = () => {
                 {/* Appareils d'expansion */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={appareilExpansion} 
-                      alt="Appareil d'expansion" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img
+                      src={appareilExpansion}
+                      alt="Appareil d'expansion"
+                      className="w-full h-full object-cover" />
+
                   </div>
                   <div className="p-6 text-center">
                     <h4 className="font-heading font-semibold text-foreground mb-2">Appareil d'expansion</h4>
@@ -125,11 +125,11 @@ const Enfants = () => {
                 {/* Appareils fonctionnels */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={appareilFonctionnel} 
-                      alt="Appareil fonctionnel" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img
+                      src={appareilFonctionnel}
+                      alt="Appareil fonctionnel"
+                      className="w-full h-full object-cover" />
+
                   </div>
                   <div className="p-6 text-center">
                     <h4 className="font-heading font-semibold text-foreground mb-2">Appareil fonctionnel</h4>
@@ -142,11 +142,11 @@ const Enfants = () => {
                 {/* Mainteneurs d'espace */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={appareilMainteneur} 
-                      alt="Mainteneur d'espace" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img
+                      src={appareilMainteneur}
+                      alt="Mainteneur d'espace"
+                      className="w-full h-full object-cover" />
+
                   </div>
                   <div className="p-6 text-center">
                     <h4 className="font-heading font-semibold text-foreground mb-2">Mainteneur d'espace</h4>
@@ -193,8 +193,8 @@ const Enfants = () => {
 
 
 
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Enfants;
