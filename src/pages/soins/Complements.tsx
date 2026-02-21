@@ -133,57 +133,49 @@ const Complements = () => {
                 </div>
               </div>
 
-              {/* Types de contention */}
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                Contention orthodontique
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                La contention est la phase qui suit le traitement actif. Elle est essentielle 
-                pour maintenir les résultats obtenus et empêcher les dents de revenir à leur 
-                position initiale.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-muted rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-2">Fil de contention collé</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Un fil fin collé à l'arrière des dents, invisible et permanent.
-                  </p>
-                </div>
-                <div className="bg-muted rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-2">Gouttière de contention</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Une gouttière transparente à porter la nuit.
-                  </p>
-                </div>
-              </div>
-
-              {/* Chirurgie */}
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Chirurgie orthognathique
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Dans certains cas de décalage squelettique sévère, une intervention chirurgicale 
-                peut être nécessaire en complément du traitement orthodontique. Cette approche 
-                combinée permet de traiter des cas impossibles à corriger par orthodontie seule.
-              </p>
-              <p className="text-muted-foreground mb-8">
-                Notre cabinet travaille en étroite collaboration avec des chirurgiens 
-                maxillo-faciaux expérimentés pour assurer une prise en charge optimale.
-              </p>
-
               {/* Rééducation */}
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Orthophonie et Kinésithérapie
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6">
                 La rééducation linguale et la correction des mauvaises habitudes (respiration 
                 buccale, déglutition atypique) sont parfois nécessaires pour garantir la 
-                stabilité du traitement.
+                stabilité du traitement. Nous travaillons en collaboration avec des orthophonistes 
+                spécialisés pour vous proposer une prise en charge complète.
               </p>
-              <p className="text-muted-foreground">
-                Nous travaillons en collaboration avec des orthophonistes spécialisés pour 
-                vous proposer une prise en charge complète.
-              </p>
+
+              <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Rééducation linguale</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Correction de la position de la langue</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Respiration nasale</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Traitement de la respiration buccale</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Déglutition</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Correction de la déglutition atypique</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Stabilité du traitement</span>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Garantit des résultats durables</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
