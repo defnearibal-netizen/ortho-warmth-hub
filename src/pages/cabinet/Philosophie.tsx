@@ -4,32 +4,18 @@ import philosophiePatient from "@/assets/philosophie-patient.jpg";
 
 const demarcheItems = [
   {
-    id: "ecoresponsable",
-    label: "Démarche écoresponsable",
-    title: "Démarche écoresponsable",
+    id: "philosophie",
+    label: "Notre philosophie",
+    title: "Notre philosophie",
     description:
-      "Cabinet entièrement dématérialisé pour réduire notre impact environnemental. Nous nous inscrivons dans une démarche écoresponsable en limitant au maximum l'utilisation de papier et en privilégiant les outils numériques pour la gestion des dossiers, la communication et le suivi des patients.",
+      "Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons un logiciel patient ainsi qu'une application mobile pour faciliter la gestion des dossiers et le suivi orthodontique. Par ailleurs, le cabinet est équipé de technologies de pointe, notamment pour les empreintes numériques et les photographies, garantissant confort, précision et modernité.",
   },
   {
-    id: "application",
-    label: "Application mobile",
-    title: "Application mobile",
+    id: "transparence",
+    label: "Transparence et pédagogie",
+    title: "Transparence et pédagogie",
     description:
-      "Suivi orthodontique facilité grâce à notre application dédiée. Vous pouvez suivre l'évolution de votre traitement, recevoir des rappels de rendez-vous et communiquer directement avec notre équipe depuis votre smartphone.",
-  },
-  {
-    id: "empreintes",
-    label: "Empreintes numériques",
-    title: "Empreintes numériques",
-    description:
-      "Le cabinet est équipé pour votre plus grand confort d'une caméra permettant la prise d'empreintes numériques 3D. Cette technologie permet d'enregistrer numériquement vos arcades dentaires. Il s'agit d'un processus rapide et très confortable pour le patient, remplaçant les traditionnelles pâtes à empreinte.",
-  },
-  {
-    id: "logiciel",
-    label: "Logiciel patient",
-    title: "Logiciel patient",
-    description:
-      "Gestion simplifiée des dossiers et communication facilitée. Notre logiciel permet un suivi précis de chaque patient, une planification optimale des rendez-vous et une communication fluide entre l'équipe soignante et les patients.",
+      "Chaque traitement vous est expliqué de manière claire et détaillée, afin que vous compreniez pleinement chaque étape de votre prise en charge. Nous prenons le temps d'échanger avec vous, de répondre à toutes vos questions et de vous accompagner avec attention tout au long de votre parcours orthodontique.",
   },
 ];
 
@@ -76,7 +62,7 @@ const Philosophie = () => {
             </h2>
             <div className="w-16 h-0.5 bg-primary mb-10" />
 
-            <Tabs defaultValue="ecoresponsable" className="w-full">
+            <Tabs defaultValue="philosophie" className="w-full">
               <TabsList className="w-full justify-start bg-transparent border-b border-border rounded-none h-auto p-0 gap-0">
                 {demarcheItems.map((item) => (
                   <TabsTrigger
