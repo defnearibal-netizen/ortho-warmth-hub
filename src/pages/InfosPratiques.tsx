@@ -4,6 +4,7 @@ import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import CtaBanner from "@/components/shared/CtaBanner";
+import infosPratiquesHero from "@/assets/infos-pratiques-hero.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -26,13 +27,18 @@ const InfosPratiques = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-heading">
+      <section className="relative min-h-[60vh] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${infosPratiquesHero})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/40 to-transparent" />
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-2xl ml-4 md:ml-12 lg:ml-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
               Informations Pratiques
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white/85">
               Tout ce qu'il faut savoir pour préparer votre visite.
             </p>
           </div>
