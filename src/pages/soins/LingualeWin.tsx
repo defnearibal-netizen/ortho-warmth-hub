@@ -11,10 +11,10 @@ const LingualeWin = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${lingualeHero})` }}
-        />
+          style={{ backgroundImage: `url(${lingualeHero})` }} />
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-foreground/75" />
         
@@ -29,10 +29,11 @@ const LingualeWin = () => {
             </h1>
             <div className="w-16 h-1 bg-primary mb-8" />
             <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
-              La technique linguale WIN est une méthode d'orthodontie où les brackets sont 
-              collés sur la face interne des dents, les rendant totalement invisibles de 
-              l'extérieur. Développée en Allemagne, cette technique de pointe offre une 
-              précision exceptionnelle grâce à des brackets fabriqués sur mesure pour chaque patient.
+              
+Cette technique innovante  totalement invisible utilise un appareil fixe collé sur la surface interne des dents.  
+ 
+
+            
             </p>
           </div>
         </div>
@@ -164,8 +165,7 @@ const LingualeWin = () => {
 
 
 
-    </Layout>
-  );
+    </Layout>);
 };
 
 export default LingualeWin;
