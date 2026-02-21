@@ -93,18 +93,28 @@ const InfosPratiquesSection = () => {
                 </Link>
               </Button>
             )}
+            {activeTab === "conseils" && (
+              <Button variant="cta" size="lg" asChild className="mt-8">
+                <Link to="/infos-pratiques/conseils" className="flex items-center gap-2">
+                  Voir les conseils
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
 
-        {/* Link to all infos */}
-        <div className="text-center mt-12">
-          <Button variant="cta" size="lg" asChild>
-            <Link to="/infos-pratiques" className="flex items-center gap-2">
-              Toutes les infos pratiques
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+        {/* Link to all infos - only on parcours tab */}
+        {activeTab === "parcours" && (
+          <div className="text-center mt-12">
+            <Button variant="cta" size="lg" asChild>
+              <Link to="/infos-pratiques" className="flex items-center gap-2">
+                Toutes les infos pratiques
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
