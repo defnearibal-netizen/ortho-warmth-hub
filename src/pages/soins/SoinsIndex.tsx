@@ -48,7 +48,7 @@ const techniques = [
 },
 {
   title: "Compléments techniques",
-  description: "Techniques complémentaires comme les mini-vis, la chirurgie orthognatique et les traitements combinés.",
+  description: "Très utiles pour étendre le pouvoir du traitement orthodontique et d'en repousser les limites, ces petits dispositifs sont à inclure dans le plan de traitement si nécessaire.",
   icon: Wrench,
   image: treatmentComplements,
   href: "/soins/complements",
