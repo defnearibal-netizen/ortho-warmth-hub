@@ -31,7 +31,7 @@ const Conseils = () => {
               Infos pratiques
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-heading leading-tight">
-              Conseils pratiques
+              Conseils pratiques et vidéos
             </h1>
             <div className="w-16 h-1 bg-primary mb-8" />
             <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
