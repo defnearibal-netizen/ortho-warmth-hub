@@ -89,12 +89,16 @@ const Complements = () => {
               <h3 className="text-xl font-semibold text-foreground mb-4">Chirurgie maxillo-faciale
 
               </h3>
-              <p className="text-muted-foreground mb-6">La chirurgie maxillo-faciale ou chirurgie des mâchoires peut être parfois indispensable dans certaine dysmorphose maxillo-faciale.
-
-
-
-
+              <p className="text-muted-foreground mb-4">La chirurgie maxillo-faciale ou chirurgie des mâchoires peut être parfois indispensable dans certaine dysmorphose maxillo-faciale.
               </p>
+              <p className="text-muted-foreground mb-2">
+                Elle a pour but de rétablir un équilibre squelettique dans les 3 dimensions de l'espace afin d'obtenir :
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground mb-6 space-y-1 ml-2">
+                <li>Une occlusion fonctionnelle stable.</li>
+                <li>Un équilibre harmonieux et esthétique du visage.</li>
+                <li>Un respect du parodonte et des articulations temporo-mandibulaires.</li>
+              </ul>
 
               <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
                 <div className="grid md:grid-cols-2 gap-5">
