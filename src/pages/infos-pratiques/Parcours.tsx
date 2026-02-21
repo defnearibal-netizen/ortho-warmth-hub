@@ -18,7 +18,7 @@ const Parcours = () => {
       number: 1,
       title: "Première consultation",
       image: dentistPatient,
-      description: "Lors de la consultation, un examen clinique complet est réalisé (visage, dents, langue), suivi de la présentation du devis et du traitement proposé. Le déroulement du traitement est expliqué et toutes vos questions sont abordées, notamment sur la durée et les techniques innovantes.",
+      description: "Lors de la consultation, un examen clinique complet est réalisé (visage, dents, langue), suivi de la présentation du devis et du traitement proposé.\n\nLe déroulement du traitement est expliqué et toutes vos questions sont abordées, notamment sur la durée et les techniques innovantes.",
     },
     {
       number: 2,
@@ -189,9 +189,11 @@ const Parcours = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">
                       {step.title}
                     </h2>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
+                    <div className="text-muted-foreground leading-relaxed space-y-3">
+                      {step.description.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
