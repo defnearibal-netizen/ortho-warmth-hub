@@ -169,7 +169,7 @@ const Complements = () => {
 
               {/* Rééducation */}
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                Rééducation fonctionnelle
+                Orthophonie et Kinésithérapie
               </h3>
               <p className="text-muted-foreground mb-4">
                 La rééducation linguale et la correction des mauvaises habitudes (respiration 
