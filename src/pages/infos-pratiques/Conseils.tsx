@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import EmplacementContact from "@/components/shared/EmplacementContact";
+import CtaBanner from "@/components/shared/CtaBanner";
 import { UtensilsCrossed, Sparkles, Shield, X, Check, ChevronDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
@@ -261,7 +261,7 @@ const Conseils = () => {
           </div>
         </div>
       </section>
-      <EmplacementContact showDivider />
+      <CtaBanner />
     </Layout>
   );
 };
