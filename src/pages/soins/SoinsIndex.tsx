@@ -72,8 +72,7 @@ const SoinsIndex = () => {
               Soins & Techniques Orthodontiques
             </h1>
             <p className="text-lg text-white/85 mb-8">
-              Découvrez l'ensemble de nos techniques orthodontiques modernes, 
-              adaptées à chaque âge et à chaque besoin pour un sourire parfait.
+              En fonction de l'âge du patient, de sa denture et des objectifs thérapeutiques à accomplir, nous utilisons différents types de traitements orthodontiques :
             </p>
           </div>
         </div>
