@@ -3,6 +3,7 @@ import { AlertTriangle, Calendar, Route, Siren, BookOpen, FileText } from "lucid
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import CtaBanner from "@/components/shared/CtaBanner";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -103,6 +104,8 @@ const InfosPratiques = () => {
           </div>
         </div>
       </section>
+
+      <CtaBanner />
     </Layout>
   );
 };

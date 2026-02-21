@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
-import { Stethoscope, Heart, Sparkles, Shield, Award, ArrowRight, Calendar, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Stethoscope, Heart, Sparkles, Shield, Award, CheckCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import CtaBanner from "@/components/shared/CtaBanner";
 import soinsDentairesHero from "@/assets/soins-dentaires-hero.png";
 import smileCouple from "@/assets/smile-couple.png";
-import ctaBackground from "@/assets/cta-background.png";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+
+
 
 const services = [
   {
@@ -132,31 +131,7 @@ const SoinsDentaires = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ctaBackground})` }} />
-        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 h-full min-h-[50vh] md:min-h-[60vh] flex items-center py-12">
-          <div className="bg-background/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-lg shadow-xl ml-2 md:ml-6 lg:ml-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-heading">Prenez soin de votre sourire</h2>
-            <div className="w-12 h-1 bg-primary mb-6" />
-            <p className="text-muted-foreground mb-8">Que ce soit pour un contrôle de routine ou un traitement spécifique, nous sommes là pour vous.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="lg" asChild>
-                <a href={RDV_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5" />
-                  Prendre rendez-vous
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/contact" className="flex items-center gap-2">
-                  Nous contacter
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaBanner />
     </Layout>
   );
 };

@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import CtaBanner from "@/components/shared/CtaBanner";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -117,6 +118,8 @@ const Contact = () => {
       </section>
 
       <EmplacementContact />
+
+      <CtaBanner />
     </Layout>
   );
 };
