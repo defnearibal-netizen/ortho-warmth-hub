@@ -133,6 +133,19 @@ const Complements = () => {
                 </div>
               </div>
 
+              {/* Video YouTube */}
+              <div className="my-8 rounded-2xl overflow-hidden">
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/iKTbW3wd3AY?start=7"
+                    title="Chirurgie maxillo-faciale"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
               {/* Rééducation */}
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Orthophonie et Kinésithérapie
