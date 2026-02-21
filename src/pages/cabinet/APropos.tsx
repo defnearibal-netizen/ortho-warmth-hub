@@ -14,7 +14,6 @@ const navItems = [
   { id: "philosophie", label: "Philosophie" },
   { id: "equipe", label: "Notre équipe" },
   { id: "emplacement", label: "Emplacement et contact" },
-  { id: "faq", label: "FAQ Administratif" },
 ];
 
 // Section Divider Component
@@ -328,40 +327,6 @@ const APropos = () => {
         </div>
       </section>
 
-      {/* Divider */}
-      <SectionDivider />
-
-      {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
-              FAQ Administratif
-            </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
-            <div className="space-y-6 text-left">
-              <div className="bg-card rounded-xl p-6 shadow-soft">
-                <h3 className="font-semibold text-foreground mb-2">Quels documents apporter lors de la première consultation ?</h3>
-                <p className="text-muted-foreground">
-                  Votre carte vitale, votre carte de mutuelle, et tout document médical pertinent (radiographies récentes, compte-rendu d'autres spécialistes).
-                </p>
-              </div>
-              <div className="bg-card rounded-xl p-6 shadow-soft">
-                <h3 className="font-semibold text-foreground mb-2">Comment se déroule la prise en charge ?</h3>
-                <p className="text-muted-foreground">
-                  Un devis détaillé vous sera remis lors de la première consultation. Nous vous accompagnons dans les démarches administratives avec votre mutuelle.
-                </p>
-              </div>
-              <div className="bg-card rounded-xl p-6 shadow-soft">
-                <h3 className="font-semibold text-foreground mb-2">Quels moyens de paiement acceptez-vous ?</h3>
-                <p className="text-muted-foreground">
-                  Nous acceptons les paiements par carte bancaire, chèque et espèces. Des facilités de paiement peuvent être proposées.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
