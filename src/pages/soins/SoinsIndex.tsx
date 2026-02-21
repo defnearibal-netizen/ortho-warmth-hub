@@ -32,7 +32,7 @@ const techniques = [
 },
 {
   title: "Techniques par aligneurs",
-  description: "Des gouttières transparentes et amovibles pour un traitement discret et flexible au quotidien.",
+  description: "Les traitements par aligneurs (gouttières transparentes, presque qu'invisible) permettent d'améliorer le sourire en toute discrétion avec un minimum de contrainte.",
   icon: SmilePlus,
   image: treatmentAligneursNew,
   href: "/soins/aligneurs",
