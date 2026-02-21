@@ -103,6 +103,17 @@ const SoinsDentaires = () => {
         </div>
       </section>
 
+      {/* Introduction Dr Aribal */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Les soins dentaires sont assurés par le Docteur Jamal ARIBAL, docteur en chirurgie dentaire, diplômé de l'Université Claude Bernard de Lyon (1984). Il a complété sa formation par une spécialisation en implantologie à Toulouse en 2005 et est inscrit à l'Ordre des chirurgiens-dentistes sous le numéro 120.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Qualité et confort */}
       <section className="py-20">
         <div className="container mx-auto px-4">
