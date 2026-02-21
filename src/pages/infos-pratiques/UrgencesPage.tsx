@@ -28,6 +28,14 @@ const UrgencesPage = () => {
       title: "Dents sensibles",
       solution: "Prenez un antalgique (paracétamol). Si la douleur persiste au-delà de 48h après un ajustement, contactez-nous.",
     },
+    {
+      title: "Appareil scellé sur deux bagues au palais",
+      solution: "Si l'appareil est sorti d'un des tubes des bagues : essayez de le réinsérer dans la dent ou essayez de le retirer. Il ne faut pas jeter l'appareil. Dans tous les cas contactez nous.",
+    },
+    {
+      title: "Perte de vos élastiques",
+      solution: "Vous pouvez passer au cabinet aux heures d'ouverture pour venir récupérer un sachet. Aucune pharmacie ne pourra vous fournir d'élastiques.",
+    },
   ];
 
   const toggleAccordion = (index: number) => {
