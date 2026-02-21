@@ -108,6 +108,19 @@ const Conseils = () => {
                 </ul>
               </div>
             </div>
+
+            {/* Video */}
+            <div className="mt-10">
+              <div className="aspect-video rounded-2xl overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/5wX_RCJBR3w"
+                  title="Conseils orthodontiques"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
