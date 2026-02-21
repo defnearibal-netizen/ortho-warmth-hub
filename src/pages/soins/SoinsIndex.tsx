@@ -24,7 +24,7 @@ const techniques = [
 },
 {
   title: "Multi-attaches autoligaturantes",
-  description: "Les traitements par aligneurs (gouttières transparentes, presque qu'invisible) permettent d'améliorer le sourire en toute discrétion avec un minimum de contrainte.",
+  description: "Nous proposons des appareils multi-attaches autoligaturants métal ou céramique pour être plus discret.",
   icon: Sparkles,
   image: treatmentAutoligaturantes,
   href: "/soins/autoligaturantes",
