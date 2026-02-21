@@ -70,6 +70,9 @@ const UrgencesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
               Une Urgence ?
             </h2>
+            <p className="text-muted-foreground text-lg mb-4">
+              Il faut savoir qu'un temps d'adaptation après la pose des bagues est nécessaire pour s'habituer à la présence de l'appareil. Une irritation des muqueuses peut donc survenir. Cela peut être soulagée par la mise en place de cire orthodontique.
+            </p>
             <p className="text-muted-foreground text-lg">
               Nous répondons à toutes vos questions pour des soins sereins et adaptés.
             </p>
