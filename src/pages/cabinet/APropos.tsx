@@ -161,11 +161,8 @@ const APropos = () => {
                   Notre philosophie
                 </h2>
                 <div className="w-16 h-0.5 bg-primary mb-8" />
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Notre approche est centrée sur le patient. Nous prenons le temps d'écouter vos besoins et vos inquiétudes pour vous proposer un traitement personnalisé.
-                </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Nous accordons une importance particulière au confort et à la sérénité de nos patients, en privilégiant des techniques modernes et peu invasives.
+                  Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons un logiciel patient ainsi qu'une application mobile pour faciliter la gestion des dossiers et le suivi orthodontique. Par ailleurs, le cabinet est équipé de technologies de pointe, notamment pour les empreintes numériques et les photographies, garantissant confort, précision et modernité.
                 </p>
                 <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <Link to="/cabinet/philosophie">En savoir plus</Link>
