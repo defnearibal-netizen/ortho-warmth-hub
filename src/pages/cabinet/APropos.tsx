@@ -7,7 +7,7 @@ import CtaBanner from "@/components/shared/CtaBanner";
 import cabinetInterior from "@/assets/cabinet-interior.png";
 import dentistPatient from "@/assets/dentist-patient-2.jpg";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
-import teamPhoto from "@/assets/team-photo.png";
+import teamPhoto from "@/assets/notre-equipe.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
@@ -132,13 +132,15 @@ const APropos = () => {
               </div>
 
               {/* Right: Image with decorative block */}
-              <div className="relative">
+              <div className="relative cursor-pointer" onClick={() => scrollToSection("a-propos")}>
                 <div className="absolute -right-4 -top-4 -bottom-4 w-2/3 bg-secondary rounded-lg -z-10 hidden md:block" />
-                <img
-                  src={dentistPatient}
-                  alt="Dentiste avec patient"
-                  className="w-full h-auto rounded-lg shadow-soft relative z-10"
-                />
+                <div className="overflow-hidden rounded-lg shadow-soft relative z-10">
+                  <img
+                    src={dentistPatient}
+                    alt="Dentiste avec patient"
+                    className="w-full h-auto transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -171,14 +173,16 @@ const APropos = () => {
               </div>
 
               {/* Right: Image with decorative block */}
-              <div className="relative">
+              <Link to="/cabinet/philosophie" className="relative block">
                 <div className="absolute -right-4 -top-4 -bottom-4 w-2/3 bg-secondary rounded-lg -z-10 hidden md:block" />
-                <img
-                  src={philosophiePatient}
-                  alt="Patient souriant lors d'un traitement orthodontique"
-                  className="w-full h-auto rounded-lg shadow-soft relative z-10"
-                />
-              </div>
+                <div className="overflow-hidden rounded-lg shadow-soft relative z-10">
+                  <img
+                    src={philosophiePatient}
+                    alt="Patient souriant lors d'un traitement orthodontique"
+                    className="w-full h-auto transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -210,14 +214,16 @@ const APropos = () => {
               </div>
 
               {/* Right: Image with decorative block */}
-              <div className="relative">
+              <Link to="/cabinet/equipe" className="relative block">
                 <div className="absolute -right-4 -top-4 -bottom-4 w-2/3 bg-secondary rounded-lg -z-10 hidden md:block" />
-                <img
-                  src={teamPhoto}
-                  alt="Notre équipe de professionnels"
-                  className="w-full h-auto max-h-80 object-cover rounded-lg shadow-soft relative z-10"
-                />
-              </div>
+                <div className="overflow-hidden rounded-lg shadow-soft relative z-10">
+                  <img
+                    src={teamPhoto}
+                    alt="Notre équipe de professionnels"
+                    className="w-full h-auto max-h-80 object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
