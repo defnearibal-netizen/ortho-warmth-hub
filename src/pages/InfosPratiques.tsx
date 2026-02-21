@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AlertTriangle, Calendar, Route, Siren, BookOpen, FileText } from "lucide-react";
+import { Calendar, Route, Siren, BookOpen, FileText } from "lucide-react";
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
@@ -20,12 +20,6 @@ const subPages = [
 ];
 
 
-const emergencyTips = [
-  { title: "Bracket décollé", solution: "Conservez le bracket. Appliquez de la cire orthodontique si gêne. Prenez rendez-vous rapidement." },
-  { title: "Fil qui pique", solution: "Appliquez de la cire sur la zone irritante. Appelez-nous pour un rendez-vous." },
-  { title: "Douleur intense", solution: "Prenez un antalgique et contactez-nous immédiatement." },
-  { title: "Appareil cassé", solution: "Ne tentez pas de réparer vous-même. Gardez les morceaux et appelez-nous." },
-];
 
 const InfosPratiques = () => {
   return (
@@ -76,48 +70,6 @@ const InfosPratiques = () => {
         </div>
       </section>
 
-      {/* Emergency */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-accent/30 flex items-center justify-center">
-                <AlertTriangle className="h-7 w-7 text-primary" />
-              </div>
-              <div>
-                <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                  Urgences
-                </span>
-                <h2 className="text-2xl font-bold text-foreground font-heading">
-                  En cas d'urgence orthodontique
-                </h2>
-              </div>
-            </div>
-
-            <div className="bg-accent/20 border border-accent/40 rounded-xl p-6 mb-8">
-              <p className="text-foreground">
-                <strong>Numéro d'urgence :</strong>{" "}
-                <a href="tel:+2250575430000" className="text-primary hover:underline font-semibold">
-                  +225 05 75 43 00 00
-                </a>
-                <br />
-                <span className="text-sm text-muted-foreground">
-                  Les premiers jours après la pose de l'appareil, une douleur/sensibilité peut s'installer au niveau de l'ensemble des dents. Elle dure en général 3 à 7 jours avant de s'atténuer. Prenez un antalgique en cas de douleurs.
-                </span>
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {emergencyTips.map((tip, index) => (
-                <div key={index} className="bg-card rounded-xl p-6 shadow-soft">
-                  <h3 className="font-semibold text-foreground mb-2 font-heading">{tip.title}</h3>
-                  <p className="text-muted-foreground text-sm">{tip.solution}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       <EmplacementContact />
 
