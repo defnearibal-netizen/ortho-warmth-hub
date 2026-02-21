@@ -4,6 +4,7 @@ import { ArrowRight, Baby, Sparkles, SmilePlus, Eye, Wrench } from "lucide-react
 import { Button } from "@/components/ui/button";
 import CtaBanner from "@/components/shared/CtaBanner";
 
+import soinsHeroBg from "@/assets/soins-hero-bg.png";
 import treatmentEnfant from "@/assets/treatment-enfant-new.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 import treatmentAligneursNew from "@/assets/treatment-aligneurs-v2.png";
@@ -59,13 +60,18 @@ const SoinsIndex = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-secondary via-background to-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-heading">
+      <section className="relative min-h-[60vh] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${soinsHeroBg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/40 to-transparent" />
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-2xl ml-4 md:ml-12 lg:ml-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
               Soins & Techniques Orthodontiques
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/85 mb-8">
               Découvrez l'ensemble de nos techniques orthodontiques modernes, 
               adaptées à chaque âge et à chaque besoin pour un sourire parfait.
             </p>
