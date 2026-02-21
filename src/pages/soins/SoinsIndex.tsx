@@ -40,7 +40,7 @@ const techniques = [
 },
 {
   title: "Technique linguale WIN",
-  description: "Bagues placées à l'intérieur des dents pour une discrétion totale. Idéal pour les adultes exigeants.",
+  description: "Cette technique innovante totalement invisible utilise un appareil fixe collé sur la surface interne des dents.",
   icon: Eye,
   image: treatmentLinguale,
   href: "/soins/linguale-win",
