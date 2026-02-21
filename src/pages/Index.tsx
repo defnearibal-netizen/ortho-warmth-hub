@@ -17,7 +17,7 @@ import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
 import treatmentAligneurs from "@/assets/treatment-aligneurs-new.png";
 import treatmentLinguale from "@/assets/treatment-linguale.jpg";
 import ctaBackground from "@/assets/cta-background.png";
-import toothMirror from "@/assets/tooth-mirror.jpg";
+import coupleSmile from "@/assets/couple-smile.png";
 import dentalCloseup from "@/assets/dental-closeup.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
@@ -219,10 +219,10 @@ const Index = () => {
 
             {/* Right - Image */}
             <Link to="/cabinet/a-propos" className="relative block">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-soft no-zoom">
                 <img 
-                  src={toothMirror} 
-                  alt="Cabinet dentaire équipement moderne" 
+                  src={coupleSmile} 
+                  alt="Couple souriant avec de belles dents" 
                   className="w-full h-full object-cover"
                 />
               </div>

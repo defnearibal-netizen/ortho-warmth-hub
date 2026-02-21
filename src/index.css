@@ -192,12 +192,12 @@
 
 
   /* Global image hover zoom - applies to all images inside overflow-hidden containers */
-  .overflow-hidden > img,
-  .overflow-hidden > picture > img {
+  .overflow-hidden:not(.no-zoom) > img,
+  .overflow-hidden:not(.no-zoom) > picture > img {
     @apply transition-transform duration-500 ease-out;
   }
-  .overflow-hidden:hover > img,
-  .overflow-hidden:hover > picture > img {
+  .overflow-hidden:not(.no-zoom):hover > img,
+  .overflow-hidden:not(.no-zoom):hover > picture > img {
     @apply scale-110;
   }
 }
