@@ -24,7 +24,7 @@ const Parcours = () => {
       number: 2,
       title: "Constitution du dossier (bilan)",
       image: orthodonticEquipment,
-      description: "Création du dossier orthodontique : photographies du visage et des dents, radiographies numériques (panoramique, téléradiographie de profil) et empreintes numériques 3D. Ces examens permettent d'établir un diagnostic précis.",
+      description: "La consultation comprend la réalisation de photographies du visage et des dents, des radiographies numériques (panoramique et téléradiographie de profil) accompagnées d'une analyse céphalométrique, ainsi que des empreintes numériques.",
     },
     {
       number: 3,
