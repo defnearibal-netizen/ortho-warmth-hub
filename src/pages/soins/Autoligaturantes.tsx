@@ -99,9 +99,11 @@ const Autoligaturantes = () => {
               </h3>
               <div className="bg-secondary rounded-2xl p-6 mb-8">
                 <p className="text-muted-foreground mb-4">
-                  Le système autoligaturant utilise des forces légères et continues pour déplacer 
-                  les dents. Le clip intégré maintient le fil orthodontique en place tout en 
-                  permettant un mouvement libre, ce qui réduit la friction et accélère le traitement.
+                  Nous proposons des appareils multi-attaches autoligaturants métal ou céramique pour être plus discret. Ces bagues, fixées sur la face externe permettent des déplacements dentaires efficaces et précis avec des forces légères permettant d’optimiser les résultats.
+
+
+ 
+
                 </p>
                 <p className="text-muted-foreground">
                   Cette technologie permet également de réduire le nombre de rendez-vous nécessaires 
@@ -147,8 +149,6 @@ const Autoligaturantes = () => {
           </div>
         </div>
       </section>
-    </Layout>);
-
-};
+    </Layout>);};
 
 export default Autoligaturantes;
