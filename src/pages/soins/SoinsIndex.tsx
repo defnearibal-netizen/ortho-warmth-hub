@@ -4,10 +4,10 @@ import { ArrowRight, Baby, Sparkles, SmilePlus, Eye, Wrench } from "lucide-react
 import { Button } from "@/components/ui/button";
 import CtaBanner from "@/components/shared/CtaBanner";
 
-import treatmentEnfant from "@/assets/treatment-enfant.png";
+import treatmentEnfant from "@/assets/treatment-enfant-new.png";
 import treatmentAutoligaturantes from "@/assets/treatment-autoligaturantes.jpg";
-import treatmentAligneursNew from "@/assets/treatment-aligneurs-new.png";
-import treatmentLinguale from "@/assets/treatment-linguale.jpg";
+import treatmentAligneursNew from "@/assets/treatment-aligneurs-v2.png";
+import treatmentLinguale from "@/assets/treatment-linguale-new.png";
 import treatmentComplements from "@/assets/treatment-complements.png";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
