@@ -16,7 +16,7 @@ const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const techniques = [
 {
   title: "Techniques pour les jeunes enfants",
-  description: "Traitements interceptifs et précoces pour guider la croissance des mâchoires et prévenir les problèmes futurs.",
+  description: "Une première consultation est recommandée à l'âge de 5/6 ans. Elle aura pour but de prévenir, intercepter ou traitement une dysfonction, par une éducation fonctionnelle.",
   icon: Baby,
   image: treatmentEnfant,
   href: "/soins/enfants",
