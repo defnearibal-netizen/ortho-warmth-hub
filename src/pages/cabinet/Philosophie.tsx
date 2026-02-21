@@ -62,7 +62,7 @@ const Philosophie = () => {
                   Écoute & bienveillance
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Chaque patient est accueilli avec attention. Nous prenons le temps d'écouter, de rassurer et d'accompagner, à chaque étape du traitement.
+                  Chaque patient est accueilli avec attention. Nous prenons le temps d'écouter et d'accompagner, à chaque étape du traitement.
                 </p>
               </div>
               <div className="text-center">
