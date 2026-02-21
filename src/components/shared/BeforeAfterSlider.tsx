@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface BeforeAfterSliderProps {
   beforeImage: string;
   afterImage: string;
+  beforeScale?: number;
   beforeLabel?: string;
   afterLabel?: string;
 }
@@ -11,6 +12,7 @@ interface BeforeAfterSliderProps {
 const BeforeAfterSlider = ({
   beforeImage,
   afterImage,
+  beforeScale = 1,
   beforeLabel = "Avant",
   afterLabel = "Après",
 }: BeforeAfterSliderProps) => {
@@ -86,6 +88,7 @@ const BeforeAfterSlider = ({
           src={beforeImage}
           alt={beforeLabel}
           className="absolute inset-0 w-full h-full object-cover"
+          style={beforeScale !== 1 ? { transform: `scale(${beforeScale})` } : undefined}
           draggable={false}
         />
       </div>
