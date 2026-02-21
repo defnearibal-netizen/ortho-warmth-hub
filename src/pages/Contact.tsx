@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
+import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
@@ -115,32 +116,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4 font-heading">
-              Nous trouver
-            </h2>
-            <p className="text-muted-foreground">
-              Notre cabinet est situé au Boulevard de Marseille, Zone 4 à Abidjan.
-            </p>
-          </div>
-
-          <div className="rounded-2xl overflow-hidden shadow-soft max-w-4xl mx-auto">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.822818619379!2d-3.990759124119335!3d5.288554894689882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1e952c590ed45%3A0xdfc663c655fddfb5!2sClinique%20dentaire%20Panorama!5e0!3m2!1sfr!2sci!4v1705600000000!5m2!1sfr!2sci"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation du cabinet"
-            />
-          </div>
-        </div>
-      </section>
+      <EmplacementContact />
     </Layout>
   );
 };

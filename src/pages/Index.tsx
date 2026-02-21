@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { 
   Calendar, Heart, Shield, Sparkles, ArrowRight, 
-  Baby, User, UserCheck, Eye, MapPin, Phone, Clock,
+  Baby, User, UserCheck, Eye,
   CheckCircle, Award, Stethoscope
 } from "lucide-react";
+import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import InfosPratiquesSection from "@/components/home/InfosPratiquesSection";
@@ -330,101 +331,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
-        <div className="container mx-auto px-4">
-          {/* Title */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary uppercase tracking-wider">
-              Accès
-            </h2>
-          </div>
-
-          {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch max-w-5xl mx-auto">
-            {/* Left - Info */}
-            <div className="space-y-10 flex flex-col justify-center">
-              {/* Horaires */}
-              <div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
-                  Horaires d'ouverture
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex gap-8">
-                    <span className="text-primary font-medium w-28">Lundi</span>
-                    <span className="text-foreground">09h00 - 18h00</span>
-                  </div>
-                  <div className="flex gap-8">
-                    <span className="text-primary font-medium w-28">Mardi</span>
-                    <span className="text-foreground">09h00 - 18h00</span>
-                  </div>
-                  <div className="flex gap-8">
-                    <span className="text-primary font-medium w-28">Mercredi</span>
-                    <span className="text-foreground">09h00 - 18h00</span>
-                  </div>
-                  <div className="flex gap-8">
-                    <span className="text-primary font-medium w-28">Jeudi</span>
-                    <span className="text-foreground">09h00 - 18h00</span>
-                  </div>
-                  <div className="flex gap-8">
-                    <span className="text-primary font-medium w-28">Vendredi</span>
-                    <span className="text-foreground">09h00 - 18h00</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Contact */}
-              <div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
-                  Contact
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <Phone className="h-5 w-5 text-primary" strokeWidth={1.5} />
-                    <span className="text-foreground">+225 05 75 43 00 00</span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <Phone className="h-5 w-5 text-primary" strokeWidth={1.5} />
-                    <span className="text-foreground">+225 27 21 59 12 99</span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5" strokeWidth={1.5} />
-                    <div>
-                      <p className="text-foreground">Boulevard de Marseille</p>
-                      <p className="text-foreground">Zone 4 Abidjan</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Google Map */}
-            <div className="h-full min-h-[400px] lg:min-h-[450px] rounded-xl overflow-hidden shadow-soft">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4LjAiVw!5e0!3m2!1sfr!2sci!4v1706000000000!5m2!1sfr!2sci"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Clinique Dentaire Panorama"
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Button */}
-          <div className="text-center mt-12">
-            <Button variant="cta" size="lg" asChild>
-              <Link to="/contact" className="flex items-center gap-2">
-                Voir la page contact
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <EmplacementContact />
 
       {/* CTA Section */}
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
