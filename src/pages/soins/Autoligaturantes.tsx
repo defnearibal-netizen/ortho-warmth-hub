@@ -11,10 +11,10 @@ const Autoligaturantes = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${treatmentAutoligaturantes})` }}
-        />
+          style={{ backgroundImage: `url(${treatmentAutoligaturantes})` }} />
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-foreground/75" />
         
@@ -29,10 +29,10 @@ const Autoligaturantes = () => {
             </h1>
             <div className="w-16 h-1 bg-primary mb-8" />
             <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed">
-              Les brackets autoligaturants représentent une évolution majeure dans le domaine de 
-              l'orthodontie. Contrairement aux brackets traditionnels qui utilisent des élastiques 
-              pour maintenir le fil, les brackets autoligaturants possèdent un système de clip 
-              intégré qui maintient le fil en place.
+              Nous proposons des appareils multi-attaches autoligaturants métal ou céramique pour être plus discret. 
+            
+
+
             </p>
           </div>
         </div>
@@ -147,8 +147,8 @@ const Autoligaturantes = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Autoligaturantes;
