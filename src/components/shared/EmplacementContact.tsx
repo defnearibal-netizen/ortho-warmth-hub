@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
@@ -54,16 +54,26 @@ const EmplacementContact = ({ id = "emplacement", showDivider = false }: Emplace
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch max-w-5xl mx-auto">
             {/* Left - Info */}
             <div className="space-y-10 flex flex-col justify-center">
-              {/* Horaires */}
-              <div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
-                  Horaires d'ouverture
-                </h3>
-                <div className="space-y-3">
+              {/* Horaires - card style */}
+              <div className="bg-card rounded-xl shadow-soft overflow-hidden">
+                <div className="p-5 bg-primary">
+                  <div className="flex items-center gap-3 text-white">
+                    <Clock className="h-6 w-6" />
+                    <span className="font-semibold">Nos horaires</span>
+                  </div>
+                </div>
+                <div className="divide-y divide-border">
                   {days.map((d) => (
-                    <div key={d.day} className="flex gap-8">
-                      <span className="text-primary font-medium w-28">{d.day}</span>
-                      <span className="text-foreground">{d.hours}</span>
+                    <div
+                      key={d.day}
+                      className={`flex justify-between items-center px-5 py-4 ${
+                        d.hours === "Fermé" ? "bg-muted/50" : ""
+                      }`}
+                    >
+                      <span className="font-medium text-foreground">{d.day}</span>
+                      <span className={d.hours === "Fermé" ? "text-muted-foreground" : "text-primary font-medium"}>
+                        {d.hours}
+                      </span>
                     </div>
                   ))}
                 </div>
