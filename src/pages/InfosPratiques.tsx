@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Car, Train, AlertTriangle, Calendar, Route, Siren, BookOpen, FileText } from "lucide-react";
+import { AlertTriangle, Calendar, Route, Siren, BookOpen, FileText } from "lucide-react";
+import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
@@ -12,15 +13,6 @@ const subPages = [
   { name: "Fiches d'information", description: "Documents utiles à télécharger", href: "/infos-pratiques/fiches", icon: FileText },
 ];
 
-const hours = [
-  { day: "Lundi", hours: "9h00 - 19h00" },
-  { day: "Mardi", hours: "9h00 - 19h00" },
-  { day: "Mercredi", hours: "9h00 - 19h00" },
-  { day: "Jeudi", hours: "9h00 - 19h00" },
-  { day: "Vendredi", hours: "9h00 - 18h00" },
-  { day: "Samedi", hours: "9h00 - 13h00" },
-  { day: "Dimanche", hours: "Fermé" },
-];
 
 const emergencyTips = [
   { title: "Bracket décollé", solution: "Conservez le bracket. Appliquez de la cire orthodontique si gêne. Prenez rendez-vous rapidement." },
@@ -67,166 +59,7 @@ const InfosPratiques = () => {
         </div>
       </section>
 
-      {/* Contact & Hours */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                Nous contacter
-              </span>
-              <h2 className="text-3xl font-bold text-foreground mt-3 mb-8 font-heading">
-                Coordonnées
-              </h2>
-
-              <div className="space-y-5">
-                <div className="flex items-start gap-4 p-5 bg-card rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <MapPin className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1 font-heading">Adresse</h3>
-                    <p className="text-muted-foreground">
-                      123 Avenue du Panorama<br />75008 Paris
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-5 bg-card rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1 font-heading">Téléphone</h3>
-                    <a href="tel:+33123456789" className="text-primary hover:underline">
-                      01 23 45 67 89
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-5 bg-card rounded-xl shadow-soft">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1 font-heading">Email</h3>
-                    <a href="mailto:contact@panorama-dentaire.fr" className="text-primary hover:underline">
-                      contact@panorama-dentaire.fr
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <Button variant="cta" size="lg" asChild>
-                  <a
-                    href={RDV_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <Calendar className="h-5 w-5" />
-                    Prendre rendez-vous en ligne
-                  </a>
-                </Button>
-              </div>
-            </div>
-
-            {/* Hours */}
-            <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                Horaires d'ouverture
-              </span>
-              <h2 className="text-3xl font-bold text-foreground mt-3 mb-8 font-heading">
-                Quand nous consulter
-              </h2>
-
-              <div className="bg-card rounded-xl shadow-soft overflow-hidden">
-                <div className="p-5 bg-primary">
-                  <div className="flex items-center gap-3 text-white">
-                    <Clock className="h-6 w-6" />
-                    <span className="font-semibold">Nos horaires</span>
-                  </div>
-                </div>
-                <div className="divide-y divide-border">
-                  {hours.map((item, index) => (
-                    <div
-                      key={index}
-                      className={`flex justify-between items-center px-5 py-4 ${
-                        item.hours === "Fermé" ? "bg-muted/50" : ""
-                      }`}
-                    >
-                      <span className="font-medium text-foreground">{item.day}</span>
-                      <span className={item.hours === "Fermé" ? "text-muted-foreground" : "text-primary font-medium"}>
-                        {item.hours}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Access */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Accès
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4 font-heading">
-              Comment venir
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
-            <div className="bg-card rounded-xl p-6 shadow-soft">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Train className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground font-heading">Transports en commun</h3>
-              </div>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Métro : Ligne 1 - Station George V</li>
-                <li>• Bus : Lignes 73, 42, 30</li>
-                <li>• RER : Ligne A - Charles de Gaulle Étoile</li>
-              </ul>
-            </div>
-
-            <div className="bg-card rounded-xl p-6 shadow-soft">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Car className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground font-heading">En voiture</h3>
-              </div>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Parking public à 50m</li>
-                <li>• Places handicapées disponibles</li>
-                <li>• Accès facile depuis le périphérique</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-card max-w-4xl mx-auto">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.822818619379!2d-3.990759124119335!3d5.288554894689882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1e952c590ed45%3A0xdfc663c655fddfb5!2sClinique%20dentaire%20Panorama!5e0!3m2!1sfr!2sci!4v1705600000000!5m2!1sfr!2sci"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localisation du cabinet"
-            />
-          </div>
-        </div>
-      </section>
+      <EmplacementContact />
 
       {/* Emergency */}
       <section className="py-20 bg-background">
