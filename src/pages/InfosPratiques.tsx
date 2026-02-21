@@ -82,8 +82,8 @@ const InfosPratiques = () => {
             <div className="bg-accent/20 border border-accent/40 rounded-xl p-6 mb-8">
               <p className="text-foreground">
                 <strong>Numéro d'urgence :</strong>{" "}
-                <a href="tel:+33123456789" className="text-primary hover:underline font-semibold">
-                  01 23 45 67 89
+                <a href="tel:+2250575430000" className="text-primary hover:underline font-semibold">
+                  +225 05 75 43 00 00
                 </a>
                 <br />
                 <span className="text-sm text-muted-foreground">
