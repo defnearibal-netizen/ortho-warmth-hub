@@ -14,7 +14,7 @@ const UrgencesPage = () => {
   const urgences = [
     {
       title: "Fil ou bague blessant",
-      solution: "Utilisez de la cire orthodontique pour couvrir le fil ou la bague qui vous blesse. Si la douleur persiste, contactez-nous pour couper ou ajuster le fil.",
+      solution: "Contacter le cabinet au plus vite, nous vous donnerons un rdv dans les plus brefs délais pour vous soulager.",
     },
     {
       title: "Bague décollée",
