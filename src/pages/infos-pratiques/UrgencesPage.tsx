@@ -21,7 +21,7 @@ const UrgencesPage = () => {
       solution: "En l'absence de douleur, ou de gêne une bague décollée n'est pas une urgence, vous pourrez attendre le prochain rendez vous.",
     },
     {
-      title: "Douleurs après pose d'un appareil ou d'un RDV d'activation",
+      title: "Gouttière cassée ou perdue",
       solution: "Portez l'aligneur précédent en attendant. Contactez-nous pour commander un nouvel aligneur. Ne restez pas sans appareil.",
     },
     {
