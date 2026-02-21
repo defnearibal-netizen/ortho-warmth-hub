@@ -1,12 +1,15 @@
 import Layout from "@/components/layout/Layout";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
+import demarchePhilosophie from "@/assets/demarche-philosophie.jpg";
+import demarcheTransparence from "@/assets/demarche-transparence.png";
 
 const demarcheItems = [
   {
     id: "philosophie",
     label: "Notre philosophie",
     title: "Notre philosophie",
+    image: demarchePhilosophie,
     description:
       "Le cabinet est entièrement dématérialisé afin de s'inscrire dans une démarche écoresponsable. Nous utilisons un logiciel patient ainsi qu'une application mobile pour faciliter la gestion des dossiers et le suivi orthodontique. Par ailleurs, le cabinet est équipé de technologies de pointe, notamment pour les empreintes numériques et les photographies, garantissant confort, précision et modernité.",
   },
@@ -14,6 +17,7 @@ const demarcheItems = [
     id: "transparence",
     label: "Transparence et pédagogie",
     title: "Transparence et pédagogie",
+    image: demarcheTransparence,
     description:
       "Chaque traitement vous est expliqué de manière claire et détaillée, afin que vous compreniez pleinement chaque étape de votre prise en charge. Nous prenons le temps d'échanger avec vous, de répondre à toutes vos questions et de vous accompagner avec attention tout au long de votre parcours orthodontique.",
   },
@@ -91,8 +95,8 @@ const Philosophie = () => {
                       </p>
                     </div>
                     {/* Right: Image Placeholder */}
-                    <div className="h-[350px] bg-muted rounded-xl flex items-center justify-center">
-                      <p className="text-muted-foreground text-sm">Image à venir</p>
+                    <div className="h-[350px] rounded-xl overflow-hidden">
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </TabsContent>
