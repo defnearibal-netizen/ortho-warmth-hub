@@ -18,7 +18,7 @@ const Parcours = () => {
       number: 1,
       title: "Première consultation",
       image: dentistPatient,
-      description: "Lors de la 1ère consultation, un entretien ainsi qu'un examen clinique sont réalisés. Ce 1er rendez-vous vise à cibler vos attentes, déterminer si un traitement est nécessaire et si oui quel est le meilleur moment pour le débuter.",
+      description: "Lors de la consultation, un examen clinique complet est réalisé (visage, dents, langue), suivi de la présentation du devis et du traitement proposé. Le déroulement du traitement est expliqué et toutes vos questions sont abordées, notamment sur la durée et les techniques innovantes.",
     },
     {
       number: 2,
