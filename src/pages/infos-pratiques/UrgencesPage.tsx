@@ -18,7 +18,7 @@ const UrgencesPage = () => {
     },
     {
       title: "Bague décollée",
-      solution: "Conservez le bracket si possible. S'il gêne, appliquez de la cire orthodontique. Contactez-nous rapidement pour un rendez-vous de recollage.",
+      solution: "En l'absence de douleur, ou de gêne une bague décollée n'est pas une urgence, vous pourrez attendre le prochain rendez vous.",
     },
     {
       title: "Gouttière cassée ou perdue",
