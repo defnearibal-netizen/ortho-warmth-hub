@@ -300,7 +300,7 @@ const Index = () => {
               style={{ backgroundImage: `url(${dentalCloseup})` }}
             />
             {/* Dark overlay for readability */}
-            <div className="absolute inset-0 bg-cta-hover/80" />
+            <div className="absolute inset-0 bg-cta-hover/55" />
             {/* Content */}
             <div className="relative z-10 p-8 md:p-12 lg:p-16">
             <div className="text-center mb-12">
