@@ -24,7 +24,7 @@ const techniques = [
 },
 {
   title: "Multi-attaches autoligaturantes",
-  description: "Les bagues nouvelle génération offrent un traitement plus rapide et plus confortable avec moins de friction.",
+  description: "Les traitements par aligneurs (gouttières transparentes, presque qu'invisible) permettent d'améliorer le sourire en toute discrétion avec un minimum de contrainte.",
   icon: Sparkles,
   image: treatmentAutoligaturantes,
   href: "/soins/autoligaturantes",
