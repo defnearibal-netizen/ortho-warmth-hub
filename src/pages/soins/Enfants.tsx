@@ -112,6 +112,17 @@ const Enfants = () => {
                 </div>
               </div>
 
+              {/* Video */}
+              <div className="aspect-video rounded-2xl overflow-hidden mb-8">
+                <iframe
+                  src="https://www.youtube.com/embed/HlTmbpznaSA"
+                  title="Orthodontie enfants"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+
               <h3 className="text-xl font-semibold text-foreground mb-6">
                 Les appareils utilisés
               </h3>
