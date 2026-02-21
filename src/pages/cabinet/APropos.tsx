@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import EmplacementContact from "@/components/shared/EmplacementContact";
+import CtaBanner from "@/components/shared/CtaBanner";
 import cabinetInterior from "@/assets/cabinet-interior.png";
 import dentistPatient from "@/assets/dentist-patient-2.jpg";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
@@ -224,6 +225,7 @@ const APropos = () => {
 
       <EmplacementContact id="emplacement" showDivider />
 
+      <CtaBanner />
     </Layout>
   );
 };
