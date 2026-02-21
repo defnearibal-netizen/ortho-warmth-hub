@@ -42,7 +42,7 @@ const Parcours = () => {
       number: 5,
       title: "Suivi orthodontique",
       image: waitingRoom,
-      description: "RDV d'activation de l'appareil toutes les 4 à 5 semaines. Contrôle de l'hygiène dentaire et des gencives, réalisation des radiographies de contrôle et vérification du respect des consignes.",
+      description: "Le suivi orthodontique comprend des rendez-vous d'activation de l'appareil toutes les 4 à 5 semaines, le contrôle de l'hygiène dentaire et des gencives, la réalisation de radiographies de contrôle ainsi que la vérification du respect des consignes, notamment le port des élastiques.",
     },
     {
       number: 6,
