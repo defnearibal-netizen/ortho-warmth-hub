@@ -87,7 +87,7 @@ const InfosPratiques = () => {
                 </a>
                 <br />
                 <span className="text-sm text-muted-foreground">
-                  Du lundi au vendredi, de 9h à 19h. En dehors de ces horaires, laissez un message.
+                  Les premiers jours après la pose de l'appareil, une douleur/sensibilité peut s'installer au niveau de l'ensemble des dents. Elle dure en général 3 à 7 jours avant de s'atténuer. Prenez un antalgique en cas de douleurs.
                 </span>
               </p>
             </div>
