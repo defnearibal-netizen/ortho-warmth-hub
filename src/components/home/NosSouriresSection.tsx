@@ -7,7 +7,7 @@ import before3 from "@/assets/before-3.jpg";
 import after3 from "@/assets/after-3.jpg";
 
 const cases = [
-  { before: before1, after: after1 },
+  { before: before1, after: after1, beforeScale: 0.75 },
   { before: before2, after: after2 },
   { before: before3, after: after3 },
 ];
@@ -34,6 +34,7 @@ const NosSouriresSection = () => {
               <BeforeAfterSlider
                 beforeImage={item.before}
                 afterImage={item.after}
+                beforeScale={item.beforeScale}
               />
             </div>
           ))}
