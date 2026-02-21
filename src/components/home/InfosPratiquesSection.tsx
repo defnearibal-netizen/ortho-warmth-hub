@@ -85,6 +85,14 @@ const InfosPratiquesSection = () => {
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               {activeInfo.details}
             </p>
+            {activeTab === "urgences" && (
+              <Button variant="cta" size="lg" asChild className="mt-8">
+                <Link to="/infos-pratiques/urgences" className="flex items-center gap-2">
+                  Voir les urgences
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
 
