@@ -153,7 +153,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button variant="cta" size="xl" asChild className="uppercase tracking-widest text-sm font-medium">
-                <Link to="/cabinet-dentaire" className="flex items-center gap-2">
+                <Link to="/soins-dentaires" className="flex items-center gap-2">
                   Nos soins dentaires
                   <ArrowRight className="h-4 w-4" />
                 </Link>
