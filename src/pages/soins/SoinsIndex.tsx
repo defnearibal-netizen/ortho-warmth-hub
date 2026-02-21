@@ -14,47 +14,47 @@ import treatmentComplements from "@/assets/treatment-complements.png";
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const techniques = [
-  {
-    title: "Techniques pour les jeunes enfants",
-    description: "Traitements interceptifs et précoces pour guider la croissance des mâchoires et prévenir les problèmes futurs.",
-    icon: Baby,
-    image: treatmentEnfant,
-    href: "/soins/enfants",
-    features: ["Interception précoce", "Appareils amovibles", "Éducation fonctionnelle"],
-  },
-  {
-    title: "Multi-attaches autoligaturantes",
-    description: "Les bagues nouvelle génération offrent un traitement plus rapide et plus confortable avec moins de friction.",
-    icon: Sparkles,
-    image: treatmentAutoligaturantes,
-    href: "/soins/autoligaturantes",
-    features: ["Moins de rendez-vous", "Confort amélioré", "Résultats précis"],
-  },
-  {
-    title: "Techniques par aligneurs",
-    description: "Des gouttières transparentes et amovibles pour un traitement discret et flexible au quotidien.",
-    icon: SmilePlus,
-    image: treatmentAligneursNew,
-    href: "/soins/aligneurs",
-    features: ["Quasiment invisibles", "Amovibles", "Hygiène facilitée"],
-  },
-  {
-    title: "Technique linguale WIN",
-    description: "Bagues placées à l'intérieur des dents pour une discrétion totale. Idéal pour les adultes exigeants.",
-    icon: Eye,
-    image: treatmentLinguale,
-    href: "/soins/linguale-win",
-    features: ["100% invisible", "Sur mesure", "Haute précision"],
-  },
-  {
-    title: "Compléments techniques",
-    description: "Techniques complémentaires comme les mini-vis, la chirurgie orthognatique et les traitements combinés.",
-    icon: Wrench,
-    image: treatmentComplements,
-    href: "/soins/complements",
-    features: ["Mini-vis d'ancrage", "Chirurgie orthognatique", "Traitements combinés"],
-  },
-];
+{
+  title: "Techniques pour les jeunes enfants",
+  description: "Traitements interceptifs et précoces pour guider la croissance des mâchoires et prévenir les problèmes futurs.",
+  icon: Baby,
+  image: treatmentEnfant,
+  href: "/soins/enfants",
+  features: ["Interception précoce", "Appareils amovibles", "Éducation fonctionnelle"]
+},
+{
+  title: "Multi-attaches autoligaturantes",
+  description: "Les bagues nouvelle génération offrent un traitement plus rapide et plus confortable avec moins de friction.",
+  icon: Sparkles,
+  image: treatmentAutoligaturantes,
+  href: "/soins/autoligaturantes",
+  features: ["Moins de rendez-vous", "Confort amélioré", "Résultats précis"]
+},
+{
+  title: "Techniques par aligneurs",
+  description: "Des gouttières transparentes et amovibles pour un traitement discret et flexible au quotidien.",
+  icon: SmilePlus,
+  image: treatmentAligneursNew,
+  href: "/soins/aligneurs",
+  features: ["Quasiment invisibles", "Amovibles", "Hygiène facilitée"]
+},
+{
+  title: "Technique linguale WIN",
+  description: "Bagues placées à l'intérieur des dents pour une discrétion totale. Idéal pour les adultes exigeants.",
+  icon: Eye,
+  image: treatmentLinguale,
+  href: "/soins/linguale-win",
+  features: ["100% invisible", "Sur mesure", "Haute précision"]
+},
+{
+  title: "Compléments techniques",
+  description: "Techniques complémentaires comme les mini-vis, la chirurgie orthognatique et les traitements combinés.",
+  icon: Wrench,
+  image: treatmentComplements,
+  href: "/soins/complements",
+  features: ["Mini-vis d'ancrage", "Chirurgie orthognatique", "Traitements combinés"]
+}];
+
 
 const SoinsIndex = () => {
   return (
@@ -63,16 +63,16 @@ const SoinsIndex = () => {
       <section className="relative min-h-[60vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${soinsHeroBg})`, transform: 'scaleX(-1)' }}
-        />
+          style={{ backgroundImage: `url(${soinsHeroBg})`, transform: 'scaleX(-1)' }} />
+
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/40 to-transparent" />
         <div className="relative container mx-auto px-4">
           <div className="max-w-2xl ml-4 md:ml-12 lg:ml-20">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
               Soins & Techniques Orthodontiques
             </h1>
-            <p className="text-lg text-white/85 mb-8">
-              En fonction de l'âge du patient, de sa denture et des objectifs thérapeutiques à accomplir, nous utilisons différents types de traitements orthodontiques :
+            <p className="text-lg text-white/85 mb-8">En fonction de l'âge du patient, de sa denture et des objectifs thérapeutiques à accomplir, nous utilisons différents types
+de traitements orthodontiques.
             </p>
           </div>
         </div>
@@ -89,22 +89,22 @@ const SoinsIndex = () => {
                   <Link
                     key={index}
                     to={technique.href}
-                    className="group block"
-                  >
+                    className="group block">
+
                     <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-all duration-300`}>
                       {/* Image */}
                       <div className="md:w-2/5 aspect-[4/3] md:aspect-auto overflow-hidden">
-                        {technique.image ? (
-                          <img
-                            src={technique.image}
-                            alt={technique.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                        {technique.image ?
+                        <img
+                          src={technique.image}
+                          alt={technique.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /> :
+
+
+                        <div className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
                             <Icon className="h-20 w-20 text-primary/40" />
                           </div>
-                        )}
+                        }
                       </div>
                       
                       {/* Content */}
@@ -123,14 +123,14 @@ const SoinsIndex = () => {
                         </p>
                         
                         <div className="flex flex-wrap gap-2 mb-6">
-                          {technique.features.map((feature, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 bg-secondary text-sm text-foreground/80 rounded-full"
-                            >
+                          {technique.features.map((feature, idx) =>
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-secondary text-sm text-foreground/80 rounded-full">
+
                               {feature}
                             </span>
-                          ))}
+                          )}
                         </div>
                         
                         <div className="flex items-center text-primary font-medium group-hover:gap-3 gap-2 transition-all">
@@ -139,8 +139,8 @@ const SoinsIndex = () => {
                         </div>
                       </div>
                     </div>
-                  </Link>
-                );
+                  </Link>);
+
               })}
             </div>
           </div>
@@ -148,8 +148,8 @@ const SoinsIndex = () => {
       </section>
 
       <CtaBanner />
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default SoinsIndex;
