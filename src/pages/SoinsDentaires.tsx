@@ -10,28 +10,28 @@ import smileCouple from "@/assets/smile-couple.png";
 const services = [
   {
     icon: Stethoscope,
-    title: "Soins conservateurs",
-    items: ["Traitement des caries", "Détartrage et polissage", "Soins préventifs"],
-  },
-  {
-    icon: Heart,
-    title: "Esthétique dentaire",
-    items: ["Éclaircissement dentaire", "Facettes esthétiques", "Restaurations harmonieuses"],
-  },
-  {
-    icon: Sparkles,
-    title: "Prothèses dentaires",
-    items: ["Couronnes et bridges", "Prothèses durables", "Restauration complète"],
-  },
-  {
-    icon: Shield,
-    title: "Soins parodontaux",
-    items: ["Traitement des gencives", "Prévention parodontale", "Santé bucco-dentaire globale"],
+    title: "Soins et prothèses dentaires",
+    items: ["Traitement des caries", "Couronnes et bridges", "Prothèses dentaires"],
   },
   {
     icon: Award,
     title: "Implantologie",
     items: ["Implants dentaires", "Remplacement naturel", "Solution pérenne"],
+  },
+  {
+    icon: Sparkles,
+    title: "Éclaircissement dentaire",
+    items: ["Blanchiment professionnel", "Résultats durables", "Technique douce"],
+  },
+  {
+    icon: Shield,
+    title: "Chirurgie",
+    items: ["Extractions dentaires", "Chirurgie pré-implantaire", "Actes chirurgicaux"],
+  },
+  {
+    icon: Heart,
+    title: "Parodontologie",
+    items: ["Traitement des gencives", "Prévention parodontale", "Santé bucco-dentaire globale"],
   },
 ];
 
