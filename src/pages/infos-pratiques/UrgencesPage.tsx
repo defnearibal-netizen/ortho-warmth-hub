@@ -22,7 +22,7 @@ const UrgencesPage = () => {
     },
     {
       title: "Gouttière cassée ou perdue",
-      solution: "Portez l'aligneur précédent en attendant. Contactez-nous pour commander un nouvel aligneur. Ne restez pas sans appareil.",
+      solution: "Si vous avez perdu ou cassé votre gouttière d'alignement ou de contention, prévenez nous afin de connaître la marche à suivre.",
     },
     {
       title: "Dents sensibles",
