@@ -69,8 +69,8 @@ const InfosPratiques = () => {
                   +225 05 75 43 00 00
                 </a>
                 <br />
-                <span className="text-sm text-muted-foreground">
-                  Les premiers jours après la pose de l'appareil, une douleur/sensibilité peut s'installer au niveau de l'ensemble des dents. Elle dure en général 3 à 7 jours avant de s'atténuer. Prenez un antalgique en cas de douleurs.
+                <span className="text-sm text-muted-foreground whitespace-pre-line">
+                  {"Les premiers jours après la pose de l'appareil, une douleur/sensibilité peut s'installer au niveau de l'ensemble des dents. \nElle dure en général 3 à 7 jours avant de s'atténuer. Prenez un antalgique en cas de douleurs."}
                 </span>
               </p>
             </div>
