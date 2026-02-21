@@ -63,7 +63,7 @@ const SoinsIndex = () => {
       <section className="relative min-h-[60vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${soinsHeroBg})` }}
+          style={{ backgroundImage: `url(${soinsHeroBg})`, transform: 'scaleX(-1)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/40 to-transparent" />
         <div className="relative container mx-auto px-4">
