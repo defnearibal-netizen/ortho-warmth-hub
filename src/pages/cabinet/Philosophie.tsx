@@ -39,8 +39,11 @@ const Philosophie = () => {
             <div className="text-6xl text-white/40 mb-4" style={{ fontFamily: "serif" }}>
               ❝
             </div>
-            <p className="text-white/90 text-lg leading-relaxed">
-              Chaque traitement vous est expliqué de manière claire et détaillée, afin que vous compreniez pleinement chaque étape de votre prise en charge. Nous prenons le temps d'échanger avec vous, de répondre à toutes vos questions et de vous accompagner avec attention tout au long de votre parcours orthodontique.
+            <p className="text-white/90 text-lg leading-relaxed italic">
+              "No bracket system will turn a difficult case into an easy one or change the rules of biology, but we can provide a big help in improving the finishing of your cases in a consistent way."
+            </p>
+            <p className="text-white/70 text-sm mt-6 font-semibold tracking-wide">
+              — Dr Stefano Troiani
             </p>
           </div>
         </div>
