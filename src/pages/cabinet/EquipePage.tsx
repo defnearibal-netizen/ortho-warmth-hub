@@ -65,18 +65,18 @@ const EquipePage = () => {
       </section>
 
       {/* Doctor Section - Two Column Layout */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 max-h-[50vh]">
         {/* Left: Image */}
-        <div className="h-[50vh] lg:h-auto overflow-hidden">
+        <div className="h-[40vh] lg:h-auto overflow-hidden">
           <img
             src={doctorPortrait}
             alt="Dr Defné Aribal - Orthodontiste spécialiste"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_15%] scale-110"
           />
         </div>
 
         {/* Right: Dark Chocolate Background with Content */}
-        <div className="bg-[hsl(25_45%_30%)] flex items-center p-8 lg:p-16">
+        <div className="bg-[hsl(25_45%_30%)] flex items-center p-6 lg:p-10">
           <div className="max-w-lg">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-2" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Dr Defné Aribal
