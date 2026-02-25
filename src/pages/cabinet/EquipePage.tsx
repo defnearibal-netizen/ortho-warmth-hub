@@ -65,13 +65,13 @@ const EquipePage = () => {
       </section>
 
       {/* Doctor Section - Two Column Layout */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 max-h-[50vh]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 h-[35vh]">
         {/* Left: Image */}
-        <div className="h-[40vh] lg:h-auto overflow-hidden">
+        <div className="h-[35vh] lg:h-full overflow-hidden no-zoom">
           <img
             src={doctorPortrait}
             alt="Dr Defné Aribal - Orthodontiste spécialiste"
-            className="w-full h-full object-cover object-[center_15%] scale-110"
+            className="w-full h-full object-cover object-[center_15%] scale-125 no-zoom"
           />
         </div>
 
@@ -81,15 +81,15 @@ const EquipePage = () => {
             <h2 className="text-3xl md:text-4xl font-light text-white mb-2" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Dr Defné Aribal
             </h2>
-            <p className="text-white/80 text-lg mb-8 uppercase tracking-wider">
+            <p className="text-white/80 text-sm mb-4 uppercase tracking-wider">
               Orthodontiste spécialiste qualifiée
             </p>
 
-            <p className="text-white/90 leading-relaxed mb-6">
+            <p className="text-white/90 text-sm leading-relaxed mb-3">
               Le Dr Aribal est votre orthodontiste spécialiste qualifiée. Elle allie une expertise exceptionnelle à une personnalité chaleureuse et un engagement profond pour aider ses patients à obtenir des sourires sains et harmonieux.
             </p>
             
-            <p className="text-white/90 leading-relaxed mb-8">
+            <p className="text-white/90 text-sm leading-relaxed">
               Dédiée à offrir des soins orthodontiques de pointe, le Dr Aribal se tient constamment informée des dernières innovations. Elle est spécialisée dans les traitements par aligneurs transparents et la technique linguale WIN.
             </p>
 
