@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AlertTriangle, Route, Siren, BookOpen, FileText } from "lucide-react";
+import { AlertTriangle, Route, Siren, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import CtaBanner from "@/components/shared/CtaBanner";
@@ -7,13 +7,11 @@ import infosPratiquesHero from "@/assets/infos-pratiques-hero.jpg";
 import infoParcours from "@/assets/info-parcours.png";
 import infoUrgences from "@/assets/info-urgences.png";
 import infoConseils from "@/assets/info-conseils.png";
-import infoFiches from "@/assets/info-fiches.png";
 
 const subPages = [
   { name: "Votre parcours", description: "Les étapes de votre traitement orthodontique", href: "/infos-pratiques/parcours", icon: Route, image: infoParcours },
   { name: "Urgences", description: "Que faire en cas d'urgence orthodontique", href: "/infos-pratiques/urgences", icon: Siren, image: infoUrgences },
   { name: "Conseils", description: "Alimentation, hygiène et bons réflexes", href: "/infos-pratiques/conseils", icon: BookOpen, image: infoConseils },
-  { name: "Fiches d'information", description: "Documents utiles à télécharger", href: "/infos-pratiques/fiches", icon: FileText, image: infoFiches },
 ];
 
 const InfosPratiques = () => {
