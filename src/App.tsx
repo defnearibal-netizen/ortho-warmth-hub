@@ -27,7 +27,6 @@ import InfosPratiques from "./pages/InfosPratiques";
 import Parcours from "./pages/infos-pratiques/Parcours";
 import UrgencesPage from "./pages/infos-pratiques/UrgencesPage";
 import Conseils from "./pages/infos-pratiques/Conseils";
-import Fiches from "./pages/infos-pratiques/Fiches";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -67,7 +66,6 @@ const App = () => (
           <Route path="/infos-pratiques/parcours" element={<Parcours />} />
           <Route path="/infos-pratiques/urgences" element={<UrgencesPage />} />
           <Route path="/infos-pratiques/conseils" element={<Conseils />} />
-          <Route path="/infos-pratiques/fiches" element={<Fiches />} />
           
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
