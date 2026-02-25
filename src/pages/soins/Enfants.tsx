@@ -144,7 +144,7 @@ const Enfants = () => {
                 {/* Appareils fonctionnels */}
                 <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={appareilFonctionnel} alt="Appareil fonctionnel" className="w-full h-full object-contain bg-white" />
+                    <img src={appareilFonctionnel} alt="Appareil fonctionnel" className="w-full h-full object-cover" />
 
                   </div>
                   <div className="p-6 text-center">
