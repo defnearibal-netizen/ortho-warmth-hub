@@ -148,9 +148,9 @@ const Enfants = () => {
 
                   </div>
                   <div className="p-6 text-center">
-                    <h4 className="font-heading font-semibold text-foreground mb-2">Appareil fonctionnel</h4>
+                    <h4 className="font-heading font-semibold text-foreground mb-2">Appareil de correction du décalage sagittal</h4>
                     <p className="text-muted-foreground text-sm">
-                      Corrigent les décalages entre les mâchoires en stimulant la croissance.
+                      Corrigent les décalages des mâchoires en stimulant la croissance.
                     </p>
                   </div>
                 </div>
