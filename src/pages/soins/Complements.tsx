@@ -100,38 +100,6 @@ const Complements = () => {
                 <li>Un respect du parodonte et des articulations temporo-mandibulaires.</li>
               </ul>
 
-              <div className="bg-cta-hover rounded-2xl p-6 md:p-8 mb-8">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Alternative aux extractions</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Évite le retrait de dents saines</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Indolore</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Sans anesthésie nécessaire</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Préserve l'intégrité</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Respecte la structure dentaire</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Stabilité améliorée</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Meilleure stabilité à long terme</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Video YouTube */}
               <div className="my-8 rounded-2xl overflow-hidden">
