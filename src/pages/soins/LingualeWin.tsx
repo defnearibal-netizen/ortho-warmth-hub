@@ -108,6 +108,13 @@ Cette technique innovante  totalement invisible utilise un appareil fixe collé
               </div>
 
               <h3 className="text-xl font-semibold text-foreground mb-4">
+                Durée d'adaptation
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                La technique linguale WIN est idéale pour les patients qui recherchent l'invisibilité absolue tout en bénéficiant d'un traitement efficace.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mb-4">
                 Pour qui ?
               </h3>
               <p className="text-muted-foreground mb-6">
