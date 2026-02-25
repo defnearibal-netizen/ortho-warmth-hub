@@ -67,11 +67,11 @@ const EquipePage = () => {
       {/* Doctor Section - Two Column Layout */}
       <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
         {/* Left: Image */}
-        <div className="h-[50vh] lg:h-auto">
+        <div className="h-[50vh] lg:h-auto overflow-hidden">
           <img
             src={doctorPortrait}
             alt="Dr Defné Aribal - Orthodontiste spécialiste"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
@@ -93,9 +93,6 @@ const EquipePage = () => {
               Dédiée à offrir des soins orthodontiques de pointe, le Dr Aribal se tient constamment informée des dernières innovations. Elle est spécialisée dans les traitements par aligneurs transparents et la technique linguale WIN.
             </p>
 
-            <p className="text-white/70 italic leading-relaxed" style={{ fontFamily: "'Tenor Sans', serif" }}>
-              "L'orthodontie est une joie pour moi pour de nombreuses raisons, mais ce que je préfère par-dessus tout, ce sont les relations que j'ai l'opportunité de construire avec mes patients."
-            </p>
           </div>
         </div>
       </section>
