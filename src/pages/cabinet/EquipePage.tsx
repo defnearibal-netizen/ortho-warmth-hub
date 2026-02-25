@@ -65,13 +65,13 @@ const EquipePage = () => {
       </section>
 
       {/* Doctor Section - Two Column Layout */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 lg:h-[40vh]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[55vh]">
         {/* Left: Image */}
-        <div className="h-[30vh] lg:h-full overflow-hidden no-zoom">
+        <div className="h-[45vh] lg:h-full overflow-hidden no-zoom">
           <img
             src={doctorPortrait}
             alt="Dr Defné Aribal - Orthodontiste spécialiste"
-            className="w-full h-full object-cover object-[center_15%] scale-125 no-zoom"
+            className="w-full h-full object-cover object-[center_20%] no-zoom"
           />
         </div>
 
