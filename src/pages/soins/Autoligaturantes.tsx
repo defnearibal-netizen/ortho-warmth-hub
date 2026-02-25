@@ -74,7 +74,8 @@ const Autoligaturantes = () => {
                     <CheckCircle className="h-6 w-6 text-primary-foreground mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="text-primary-foreground font-medium uppercase tracking-wide text-sm">Hygiène facilitée</span>
-                      <p className="text-primary-foreground/70 text-sm mt-1">Pas d'élastiques</p>
+                      <p className="text-primary-foreground/70 text-sm mt-1">Pas de ligatures élastomériques  
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -149,5 +150,4 @@ const Autoligaturantes = () => {
         </div>
       </section>
     </Layout>);};
-
 export default Autoligaturantes;
