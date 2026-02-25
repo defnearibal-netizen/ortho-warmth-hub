@@ -27,7 +27,7 @@ const memberships = [
 ];
 
 const staff = [
-  { name: "Sylvain", role: "Assistant dentaire", image: sylvainPhoto },
+  { name: "Sylvain", role: "Assistant dentaire", image: null },
   { name: "Ange", role: "Assistant dentaire", image: angePhoto },
 ];
 
