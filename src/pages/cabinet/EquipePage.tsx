@@ -64,48 +64,35 @@ const EquipePage = () => {
         </div>
       </section>
 
-      {/* Doctor Section - Hero style with chocolate background */}
-      <section className="relative bg-[hsl(25_45%_25%)] overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center min-h-[620px]">
-            {/* Left: Text */}
-            <div className="py-12 lg:py-16 lg:pr-12 relative z-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-3" style={{ fontFamily: "'Tenor Sans', serif" }}>
-                Dr Defné Aribal
-              </h2>
-              <p className="text-white/70 text-sm mb-6 uppercase tracking-widest">
-                Orthodontiste spécialiste qualifiée
-              </p>
+      {/* Doctor Section - Two Column Layout */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 lg:h-[40vh]">
+        {/* Left: Image */}
+        <div className="h-[30vh] lg:h-full overflow-hidden no-zoom">
+          <img
+            src={doctorPortrait}
+            alt="Dr Defné Aribal - Orthodontiste spécialiste"
+            className="w-full h-full object-cover object-[center_15%] scale-125 no-zoom"
+          />
+        </div>
 
-              <p className="text-white/85 leading-relaxed mb-4">
-                Le Dr Aribal est votre orthodontiste spécialiste qualifiée. Elle allie une expertise exceptionnelle à une personnalité chaleureuse et un engagement profond pour aider ses patients à obtenir des sourires sains et harmonieux.
-              </p>
-              
-              <p className="text-white/85 leading-relaxed mb-8">
-                Dédiée à offrir des soins orthodontiques de pointe, le Dr Aribal se tient constamment informée des dernières innovations. Elle est spécialisée dans les traitements par aligneurs transparents et la technique linguale WIN.
-              </p>
+        {/* Right: Dark Chocolate Background with Content */}
+        <div className="bg-[hsl(25_45%_30%)] flex items-center p-6 lg:p-10">
+          <div className="max-w-lg">
+            <h2 className="text-3xl md:text-4xl font-light text-white mb-2" style={{ fontFamily: "'Tenor Sans', serif" }}>
+              Dr Defné Aribal
+            </h2>
+            <p className="text-white/80 text-sm mb-4 uppercase tracking-wider">
+              Orthodontiste spécialiste qualifiée
+            </p>
 
-              <Button 
-                size="lg" 
-                asChild 
-                className="bg-white text-[hsl(25_45%_25%)] hover:bg-white/90 uppercase tracking-wider px-8"
-              >
-                <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                  Prendre rendez-vous
-                </a>
-              </Button>
-            </div>
+            <p className="text-white/90 text-sm leading-relaxed mb-3">
+              Le Dr Aribal est votre orthodontiste spécialiste qualifiée. Elle allie une expertise exceptionnelle à une personnalité chaleureuse et un engagement profond pour aider ses patients à obtenir des sourires sains et harmonieux.
+            </p>
+            
+            <p className="text-white/90 text-sm leading-relaxed">
+              Dédiée à offrir des soins orthodontiques de pointe, le Dr Aribal se tient constamment informée des dernières innovations. Elle est spécialisée dans les traitements par aligneurs transparents et la technique linguale WIN.
+            </p>
 
-            {/* Right: Photo */}
-            <div className="relative flex justify-center lg:justify-end items-end">
-              {/* Decorative circle behind photo */}
-              <div className="absolute bottom-0 right-1/2 lg:right-10 translate-x-1/2 lg:translate-x-0 w-[480px] h-[480px] rounded-full bg-white/5" />
-              <img
-                src={doctorPortrait}
-                alt="Dr Defné Aribal - Orthodontiste spécialiste"
-                className="relative z-10 w-[380px] md:w-[440px] lg:w-[500px] object-cover object-top rounded-t-2xl"
-              />
-            </div>
           </div>
         </div>
       </section>
