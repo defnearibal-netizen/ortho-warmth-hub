@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Calendar, Phone, ClipboardList, Pencil, FileText, Stethoscope, RefreshCw, Smile } from "lucide-react";
 import parcours1 from "@/assets/parcours-1.png";
-import parcours2 from "@/assets/parcours-2.jpg";
+import parcours2 from "@/assets/parcours-2.png";
 import parcours3 from "@/assets/parcours-3.png";
 import parcours4 from "@/assets/parcours-4.png";
 import parcours5 from "@/assets/parcours-5.png";
