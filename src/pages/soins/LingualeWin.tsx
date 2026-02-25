@@ -108,40 +108,6 @@ Cette technique innovante  totalement invisible utilise un appareil fixe collé
               </div>
 
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                Pour qui ?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                La technique linguale WIN est idéale pour les patients qui recherchent 
-                l'invisibilité absolue tout en bénéficiant d'un traitement efficace :
-              </p>
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-muted rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-2">Professionnels en vue</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Pour ceux dont l'image est primordiale au quotidien
-                  </p>
-                </div>
-                <div className="bg-muted rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-2">Occasions spéciales</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Mariages, événements importants pendant le traitement
-                  </p>
-                </div>
-                <div className="bg-muted rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-2">Cas complexes</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Quand les aligneurs ne sont pas adaptés
-                  </p>
-                </div>
-                <div className="bg-muted rounded-xl p-6">
-                  <h4 className="font-semibold text-foreground mb-2">Exigence de résultat</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Pour ceux qui veulent un contrôle maximal
-                  </p>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-semibold text-foreground mb-4">
                 Durée d'adaptation
               </h3>
               <p className="text-muted-foreground mb-6">
