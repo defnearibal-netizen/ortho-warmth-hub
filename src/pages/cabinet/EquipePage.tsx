@@ -67,7 +67,7 @@ const EquipePage = () => {
       {/* Doctor Section - Hero style with chocolate background */}
       <section className="relative bg-[hsl(25_45%_25%)] overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center min-h-[420px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center min-h-[520px]">
             {/* Left: Text */}
             <div className="py-12 lg:py-16 lg:pr-12 relative z-10">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-3" style={{ fontFamily: "'Tenor Sans', serif" }}>
@@ -99,11 +99,11 @@ const EquipePage = () => {
             {/* Right: Photo */}
             <div className="relative flex justify-center lg:justify-end items-end">
               {/* Decorative circle behind photo */}
-              <div className="absolute bottom-0 right-1/2 lg:right-10 translate-x-1/2 lg:translate-x-0 w-[340px] h-[340px] rounded-full bg-white/5" />
+              <div className="absolute bottom-0 right-1/2 lg:right-10 translate-x-1/2 lg:translate-x-0 w-[420px] h-[420px] rounded-full bg-white/5" />
               <img
                 src={doctorPortrait}
                 alt="Dr Defné Aribal - Orthodontiste spécialiste"
-                className="relative z-10 w-[280px] md:w-[320px] lg:w-[360px] object-cover object-top rounded-t-2xl"
+                className="relative z-10 w-[340px] md:w-[400px] lg:w-[440px] object-cover object-top rounded-t-2xl"
               />
             </div>
           </div>
