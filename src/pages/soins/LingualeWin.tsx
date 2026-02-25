@@ -110,11 +110,11 @@ Cette technique innovante  totalement invisible utilise un appareil fixe collé
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Durée d'adaptation
               </h3>
-              <p className="text-muted-foreground mb-6">
-                Comme pour tout appareil lingual, une période d'adaptation de 2 à 3 semaines 
-                est nécessaire. Pendant cette période, vous pouvez ressentir une gêne au niveau 
-                de la langue et une légère modification de l'élocution. Ces désagréments 
-                disparaissent rapidement à mesure que votre langue s'habitue aux brackets.
+              <p className="text-muted-foreground mb-6">La technique linguale WIN est idéale pour les patients qui recherchent l'invisibilité absolue tout en bénéficiant d'un traitement efficace.
+
+
+
+
               </p>
             </div>
           </div>
