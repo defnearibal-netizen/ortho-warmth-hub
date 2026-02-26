@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 mt-6">
               <a
-                href="https://www.instagram.com/aribal.orthodontie?igsh=MWU5cGZ2b3prMTNkbw%3D%3D&utm_source=qr"
+                href="https://www.instagram.com/aribal.orthodontie/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-secondary hover:bg-primary/10 transition-colors duration-200"
