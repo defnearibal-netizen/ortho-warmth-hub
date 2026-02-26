@@ -9,7 +9,7 @@ import after3 from "@/assets/after-3.jpg";
 const cases = [
   { before: before1, after: after1 },
   { before: after2, after: before2 },
-  { before: after3, after: before3 },
+  { before: before3, after: after3 },
 ];
 
 const NosSouriresSection = () => {
