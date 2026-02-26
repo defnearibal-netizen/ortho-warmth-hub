@@ -8,6 +8,7 @@ import EmplacementContact from "@/components/shared/EmplacementContact";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import InfosPratiquesSection from "@/components/home/InfosPratiquesSection";
+import EquipePreviewSection from "@/components/home/EquipePreviewSection";
 import CtaBanner from "@/components/shared/CtaBanner";
 import NosSouriresSection from "@/components/home/NosSouriresSection";
 import heroClinic from "@/assets/hero-clinic.jpg";
@@ -292,6 +293,9 @@ const Index = () => {
 
       {/* Infos Pratiques - Section interactive avec tabs */}
       <InfosPratiquesSection />
+
+      {/* Équipe Preview */}
+      <EquipePreviewSection />
 
       {/* Cabinet Dentaire */}
       <section className="py-24 bg-background" style={{ fontFamily: "'Poppins', sans-serif" }}>
