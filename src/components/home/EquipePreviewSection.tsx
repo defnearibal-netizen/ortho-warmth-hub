@@ -47,15 +47,17 @@ const EquipePreviewSection = () => {
           </div>
 
           {/* Right - Photo with colored block */}
-          <div className="relative flex justify-center items-end">
+          <div className="relative flex justify-center items-center">
             {/* Chocolate block behind */}
-            <div className="w-[80%] h-[85%] absolute bottom-0 right-[10%] rounded-3xl bg-cta-hover" />
-            {/* Portrait that overflows above the block */}
-            <img
-              src={defnePortrait}
-              alt="Dr Defné Aribal - Orthodontiste spécialiste"
-              className="relative z-10 w-[65%] object-contain drop-shadow-lg"
-            />
+            <div className="w-[80%] h-[90%] absolute bottom-[5%] right-[10%] rounded-3xl bg-cta-hover" />
+            {/* Portrait with brown border */}
+            <div className="relative z-10 w-[70%] rounded-2xl overflow-hidden border-4 border-cta-hover shadow-lg">
+              <img
+                src={defnePortrait}
+                alt="Dr Defné Aribal - Orthodontiste spécialiste"
+                className="w-full aspect-[3/4] object-cover object-top"
+              />
+            </div>
           </div>
         </div>
       </div>
