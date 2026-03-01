@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import defnePortrait from "@/assets/defne-portrait-cutout.png";
+import defnePortrait from "@/assets/defne-portrait-new.jpg";
 
 const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
