@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Users } from "lucide-react";
-import doctorPortrait from "@/assets/defne-aribal.png";
+import doctorPortrait from "@/assets/defne-portrait-new.jpg";
 import logoOrthospe from "@/assets/logo-orthospe.png";
 import logoCode36 from "@/assets/logo-code36.png";
 import angePhoto from "@/assets/ange.png";
