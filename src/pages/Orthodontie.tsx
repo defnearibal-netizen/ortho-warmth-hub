@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Smile, Shield, Clock, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
+import { RdvButton } from "@/components/shared/RdvButton";
 
 const subPages = [
   {
@@ -152,15 +152,9 @@ const Orthodontie = () => {
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
             Prenez rendez-vous pour une consultation et discutons ensemble de vos besoins.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <a
-              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <RdvButton variant="cta" size="xl">
               Prendre rendez-vous
-            </a>
-          </Button>
+            </RdvButton>
         </div>
       </section>
     </Layout>

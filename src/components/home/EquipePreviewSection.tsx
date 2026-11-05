@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import defnePortrait from "@/assets/defne-portrait-new.jpg";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const EquipePreviewSection = () => {
   return (
@@ -32,17 +32,10 @@ const EquipePreviewSection = () => {
                   Notre équipe
                 </Link>
               </Button>
-              <Button size="lg" asChild className="bg-cta-hover text-cta-foreground hover:bg-cta-hover/90">
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Calendar className="h-5 w-5" />
+              <RdvButton size="lg" className="bg-cta-hover text-cta-foreground hover:bg-cta-hover/90">
+              <Calendar className="h-5 w-5" />
                   Prendre RDV
-                </a>
-              </Button>
+            </RdvButton>
             </div>
           </div>
 

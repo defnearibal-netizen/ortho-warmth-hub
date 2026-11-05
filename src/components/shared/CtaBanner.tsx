@@ -1,8 +1,7 @@
 import { Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import ctaBackground from "@/assets/cta-background.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const CtaBanner = () => {
   return (
@@ -24,17 +23,10 @@ const CtaBanner = () => {
               Prenez rendez-vous dès aujourd'hui pour une première consultation 
               et découvrez comment nous pouvons vous accompagner.
             </p>
-            <Button variant="hero" size="xl" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
+            <RdvButton variant="hero" size="xl">
+              <Calendar className="h-5 w-5" />
                 Prendre rendez-vous
-              </a>
-            </Button>
+            </RdvButton>
           </div>
         </div>
       </div>

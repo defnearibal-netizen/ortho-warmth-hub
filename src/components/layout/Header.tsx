@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Calendar, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const cabinetSubPages = [
   { name: "À propos", href: "/cabinet/a-propos" },
@@ -176,17 +175,10 @@ const Header = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex items-center">
-            <Button variant="cta" size="sm" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-4 w-4" />
+            <RdvButton variant="cta" size="sm">
+              <Calendar className="h-4 w-4" />
                 1ère consultation
-              </a>
-            </Button>
+            </RdvButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -275,17 +267,10 @@ const Header = () => {
 
             {/* Mobile CTA */}
             <div className="mt-4 pt-4 border-t border-border/50">
-              <Button variant="cta" className="w-full" asChild>
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
-                >
-                  <Calendar className="h-4 w-4" />
+              <RdvButton variant="cta" className="w-full">
+              <Calendar className="h-4 w-4" />
                   1ère consultation en orthodontie
-                </a>
-              </Button>
+            </RdvButton>
             </div>
           </nav>
         </div>

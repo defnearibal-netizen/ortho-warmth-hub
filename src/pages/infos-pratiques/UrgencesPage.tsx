@@ -1,11 +1,10 @@
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import EmplacementContact from "@/components/shared/EmplacementContact";
 import { ChevronDown, Calendar, Phone } from "lucide-react";
 import { useState } from "react";
 import urgenceHero from "@/assets/urgence-hero.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const PHONE_NUMBER = "+225 05 75 43 00 00";
 
 const UrgencesPage = () => {
@@ -121,15 +120,9 @@ const UrgencesPage = () => {
 
             {/* CTA Button */}
             <div className="text-center mt-10">
-              <Button variant="cta" size="lg" asChild>
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Nous contacter
-                </a>
-              </Button>
+              <RdvButton variant="cta" size="lg">
+              Nous contacter
+            </RdvButton>
             </div>
           </div>
         </div>

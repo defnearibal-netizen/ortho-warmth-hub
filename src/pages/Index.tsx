@@ -22,8 +22,8 @@ import treatmentLinguale from "@/assets/treatment-linguale-new.png";
 
 import coupleSmile from "@/assets/couple-smile.png";
 import dentalCloseup from "@/assets/dental-closeup.jpg";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const treatments = [
   {
@@ -143,16 +143,9 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <Button variant="heroOutline" size="xl" asChild className="border-white/80 text-white hover:bg-white/10 uppercase tracking-widest text-sm font-medium px-8 py-6">
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  Prendre RDV
-                </a>
-              </Button>
+              <RdvButton variant="heroOutline" size="xl" className="border-white/80 text-white hover:bg-white/10 uppercase tracking-widest text-sm font-medium px-8 py-6">
+              Prendre RDV
+            </RdvButton>
               <Button variant="cta" size="xl" asChild className="uppercase tracking-widest text-sm font-medium">
                 <Link to="/soins-dentaires" className="flex items-center gap-2">
                   Nos soins dentaires

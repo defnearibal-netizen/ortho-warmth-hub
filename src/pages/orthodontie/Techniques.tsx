@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import { RdvButton } from "@/components/shared/RdvButton";
 
 const techniques = [
   {
@@ -137,15 +137,9 @@ const Techniques = () => {
             Prenez rendez-vous pour une évaluation personnalisée et découvrez 
             le traitement le plus adapté à vos besoins.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <a
-              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <RdvButton variant="cta" size="xl">
               Prendre rendez-vous
-            </a>
-          </Button>
+            </RdvButton>
         </div>
       </section>
     </Layout>

@@ -1,13 +1,12 @@
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Users } from "lucide-react";
 import doctorPortrait from "@/assets/defne-portrait-new.jpg";
 import logoOrthospe from "@/assets/logo-orthospe.png";
 import logoCode36 from "@/assets/logo-code36.png";
 import angePhoto from "@/assets/ange.png";
 import sylvainPhoto from "@/assets/sylvain.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const diplomes = [
   "Diplôme de Docteur en Chirurgie-dentaire (Université de Paris)",
@@ -51,15 +50,9 @@ const EquipePage = () => {
               Nous travaillons avec vous pour élaborer un plan de traitement personnalisé, adapté à vos besoins et objectifs. Nous savons qu'il faut beaucoup de confiance pour nous confier votre sourire, et nous sommes honorés de vous accompagner vers le résultat que vous méritez.
             </p>
 
-            <Button 
-              size="lg" 
-              asChild 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase tracking-wider px-8"
-            >
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                Prendre rendez-vous
-              </a>
-            </Button>
+            <RdvButton size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase tracking-wider px-8">
+              Prendre rendez-vous
+            </RdvButton>
           </div>
         </div>
       </section>

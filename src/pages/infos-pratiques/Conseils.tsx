@@ -6,7 +6,6 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { useState } from "react";
 import conseilsHero from "@/assets/conseils-hero.png";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const PHONE_NUMBER = "+225 05 75 43 00 00";
 
 const Conseils = () => {

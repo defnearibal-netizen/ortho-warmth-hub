@@ -1,10 +1,9 @@
 import { Calendar } from "lucide-react";
 import EmplacementContact from "@/components/shared/EmplacementContact";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import CtaBanner from "@/components/shared/CtaBanner";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const Contact = () => {
   return (
@@ -19,17 +18,10 @@ const Contact = () => {
             <p className="text-primary-foreground/80 mb-8 text-lg max-w-xl mx-auto">
               Inscription en ligne sur la plateforme, des créneaux de rendez-vous vous seront ensuite proposés.
             </p>
-            <Button variant="secondary" size="lg" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
+            <RdvButton variant="secondary" size="lg">
+              <Calendar className="h-5 w-5" />
                 Prendre rendez-vous
-              </a>
-            </Button>
+            </RdvButton>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const PHONE_PRIMARY = "+225 05 75 43 00 00";
 const PHONE_SECONDARY = "+225 27 21 59 12 99";
 const MAPS_EMBED_URL =
@@ -162,15 +162,9 @@ const EmplacementContact = ({ id = "emplacement", showDivider = false }: Emplace
                 WhatsApp
               </a>
             </Button>
-            <Button
-              size="lg"
-              asChild
-              className="bg-[#3E2723] hover:bg-[#3E2723]/90 text-white"
-            >
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                PRENDRE RENDEZ-VOUS
-              </a>
-            </Button>
+            <RdvButton size="lg" className="bg-[#3E2723] hover:bg-[#3E2723]/90 text-white">
+              PRENDRE RENDEZ-VOUS
+            </RdvButton>
           </div>
         </div>
       </section>

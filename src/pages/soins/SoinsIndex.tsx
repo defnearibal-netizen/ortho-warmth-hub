@@ -11,7 +11,6 @@ import treatmentAligneursNew from "@/assets/treatment-aligneurs-v2.png";
 import treatmentLinguale from "@/assets/treatment-linguale-new.png";
 import treatmentComplements from "@/assets/treatment-complements.png";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const techniques = [
 {
