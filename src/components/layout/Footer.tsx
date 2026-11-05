@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { RdvLink } from "@/components/shared/RdvButton";
+import { PHONE_PRIMARY, PHONE_PRIMARY_TEL, WHATSAPP_LINK } from "@/lib/rdv";
 
 const Footer = () => {
   return (
@@ -119,11 +120,11 @@ const Footer = () => {
                 <Phone className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <div className="text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
-                    <a href="tel:+2250575430000" className="hover:text-primary transition-colors duration-200">
-                      +225 05 75 43 00 00
+                    <a href={PHONE_PRIMARY_TEL} className="hover:text-primary transition-colors duration-200">
+                      {PHONE_PRIMARY}
                     </a>
                     <a
-                      href="https://wa.me/2250575430000"
+                      href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Contacter sur WhatsApp"
