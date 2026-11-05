@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Smile, Shield, Clock, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import orthodonticEquipment from "@/assets/orthodontic-equipment.jpg";
 import { RdvButton } from "@/components/shared/RdvButton";

@@ -1,6 +1,5 @@
 import { Calendar } from "lucide-react";
 import EmplacementContact from "@/components/shared/EmplacementContact";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import CtaBanner from "@/components/shared/CtaBanner";
 import { RdvButton } from "@/components/shared/RdvButton";

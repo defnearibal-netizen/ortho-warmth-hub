@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
 import { Award, GraduationCap, Users } from "lucide-react";
 import doctorPortrait from "@/assets/defne-portrait-new.jpg";
 import logoOrthospe from "@/assets/logo-orthospe.png";

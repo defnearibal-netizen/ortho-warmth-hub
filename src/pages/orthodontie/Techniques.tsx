@@ -1,5 +1,4 @@
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import { RdvButton } from "@/components/shared/RdvButton";
 

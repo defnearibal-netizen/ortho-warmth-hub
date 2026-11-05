@@ -1,5 +1,4 @@
 import { Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import ctaBackground from "@/assets/cta-background.png";
 import { RdvButton } from "@/components/shared/RdvButton";
 
