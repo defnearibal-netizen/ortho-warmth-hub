@@ -8,8 +8,8 @@ import cabinetInterior from "@/assets/cabinet-interior.png";
 import dentistPatient from "@/assets/dentist-patient-2.jpg";
 import philosophiePatient from "@/assets/philosophie-patient.jpg";
 import teamPhoto from "@/assets/notre-equipe.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const navItems = [
   { id: "a-propos", label: "À propos" },

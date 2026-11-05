@@ -1,8 +1,8 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ctaBackground from "@/assets/cta-background.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const CtaBanner = () => {
   return (

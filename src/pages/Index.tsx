@@ -22,8 +22,8 @@ import treatmentLinguale from "@/assets/treatment-linguale-new.png";
 
 import coupleSmile from "@/assets/couple-smile.png";
 import dentalCloseup from "@/assets/dental-closeup.jpg";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const treatments = [
   {

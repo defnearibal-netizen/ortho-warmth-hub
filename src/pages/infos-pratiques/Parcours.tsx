@@ -9,7 +9,6 @@ import parcours4 from "@/assets/parcours-4.png";
 import parcours5 from "@/assets/parcours-5.png";
 import parcours6 from "@/assets/parcours-6.png";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const PHONE_NUMBER = "+225 05 75 43 00 00";
 
 const Parcours = () => {

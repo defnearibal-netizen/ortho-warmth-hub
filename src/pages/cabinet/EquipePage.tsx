@@ -6,8 +6,8 @@ import logoOrthospe from "@/assets/logo-orthospe.png";
 import logoCode36 from "@/assets/logo-code36.png";
 import angePhoto from "@/assets/ange.png";
 import sylvainPhoto from "@/assets/sylvain.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 
 const diplomes = [
   "Diplôme de Docteur en Chirurgie-dentaire (Université de Paris)",

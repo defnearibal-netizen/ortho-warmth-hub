@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
-
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
+import { RdvLink } from "@/components/shared/RdvButton";
 
 const Footer = () => {
   return (
@@ -97,14 +96,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors duration-200 font-medium"
-                >
+                <RdvLink className="text-sm text-primary hover:text-primary/80 transition-colors duration-200 font-medium">
                   Prendre RDV →
-                </a>
+                </RdvLink>
               </li>
             </ul>
           </div>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import waitingRoom from "@/assets/waiting-room.jpg";
 import heroClinic from "@/assets/hero-clinic.jpg";
+import { RdvButton } from "@/components/shared/RdvButton";
 
 const services = [
   {

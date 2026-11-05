@@ -4,8 +4,8 @@ import EmplacementContact from "@/components/shared/EmplacementContact";
 import { ChevronDown, Calendar, Phone } from "lucide-react";
 import { useState } from "react";
 import urgenceHero from "@/assets/urgence-hero.png";
+import { RdvButton } from "@/components/shared/RdvButton";
 
-const RDV_LINK = "https://aribal-portail.orthoadvance.com/#/cabinets/aribal";
 const PHONE_NUMBER = "+225 05 75 43 00 00";
 
 const UrgencesPage = () => {
