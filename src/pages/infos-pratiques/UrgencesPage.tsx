@@ -121,15 +121,9 @@ const UrgencesPage = () => {
 
             {/* CTA Button */}
             <div className="text-center mt-10">
-              <Button variant="cta" size="lg" asChild>
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Nous contacter
-                </a>
-              </Button>
+              <RdvButton variant="cta" size="lg">
+              Nous contacter
+            </RdvButton>
             </div>
           </div>
         </div>

@@ -145,17 +145,10 @@ const FAQ = () => {
             N'hésitez pas à nous contacter ou à prendre rendez-vous pour une consultation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="cta" size="lg" asChild>
-              <a
-                href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
+            <RdvButton variant="cta" size="lg">
+              <Calendar className="h-5 w-5" />
                 Prendre rendez-vous
-              </a>
-            </Button>
+            </RdvButton>
           </div>
         </div>
       </section>

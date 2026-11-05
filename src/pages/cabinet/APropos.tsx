@@ -69,16 +69,9 @@ const APropos = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-10 leading-tight" style={{ fontFamily: "'Tenor Sans', serif" }}>
               Présentation du cabinet et informations pratiques
             </h1>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/80 text-white hover:bg-white hover:text-foreground bg-white/10 backdrop-blur-sm uppercase tracking-wider px-8"
-              asChild
-            >
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                Prendre RDV en ligne
-              </a>
-            </Button>
+            <RdvButton variant="outline" size="lg" className="border-white/80 text-white hover:bg-white hover:text-foreground bg-white/10 backdrop-blur-sm uppercase tracking-wider px-8">
+              Prendre RDV en ligne
+            </RdvButton>
           </div>
         </div>
 

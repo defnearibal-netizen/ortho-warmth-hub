@@ -32,17 +32,10 @@ const EquipePreviewSection = () => {
                   Notre équipe
                 </Link>
               </Button>
-              <Button size="lg" asChild className="bg-cta-hover text-cta-foreground hover:bg-cta-hover/90">
-                <a
-                  href={RDV_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Calendar className="h-5 w-5" />
+              <RdvButton size="lg" className="bg-cta-hover text-cta-foreground hover:bg-cta-hover/90">
+              <Calendar className="h-5 w-5" />
                   Prendre RDV
-                </a>
-              </Button>
+            </RdvButton>
             </div>
           </div>
 

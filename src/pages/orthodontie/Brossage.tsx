@@ -207,15 +207,9 @@ const Brossage = () => {
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
             Notre équipe est là pour vous conseiller et vous montrer les bonnes techniques.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <a
-              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <RdvButton variant="cta" size="xl">
               Prendre rendez-vous
-            </a>
-          </Button>
+            </RdvButton>
         </div>
       </section>
     </Layout>

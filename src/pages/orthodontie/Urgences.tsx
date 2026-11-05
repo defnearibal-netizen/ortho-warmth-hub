@@ -174,16 +174,9 @@ const Urgences = () => {
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
             N'hésitez pas à nous contacter pour toute question ou urgence.
           </p>
-          <Button variant="cta" size="xl" asChild>
-            <a 
-              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
+          <RdvButton variant="cta" size="xl">
               Prendre rendez-vous
-            </a>
-          </Button>
+            </RdvButton>
         </div>
       </section>
     </Layout>

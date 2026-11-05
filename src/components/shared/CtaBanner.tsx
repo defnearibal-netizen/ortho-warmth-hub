@@ -24,17 +24,10 @@ const CtaBanner = () => {
               Prenez rendez-vous dès aujourd'hui pour une première consultation 
               et découvrez comment nous pouvons vous accompagner.
             </p>
-            <Button variant="hero" size="xl" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
+            <RdvButton variant="hero" size="xl">
+              <Calendar className="h-5 w-5" />
                 Prendre rendez-vous
-              </a>
-            </Button>
+            </RdvButton>
           </div>
         </div>
       </div>

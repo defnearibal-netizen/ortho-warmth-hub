@@ -162,15 +162,9 @@ const EmplacementContact = ({ id = "emplacement", showDivider = false }: Emplace
                 WhatsApp
               </a>
             </Button>
-            <Button
-              size="lg"
-              asChild
-              className="bg-[#3E2723] hover:bg-[#3E2723]/90 text-white"
-            >
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                PRENDRE RENDEZ-VOUS
-              </a>
-            </Button>
+            <RdvButton size="lg" className="bg-[#3E2723] hover:bg-[#3E2723]/90 text-white">
+              PRENDRE RENDEZ-VOUS
+            </RdvButton>
           </div>
         </div>
       </section>

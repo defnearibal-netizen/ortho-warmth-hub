@@ -51,15 +51,9 @@ const EquipePage = () => {
               Nous travaillons avec vous pour élaborer un plan de traitement personnalisé, adapté à vos besoins et objectifs. Nous savons qu'il faut beaucoup de confiance pour nous confier votre sourire, et nous sommes honorés de vous accompagner vers le résultat que vous méritez.
             </p>
 
-            <Button 
-              size="lg" 
-              asChild 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase tracking-wider px-8"
-            >
-              <a href={RDV_LINK} target="_blank" rel="noopener noreferrer">
-                Prendre rendez-vous
-              </a>
-            </Button>
+            <RdvButton size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground uppercase tracking-wider px-8">
+              Prendre rendez-vous
+            </RdvButton>
           </div>
         </div>
       </section>

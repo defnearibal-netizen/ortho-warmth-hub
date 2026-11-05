@@ -19,17 +19,10 @@ const Contact = () => {
             <p className="text-primary-foreground/80 mb-8 text-lg max-w-xl mx-auto">
               Inscription en ligne sur la plateforme, des créneaux de rendez-vous vous seront ensuite proposés.
             </p>
-            <Button variant="secondary" size="lg" asChild>
-              <a
-                href={RDV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
+            <RdvButton variant="secondary" size="lg">
+              <Calendar className="h-5 w-5" />
                 Prendre rendez-vous
-              </a>
-            </Button>
+            </RdvButton>
           </div>
         </div>
       </section>

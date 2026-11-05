@@ -243,17 +243,10 @@ const Services = () => {
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
             Prenez rendez-vous pour une première consultation et découvrez le traitement adapté à votre situation.
           </p>
-          <Button variant="hero" size="lg" asChild>
-            <a
-              href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
+          <RdvButton variant="hero" size="lg">
               <Calendar className="h-5 w-5" />
               Prendre rendez-vous
-            </a>
-          </Button>
+            </RdvButton>
         </div>
       </section>
     </Layout>

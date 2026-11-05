@@ -85,17 +85,10 @@ const CabinetDentaire = () => {
                 De la simple visite de contrôle aux traitements plus complexes, 
                 notre équipe vous accompagne avec professionnalisme et bienveillance.
               </p>
-              <Button variant="cta" size="lg" asChild>
-                <a
-                  href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Calendar className="h-5 w-5" />
+              <RdvButton variant="cta" size="lg">
+              <Calendar className="h-5 w-5" />
                   Prendre rendez-vous
-                </a>
-              </Button>
+            </RdvButton>
             </div>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-card">
@@ -191,17 +184,10 @@ const CabinetDentaire = () => {
             nous sommes là pour vous.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild>
-              <a
-                href="https://aribal-portail.orthoadvance.com/#/cabinets/aribal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Calendar className="h-5 w-5" />
+            <RdvButton variant="hero" size="xl">
+              <Calendar className="h-5 w-5" />
                 Prendre rendez-vous
-              </a>
-            </Button>
+            </RdvButton>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/contact" className="flex items-center gap-2">
                 Nous contacter
