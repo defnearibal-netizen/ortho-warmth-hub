@@ -2,6 +2,10 @@ import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import RdvDialog from "@/components/shared/RdvDialog";
 import { RdvButton } from "@/components/shared/RdvButton";
+import { MemoryRouter } from "react-router-dom";
+import Footer from "@/components/layout/Footer";
+import EmplacementContact from "@/components/shared/EmplacementContact";
+import InfosPratiques from "@/pages/InfosPratiques";
 import {
   PHONE_PRIMARY,
   RDV_PLATFORM_LINK,
@@ -9,6 +13,32 @@ import {
 } from "@/lib/rdv";
 
 describe("booking choice", () => {
+  it.each([
+    ["footer", Footer],
+    ["contact section", EmplacementContact],
+    ["practical information", InfosPratiques],
+  ] as const)("opens every WhatsApp link separately in the %s", (_name, Component) => {
+    render(<MemoryRouter><Component /></MemoryRouter>);
+    const links = screen.getAllByRole("link", { name: /WhatsApp/i });
+    expect(links.length).toBeGreaterThan(0);
+    for (const link of links) {
+      expect(link).toHaveAttribute("href", "https://wa.me/2250575430000");
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    }
+  });
+
+  it("contains no obsolete WhatsApp destination in application source", () => {
+    const sources = import.meta.glob("/src/**/*.{ts,tsx,html}", {
+      query: "?raw", import: "default", eager: true,
+    });
+    const applicationSources = Object.entries(sources).filter(([path]) => !path.includes("/test/") && !/\.(test|spec)\./.test(path));
+    expect(applicationSources.length).toBeGreaterThan(0);
+    for (const [_path, source] of applicationSources) {
+      expect(source).not.toMatch(/api\.whatsapp\.com|web\.whatsapp\.com|whatsapp:\/\//i);
+    }
+  });
+
   it("keeps the WhatsApp number and the OrthoAdvance portal the user gave", () => {
     expect(WHATSAPP_LINK).toBe("https://wa.me/2250575430000");
     expect(RDV_PLATFORM_LINK).toBe(

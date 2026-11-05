@@ -7,6 +7,7 @@ import infosPratiquesHero from "@/assets/infos-pratiques-hero.jpg";
 import infoParcours from "@/assets/info-parcours.png";
 import infoUrgences from "@/assets/info-urgences.png";
 import infoConseils from "@/assets/info-conseils.png";
+import { PHONE_PRIMARY, PHONE_PRIMARY_TEL, WHATSAPP_LINK } from "@/lib/rdv";
 
 const subPages = [
   { name: "Votre parcours", description: "Les étapes de votre traitement orthodontique", href: "/infos-pratiques/parcours", icon: Route, image: infoParcours },
@@ -63,11 +64,11 @@ const InfosPratiques = () => {
             <div className="bg-accent/20 border border-accent/40 rounded-xl p-6 mb-12">
               <p className="text-foreground">
                 <strong>Numéro d'urgence :</strong>{" "}
-                <a href="tel:+2250575430000" className="text-primary hover:underline font-semibold">
-                  +225 05 75 43 00 00
+                <a href={PHONE_PRIMARY_TEL} className="text-primary hover:underline font-semibold">
+                  {PHONE_PRIMARY}
                 </a>
                 <a
-                  href="https://wa.me/2250575430000"
+                  href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Contacter sur WhatsApp"

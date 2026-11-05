@@ -1,8 +1,8 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RdvButton } from "@/components/shared/RdvButton";
+import { PHONE_PRIMARY, PHONE_PRIMARY_TEL, WHATSAPP_LINK } from "@/lib/rdv";
 
-const PHONE_PRIMARY = "+225 05 75 43 00 00";
 const PHONE_SECONDARY = "+225 27 21 59 12 99";
 const MAPS_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.5!2d-3.9883!3d5.2888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTcnMTkuNiJOIDPCsDU5JzE4IlciZg!5e0!3m2!1sfr!2sci!4v1234567890";
@@ -87,11 +87,11 @@ const EmplacementContact = ({ id = "emplacement", showDivider = false }: Emplace
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <Phone className="h-5 w-5 text-primary" strokeWidth={1.5} />
-                    <a href={`tel:${PHONE_PRIMARY.replace(/\s/g, "")}`} className="text-foreground hover:text-primary transition-colors duration-200">
+                    <a href={PHONE_PRIMARY_TEL} className="text-foreground hover:text-primary transition-colors duration-200">
                       {PHONE_PRIMARY}
                     </a>
                     <a
-                      href="https://wa.me/2250575430000"
+                      href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Contacter sur WhatsApp"
@@ -141,7 +141,7 @@ const EmplacementContact = ({ id = "emplacement", showDivider = false }: Emplace
               asChild
               className="border-[#3E2723] text-[#3E2723] hover:bg-[#3E2723] hover:text-white"
             >
-              <a href={`tel:${PHONE_PRIMARY.replace(/\s/g, "")}`} className="flex items-center gap-2">
+              <a href={PHONE_PRIMARY_TEL} className="flex items-center gap-2">
                 {PHONE_PRIMARY}
               </a>
             </Button>
@@ -151,7 +151,7 @@ const EmplacementContact = ({ id = "emplacement", showDivider = false }: Emplace
               className="bg-[#25D366] hover:bg-[#128C7E] text-white"
             >
               <a
-                href="https://wa.me/2250575430000"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
